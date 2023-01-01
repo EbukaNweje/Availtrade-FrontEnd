@@ -35,7 +35,7 @@ width: 90%;
 }
 `;
 export const H1 = styled.div`
-color: #53387F;
+color: #1035ac;
 font-size :25px;
 margin-top: 350px;
 `;
@@ -58,7 +58,7 @@ export const BackgroundText = styled.div`
 font-family: 'Montserrat',sans-serif;
 font-weight: 300;
 font-size: 100px;
-color: #958e9e;
+color: #1035ac;
 position: absolute;
 opacity:  20%;
 /* line-height: 82px; */
@@ -171,7 +171,7 @@ align-items: center;
 }
 `;
 export const Topic = styled.div`
-background: linear-gradient(72deg, #5f2b93, #7086dc);
+background: linear-gradient(20deg,#1035ac,#000080);
 display: block;
 color: #fff;
 line-height: 48px;
@@ -347,7 +347,7 @@ color : #3c357e;
 `;
 export const BottomRight = styled(Link)`
 /* display: inline-block; */
-    background-color: #766acf;
+    background-color: #1035ac;
     float: right;
     width: 33.333333%;
     line-height: 100px;

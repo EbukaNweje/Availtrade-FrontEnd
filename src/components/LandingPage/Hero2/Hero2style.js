@@ -105,7 +105,7 @@ export const H4= styled.div`
  }
 `;
 export const H1 = styled.div`
-color: #7A3999;
+color: #1035ac;
 font-size: 25px;
 font-weight: 500;
 margin: 20px 0;
@@ -181,7 +181,7 @@ margin-bottom: 15px;
 }
 `;
 export const ButtonHold = styled.div`
-background-color: #7856d5;
+background-color: #1035ac;
 width: 150px;
 height: 40px;
 display: flex;

@@ -33,7 +33,7 @@ color: #e5e2ee;
 font-size: 18px;
 `;
 export const H1 = styled.div`
-color: #639;
+color: #1035ac;
 margin: 20px 0;
 font-size: 25px;
 font-weight: 500;

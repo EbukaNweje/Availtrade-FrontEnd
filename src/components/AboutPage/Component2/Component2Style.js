@@ -79,12 +79,12 @@ object-fit: cover;
 `;
 
 export const H4 = styled.div`
-color:#54D8A3;
+color: #1035ac;
 font-weight:  500;
 
 `;
 export const H1 = styled.div`
-color: #639;
+color: #1035ac;
 font-size: 23px;
 font-weight: 510;
 margin: 10px 0;
@@ -144,7 +144,7 @@ export const ButtonHold = styled(Link)`
 text-decoration: none;
 color: white;
 /* background-color: #7856d5; */
-background: linear-gradient(135deg, rgba(141, 143, 254, 1) 0, rgba(156, 126, 255, 1) 100%);
+background: linear-gradient(20deg,#1035ac,#000080);
 width: 170px;
 height: 40px;
 display: flex;

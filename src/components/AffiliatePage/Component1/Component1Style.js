@@ -4,7 +4,7 @@ import bgaff from './bgaff.jpg'
 export const Wrapper = styled.div`
 width: 100%;
 height: 100%;
-background: linear-gradient(28deg, #639, #5f72bd);
+background: linear-gradient(20deg,#1035ac,#000080);
 /* padding-bottom: 72px; */
 position: relative;
 display: block;
@@ -127,7 +127,7 @@ align-items: center;
 font-family: 'Montserrat',sans-serif
 `;
 export const Circle2 = styled.div`
-background: linear-gradient(135deg, rgba(141, 143, 254, 1) 0, rgba(156, 126, 255, 1) 100%);
+background: linear-gradient(20deg,#1035ac,#000080);
 width: 96px;
 height: 96px;
 border-radius: 100%;

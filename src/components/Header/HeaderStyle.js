@@ -61,7 +61,7 @@ flex-wrap: wrap;
 `;
 export const Container2 = styled.div`
 width: 100vw;
-background-color: #47389b81;
+background-color: #1035ac;
 /* height: 150px; */
 /* min-height: 49px; */
 position: fixed;
@@ -239,7 +239,7 @@ color: black;
 `;
 export const Nav2 = styled(Link)`
 cursor: pointer;
-color: black;
+color: white;
 text-decoration: none;
 :hover{
     /* color:white; */
@@ -258,7 +258,7 @@ justify-content: center;
 align-items: center;
 border-radius: 50px;
 cursor: pointer;
-color: black;
+color: white;
 text-decoration: none;
 
 @media Screen and (max-width: 768px){

@@ -27,7 +27,7 @@ justify-content: center;
 align-items: center;
 `
 export const H1 = styled.div`
-color: #7A3999;
+color: #000080;
 font-size: 25px;
 font-weight: 500;
 margin: 20px 0;

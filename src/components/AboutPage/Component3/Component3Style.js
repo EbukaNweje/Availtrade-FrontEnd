@@ -100,7 +100,7 @@ font-size: 13px;
 `;
 
 export const H1 = styled(Link)`
-color: #639;
+color: #1035ac;
 font-size: 23px;
 font-weight: 510;
 margin: 10px 0;

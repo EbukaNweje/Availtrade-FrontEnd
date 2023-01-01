@@ -116,11 +116,11 @@ border-radius: 7px;
 display: flex;
 justify-content: center;
 align-items: center;
-color: #7b66e3;
+color: #000080;
 font-family: 'Aldrich', sans-serif;
 font-size: 32px;
 margin-left: 10px;
-background-color: #9c7eff;
+background-color: #1035ac;
 /* linear-gradient(to left, #5f72bd, #639); */
 /* margin: 30px 30px 0 0; */
 /* border-image-slice: 1; */
@@ -129,13 +129,13 @@ export const Box2 = styled.div`
 width: 300px;
 height: 112px;
 box-shadow: 0 2px 24px 0 rgb(31 8 54 / 10%);
-background: linear-gradient(to left, #5f72bd, #639);
+background: linear-gradient(to left, #000080, #1035ac);
 border-radius: 7px;
 display: flex;
 justify-content: center;
 align-items: center;
 margin-left: 40px;
-color: #639;
+color: #000080;
 
 `;
 export const Div = styled.div`
@@ -261,7 +261,7 @@ color:#54D8A3;
  font-weight:  500;
 `;
 export const H1 = styled.div`
-color: #7A3999;
+color: #000080;
 font-size: 25px;
 font-weight: 500;
 margin: 20px 0;
@@ -317,7 +317,7 @@ background-color: #54D8A3;
 margin-bottom: 15px;
 `;
 export const ButtonHold = styled(Link)`
-background-color: #7856d5;
+background-color: #000080;
 width: 210px;
 height: 40px;
 display: flex;

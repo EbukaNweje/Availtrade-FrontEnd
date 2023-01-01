@@ -26,7 +26,7 @@ align-items: center;
 export const Wrapper = styled.div`
 width: 100%;
 height: 100%;
-background: linear-gradient(28deg, #639, #5f72bd);
+background: linear-gradient(20deg,#1035ac,#000080);
 /* padding-bottom: 72px; */
 position: relative;
 display: block;

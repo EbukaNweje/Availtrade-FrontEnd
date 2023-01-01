@@ -2,12 +2,13 @@ import { BsArrowRight } from "react-icons/bs";
 /* import { AiOutlineArrowRight } from "react-icons/ai"; */
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import bg from '../../../asset/Video.png'
+import bg from '../../../asset/bgnew.png'
 
 export const Container = styled.div`
 width: 100%;
 height: 70vh;
 background-image: url(${bg});
+/* background: linear-gradient(20deg,#1035ac,#000080); */
 background-size: cover;
 background-repeat: no-repeat;
 display: flex;
@@ -40,7 +41,7 @@ padding: 50px 0;
     width: 90%;
 }
 @media Screen and (max-width: 425px){
-    background: linear-gradient(28deg,#639,#5f72bd);
+    background: linear-gradient(20deg,#1035ac,#000080);
     padding: 0px;
     height: 80vh;
     width: 100%;
@@ -87,7 +88,7 @@ height: 100%;
 }
 `;
 export const BitcoinLink = styled.a`
-color: #639;
+color: #fff;
 font-weight: 300;
 text-decoration: none;
 cursor: pointer;

@@ -4,6 +4,7 @@ import bgg from './wallpaper.jpg';
 
 export const Container = styled.div`
 background-image: url(${bgg});
+//background: linear-gradient(20deg,#1035ac,#000080);/
 background-size: cover;
 background-repeat: no repeat;
 background-position: center;
@@ -30,7 +31,7 @@ align-items: center;
 `;
 
 export const Wrapper = styled.div`
-background: linear-gradient(28deg,#639,#5f72bd);
+background: linear-gradient(20deg,#1035ac,#000080);
 width: 100%;
 height: 100%;
 display: flex;

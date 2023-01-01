@@ -85,7 +85,7 @@ height: 42px;
 display: flex;
 justify-content: center;
 align-items:center;
-background-color: #639;
+background-color: #000080;
 color: white;
 `;
 export const Wrap = styled.div`
@@ -112,7 +112,7 @@ margin: 15px 0;
 export const ButtonHold = styled.div`
 width: 150px;
 height: 40px;
-background: linear-gradient(135deg, rgb(141 143 254), rgb(156 126 255));
+background: linear-gradient(135deg, #1035ac, #000080);
 color: #fff!important;
 margin: 25px 0;
 display: flex;
