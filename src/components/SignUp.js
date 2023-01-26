@@ -44,24 +44,28 @@ function SignUp() {
             <option value="Bitcoin Investment">ADVANCED($5000-$9999)</option>
             <option value="Bitcoin Investment">EMERALD($10000-$19000)</option>
             <option value="Bitcoin Investment">DIAMOND($20000-$49000)</option>
-            <option value="Bitcoin Investment">TRADING PRO($50000-$99000)</option>
-            <option value="Bitcoin Investment">BUSINESS PRO($100000 & ABOVE)</option>
+            <option value="Bitcoin Investment">
+              TRADING PRO($50000-$99000)
+            </option>
+            <option value="Bitcoin Investment">
+              BUSINESS PRO($100000 & ABOVE)
+            </option>
           </SelectPackage>
           <Password type="password" placeholder="Input Password(*)" />
           <ConfirmPassword type="password" placeholder="Confirm Password(*)" />
 
           <CheckBoxContainer>
-          <CheckBox type="checkbox" />
-          <p>I Agree the terms and conditions(*)</p>
+            <CheckBox type="checkbox" />
+            <p>I Agree the terms and conditions(*)</p>
           </CheckBoxContainer>
           <Instruction>
-        (All fields with (*) are required. Check to ensure all fields are filled properly before Submitting your form.)
-        </Instruction>
-        <ButtonContainer>
-        <button type='submit'> Sign Up</button>
-        </ButtonContainer>
+            (All fields with (*) are required. Check to ensure all fields are
+            filled properly before Submitting your form.)
+          </Instruction>
+          <ButtonContainer>
+            <button type="submit"> Sign Up</button>
+          </ButtonContainer>
         </FormInput>
-
       </SecondContainer>
     </MainContainer>
   )
@@ -246,7 +250,7 @@ const CheckBoxContainer = styled.div`
   width: 60%;
   display: flex;
   gap: 5%;
-  p{
+  p {
     color: gray;
   }
 `
@@ -261,37 +265,19 @@ const ButtonContainer = styled.div`
   width: 60%;
   display: flex;
   gap: 5%;
-  button{
+  button {
     height: 7vh;
-  width: 25%;
-  margin: 5% 0%;
-  background: #1E90FF;
-  border: none;
-  border-radius: 5px;
-  color: #fff;
-  cursor: pointer;
-  &:hover {
-    box-shadow: 1px 1px 9px -3px rgba(0,0,0,0.75);
--webkit-box-shadow: 1px 1px 9px -3px rgba(0,0,0,0.75);
--moz-box-shadow: 1px 1px 9px -3px rgba(0,0,0,0.75);
-  }
+    width: 25%;
+    margin: 5% 0%;
+    background: #1e90ff;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    &:hover {
+      box-shadow: 1px 1px 9px -3px rgba(0, 0, 0, 0.75);
+      -webkit-box-shadow: 1px 1px 9px -3px rgba(0, 0, 0, 0.75);
+      -moz-box-shadow: 1px 1px 9px -3px rgba(0, 0, 0, 0.75);
+    }
   }
 `
-
-
-// const Button = styled.button`
-//   height: 7vh;
-//   width: 15%;
-//   margin: 5% 0%;
-//   background: #1E90FF;
-//   border: none;
-//   border-radius: 5px;
-//   color: #fff;
-//   cursor: pointer;
-
-//   &:hover {
-//     box-shadow: 1px 1px 9px -3px rgba(0,0,0,0.75);
-// -webkit-box-shadow: 1px 1px 9px -3px rgba(0,0,0,0.75);
-// -moz-box-shadow: 1px 1px 9px -3px rgba(0,0,0,0.75);
-//   }
-// `
