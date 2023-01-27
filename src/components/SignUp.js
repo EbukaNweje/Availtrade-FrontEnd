@@ -40,26 +40,20 @@ function SignUp() {
           </SelectAccount>
           <SelectPackage>
             <option>-Select Package Plan-</option>
-            <option value="Forex Trading">BEGINNER($3000-$4999)</option>
-            <option value="Bitcoin Investment">ADVANCED($5000-$9999)</option>
-            <option value="Bitcoin Investment">EMERALD($10000-$19000)</option>
-            <option value="Bitcoin Investment">DIAMOND($20000-$49000)</option>
-            <option value="Bitcoin Investment">
-              TRADING PRO($50000-$99000)
-            </option>
-            <option value="Bitcoin Investment">
-              BUSINESS PRO($100000 & ABOVE)
-            </option>
+            <option>STARTER PLAN($3000-$10,000)</option>
+            <option>SILVER PLAN($11,000-$50,000)</option>
+            <option>GOLD PLAN($51000-$100,000)</option>
+            <option>DIAMOND PLAN($101,000-$1,000,000)</option>
           </SelectPackage>
           <Password type="password" placeholder="Input Password(*)" />
           <ConfirmPassword type="password" placeholder="Confirm Password(*)" />
 
           <CheckBoxContainer>
             <CheckBox type="checkbox" />
-            <p>I Agree the terms and conditions(*)</p>
+            <p>I Agree to the terms and conditions(*)</p>
           </CheckBoxContainer>
           <Instruction>
-            (All fields with (*) are required. Check to ensure all fields are
+            (All fields with (*) are required. Kindly Check to ensure all fields are
             filled properly before Submitting your form.)
           </Instruction>
           <ButtonContainer>
@@ -77,13 +71,21 @@ const MainContainer = styled.div`
   width: 100%;
   display: flex;
   justify-content: center;
-  height: 100vh;
+  // height: 100vh;
   flex-wrap: wrap;
+    @media (max-width: 768px) {
+    flex-direction: column;
+  }
 `
 
 const FirstContainer = styled.div`
   background: gray;
   width: 44%;
+  flex-wrap: wrap;
+  @media (max-width: 768px) {
+  height: 40vh;
+  width: 100%;
+}
 `
 
 const SecondContainer = styled.div`
@@ -91,6 +93,9 @@ const SecondContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `
 
 const FirstParagraph = styled.p`
@@ -103,6 +108,9 @@ const FirstParagraph = styled.p`
       text-decoration: none;
       color: #1e90ff;
     }
+  }
+  @media (max-width: 768px) {
+    margin-bottom: 5%;
   }
 `
 
@@ -127,6 +135,9 @@ const FirstNameInput = styled.input`
   outline: none;
   padding-left: 3%;
   margin-bottom: 2%;
+  @media (max-width: 768px) {
+    width: 90%;
+  }
 `
 const LastNameInput = styled.input`
   width: 57%;
@@ -137,6 +148,9 @@ const LastNameInput = styled.input`
   outline: none;
   padding-left: 3%;
   margin-bottom: 2%;
+  @media (max-width: 768px) {
+    width: 90%;
+  }
 `
 
 const EmailInput = styled.input`
@@ -148,6 +162,9 @@ const EmailInput = styled.input`
   outline: none;
   padding-left: 3%;
   margin-bottom: 2%;
+  @media (max-width: 768px) {
+    width: 90%;
+  }
 `
 
 const ConfirmEmailInput = styled.input`
@@ -159,6 +176,9 @@ const ConfirmEmailInput = styled.input`
   outline: none;
   padding-left: 3%;
   margin-bottom: 2%;
+  @media (max-width: 768px) {
+    width: 90%;
+  }
 `
 
 const DateOfBirth = styled.input`
@@ -170,6 +190,9 @@ const DateOfBirth = styled.input`
   outline: none;
   padding-left: 3%;
   margin-bottom: 2%;
+  @media (max-width: 768px) {
+    width: 90%;
+  }
 `
 
 const PhoneNumber = styled.input`
@@ -181,6 +204,9 @@ const PhoneNumber = styled.input`
   outline: none;
   padding-left: 3%;
   margin-bottom: 2%;
+  @media (max-width: 768px) {
+    width: 90%;
+  }
 `
 
 const SelectCountry = styled.select`
@@ -193,6 +219,9 @@ const SelectCountry = styled.select`
   padding-left: 3%;
   margin-bottom: 2%;
   color: gray;
+  @media (max-width: 768px) {
+    width: 93%;
+  }
 `
 const SelectAccount = styled.select`
   width: 60%;
@@ -204,6 +233,9 @@ const SelectAccount = styled.select`
   padding-left: 3%;
   margin-bottom: 2%;
   color: gray;
+  @media (max-width: 768px) {
+    width: 93%;
+  }
 `
 
 const SelectPackage = styled.select`
@@ -216,6 +248,9 @@ const SelectPackage = styled.select`
   padding-left: 3%;
   margin-bottom: 2%;
   color: gray;
+  @media (max-width: 768px) {
+    width: 93%;
+  }
 `
 
 const Password = styled.input`
@@ -227,6 +262,9 @@ const Password = styled.input`
   outline: none;
   padding-left: 3%;
   margin-bottom: 2%;
+  @media (max-width: 768px) {
+    width: 90%;
+  }
 `
 
 const ConfirmPassword = styled.input`
@@ -238,6 +276,9 @@ const ConfirmPassword = styled.input`
   outline: none;
   padding-left: 3%;
   margin-bottom: 2%;
+  @media (max-width: 768px) {
+    width: 90%;
+  }
 `
 
 const CheckBox = styled.input`
@@ -249,9 +290,16 @@ const CheckBox = styled.input`
 const CheckBoxContainer = styled.div`
   width: 60%;
   display: flex;
+  align-items: center;
   gap: 5%;
   p {
     color: gray;
+  }
+  @media (max-width: 768px) {
+    width: 93%;
+    p {
+      font-size: 14px;
+    }
   }
 `
 
@@ -259,6 +307,11 @@ const Instruction = styled.p`
   font-size: 15px;
   margin: 0% 20%;
   color: gray;
+  @media (max-width: 768px) {
+    width: 93%;
+    font-size: 13px;
+    margin-bottom: 5%;
+  }
 `
 
 const ButtonContainer = styled.div`
@@ -278,6 +331,14 @@ const ButtonContainer = styled.div`
       box-shadow: 1px 1px 9px -3px rgba(0, 0, 0, 0.75);
       -webkit-box-shadow: 1px 1px 9px -3px rgba(0, 0, 0, 0.75);
       -moz-box-shadow: 1px 1px 9px -3px rgba(0, 0, 0, 0.75);
+    }
+  }
+  @media (max-width: 768px) {
+    width: 93%;
+    button {
+      width: 55%;
+    height: 9vh;
+
     }
   }
 `
