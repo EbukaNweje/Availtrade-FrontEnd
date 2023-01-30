@@ -420,7 +420,7 @@ const ButtonContainer = styled.div`
     button {
       width: 55%;
     height: 9vh;
-
+    margin-bottom: 5%;
     }
   }
 `
