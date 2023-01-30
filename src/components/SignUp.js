@@ -1,14 +1,32 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
+import bg from '../asset/bitcoinwallpaper.jpg'
+import logo from '../asset/preeminentcryptotrade.png'
 
 function SignUp() {
   return (
     <MainContainer>
-      <FirstContainer>Sign Up1</FirstContainer>
+      <FirstContainer>
+          <LogoDiv>
+            <LogoImg src={logo} alt="Logo"/>
+          </LogoDiv>
+          <Welcome>
+              <WelText>Welcome to <span>Preeminentcryptotrade</span> </WelText>
+              <Parg>Our goal here is to provide investors with a platform that is trustworthy, 
+                reliable and efficient.</Parg>
+            </Welcome>
+            <FirstFooter>
+              <FirstFooterText1>© 2020 preeminentcryptotrade.com ! </FirstFooterText1>
+              <FirstFooterText2>
+                <span>Terms & Conditions</span>
+                <span>Contact</span>
+              </FirstFooterText2>
+            </FirstFooter>
+      </FirstContainer>
       <SecondContainer>
         <FirstParagraph>
-          Already a member?{' '}
+          Already a member?
           <span>
             <Link to="/login">Login</Link>
           </span>
@@ -67,11 +85,69 @@ function SignUp() {
 
 export default SignUp
 
+const FirstFooterText2 = styled.div`
+  display: flex;
+  margin-right: 5%auto;
+
+  span{
+    color: gray;
+    font-size: 15px;
+    font-weight: 600;
+    margin: 0px 20px;
+    cursor: pointer;
+    transition: all 350ms;
+  }
+
+  span:hover{
+    color: lightgray;
+    text-decoration: underline
+  }
+`
+const FirstFooterText1 = styled.div`
+  color: lightgray;
+  font-size: 15px;
+`
+const FirstFooter = styled.div`
+  margin-left: 5%;
+  margin-bottom: 5%;
+  display: flex;
+  width: 90%;
+  justify-content: space-between;
+`
+const Parg = styled.p`
+  width:  85%;
+  margin-top: 20px;
+  color: lightgray;
+`
+const WelText = styled.div`
+  width: 80%;
+  color: white;
+  font-size: 25px;
+  font-weight: 600;
+  text-shadow: -2px 1px 15px rgba(0,0,0,0.74);
+
+  span{
+    color: yellow;
+    text-shadow: -2px 1px 15px rgba(0,0,0,0.74);
+  }
+`
+const Welcome = styled.div`
+  margin-left: 5%;
+  height: max-content
+`
+const LogoImg = styled.img`
+  width: 100%;
+`
+const LogoDiv = styled.div`
+  width: 70%;
+  height: max-content;
+  margin-top: 5%;
+  margin-left: 5%;
+`
 const MainContainer = styled.div`
   width: 100%;
   display: flex;
   justify-content: center;
-  // height: 100vh;
   flex-wrap: wrap;
     @media (max-width: 768px) {
     flex-direction: column;
@@ -79,9 +155,15 @@ const MainContainer = styled.div`
 `
 
 const FirstContainer = styled.div`
-  background: gray;
+  background-image: url(${bg});
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left;
   width: 44%;
   flex-wrap: wrap;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   @media (max-width: 768px) {
   height: 40vh;
   width: 100%;
