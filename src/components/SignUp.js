@@ -87,7 +87,7 @@ export default SignUp
 
 const FirstFooterText2 = styled.div`
   display: flex;
-  margin-right: 5%auto;
+  margin-right: auto;
 
   span{
     color: gray;
