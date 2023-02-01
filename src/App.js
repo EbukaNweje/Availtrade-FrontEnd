@@ -1,9 +1,14 @@
-import GetStarted from './components/GetStarted';
+import './App.css';
+// import Faq from './components/Faq';
+import Contact from './components/Contact';
+// import GetStarted from './components/GetStarted';
 
 function App() {
   return (
     <div>
-      <GetStarted />
+      {/* <Faq /> */}
+      {/* <GetStarted /> */}
+      <Contact />
     </div>
   );
 }
