@@ -8,7 +8,7 @@ const Share = () => {
       <section className="open_acct_shared">
         <div className="acct_step">
           <div className="step">
-            <span> STEP</span>
+            <span>STEP</span>
             <h1 className="share_h1">5</h1>
           </div>
 
@@ -26,6 +26,7 @@ const Share = () => {
               for everybody; you don’t need to have an active account to be able
               to participate.
             </p>
+
             <br />
             <br />
 
