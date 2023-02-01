@@ -11,7 +11,7 @@ const StepTwo = () => {
       <div className="step_two">
         <h5 className="step_two_h5">STEP BY STEP</h5>
         <h2 className="systematic_parag">
-          Systematic fuide on how to start profiting with Pipscountfx.com
+          Systematic guide on how to start profiting with Pipscountfx.com
         </h2>
         <hr className="step_two_hr" />
       </div>
