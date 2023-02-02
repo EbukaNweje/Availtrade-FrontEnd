@@ -10,4 +10,27 @@ body {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
       monospace;
   }
+
+  .Icons {
+    font-size: 25px;
+    margin-right: 2%;
+  }
   
+  @media (max-width: 768px) {
+    .Icons{
+      font-size: 10px;
+    }
+  }
+
+.BitconMapDiv {
+    width: 100%;
+}
+
+.tradingview-widget-container {
+    width: 100%;
+}
+
+.IframeCss {
+    width: 100%;
+    height: 50px;
+}
