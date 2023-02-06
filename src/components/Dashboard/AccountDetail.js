@@ -389,6 +389,9 @@ const UpgradeAccount = styled.section`
     flex-wrap: wrap;
     margin-bottom: 18%;
   }
+  @media screen and (min-width: 769px) and (max-width: 1200px) {
+    height: 28vh;
+  }
 `
 
 const UserPackage = styled.div`
@@ -436,6 +439,14 @@ const UserPackage = styled.div`
       background: #000;
     }
   }
+  /* @media only screen and (min-width: 360px) and (max-width: 768px) { */
+
+  @media screen and (min-width: 769px) and (max-width: 1120px) {
+    small {
+    font-size: 12px;
+  }
+  }
+
   @media (max-width: 768px) {
     width: 33%;
 
@@ -499,6 +510,7 @@ const LastDeposit = styled.div`
       background: #000;
     }
   }
+
   @media (max-width: 768px) {
     width: 32%;
     small {
