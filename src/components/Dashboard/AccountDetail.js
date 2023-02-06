@@ -7,6 +7,7 @@ import Bag from '../../asset/pipBag.png'
 import pipMoney from '../../asset/pipMoney.png'
 import EarnedMoney from '../../asset/Earned-money.png'
 import head from '../../asset/head.png'
+import protectImage from '../../asset/protect.png'
 
 function AccountDetail() {
   return (
@@ -70,7 +71,7 @@ function AccountDetail() {
           <button>UPGRADE ACCOUNT</button>
         </UserPackage>
         <LastDeposit>
-        <img src={head} alt="imag" />
+          <img src={head} alt="imag" />
           <small>0.00</small>
           <div>
             <p>LAST DEPOSIT</p>
@@ -78,7 +79,7 @@ function AccountDetail() {
           <button>LAST DEPOSIT</button>
         </LastDeposit>
         <Withdraw>
-        <img src={head} alt="imag" />
+          <img src={head} alt="imag" />
           <small>0.00</small>
           <div>
             <p>TOTAL WIDRAWN</p>
@@ -86,7 +87,7 @@ function AccountDetail() {
           <button>MAKE WITHDRAWAL</button>
         </Withdraw>
         <NewDeposit>
-        <img src={head} alt="imag" />
+          <img src={head} alt="imag" />
           <small>0.00</small>
           <div>
             <p>TOTAL DEPOSIT</p>
@@ -94,6 +95,9 @@ function AccountDetail() {
           <button>MAKE NEW DEPOSIT</button>
         </NewDeposit>
       </UpgradeAccount>
+      <ProtectImage>
+        <img src={protectImage} alt='img'/>
+      </ProtectImage>
     </AccountContainer>
   )
 }
@@ -102,11 +106,8 @@ export default AccountDetail
 
 const AccountContainer = styled.div`
   display: flex;
-  /* align-items: center; */
   flex-direction: column;
   justify-content: center;
-  /* width: 100%; */
-  /* background: #000; */
   margin: 4% 6% 0 6%;
 
   p {
@@ -116,6 +117,9 @@ const AccountContainer = styled.div`
   }
 
   @media (max-width: 768px) {
+    p {
+      font-size: 13px;
+    }
   }
 `
 
@@ -124,13 +128,15 @@ const AccountInfo = styled.section`
 
   height: 15vh;
   gap: 0.1%;
+  @media (max-width: 768px) {
+    gap: 0.4%;
+  }
 `
 
 const AccountType = styled.div`
   width: 25%;
   background: #00add4;
   display: flex;
-  /* justify-content: space-around; */
   align-items: center;
   gap: 4%;
   div {
@@ -149,6 +155,19 @@ const AccountType = styled.div`
     width: 20%;
     height: 9vh;
     margin-left: 5%;
+  }
+  @media (max-width: 768px) {
+    img {
+      height: 4vh;
+    }
+    div {
+      h3 {
+        font-size: 10px;
+      }
+      p {
+        font-size: 8px;
+      }
+    }
   }
 `
 
@@ -156,7 +175,6 @@ const AccountEmail = styled.div`
   width: 25%;
   background: #00add4;
   display: flex;
-  /* justify-content: space-around; */
   align-items: center;
   gap: 4%;
   div {
@@ -175,6 +193,19 @@ const AccountEmail = styled.div`
     width: 20%;
     height: 9vh;
     margin-left: 5%;
+  }
+  @media (max-width: 768px) {
+    img {
+      height: 4vh;
+    }
+    div {
+      h3 {
+        font-size: 10px;
+      }
+      p {
+        font-size: 8px;
+      }
+    }
   }
 `
 
@@ -182,7 +213,6 @@ const AccountCountry = styled.div`
   width: 25%;
   background: #00add4;
   display: flex;
-  /* justify-content: space-around; */
   align-items: center;
   gap: 4%;
   div {
@@ -201,6 +231,19 @@ const AccountCountry = styled.div`
     width: 20%;
     height: 9vh;
     margin-left: 5%;
+  }
+  @media (max-width: 768px) {
+    img {
+      height: 4vh;
+    }
+    div {
+      h3 {
+        font-size: 10px;
+      }
+      p {
+        font-size: 8px;
+      }
+    }
   }
 `
 
@@ -208,7 +251,6 @@ const AccountPhone = styled.div`
   width: 25%;
   background: #00add4;
   display: flex;
-  /* justify-content: space-around; */
   align-items: center;
   gap: 4%;
   div {
@@ -228,26 +270,37 @@ const AccountPhone = styled.div`
     height: 9vh;
     margin-left: 5%;
   }
+  @media (max-width: 768px) {
+    img {
+      height: 4vh;
+    }
+    div {
+      h3 {
+        font-size: 10px;
+      }
+      p {
+        font-size: 8px;
+      }
+    }
+  }
 `
 
 const MoneyInfo = styled.section`
   display: flex;
-  background: #529777;
   margin-top: 2%;
   gap: 2%;
 `
 
 const AccountBalance = styled.section`
-  /* background: gray; */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 35%;
   height: 40vh;
-  box-shadow: 4px 7px 13px 0px rgba(0, 0, 0, 0.72);
-  -webkit-box-shadow: 4px 7px 13px 0px rgba(0, 0, 0, 0.72);
-  -moz-box-shadow: 4px 7px 13px 0px rgba(0, 0, 0, 0.72);
+  box-shadow: 4px 3px 10px -4px rgba(0, 0, 0, 0.54);
+  -webkit-box-shadow: 4px 3px 10px -4px rgba(0, 0, 0, 0.54);
+  -moz-box-shadow: 4px 3px 10px -4px rgba(0, 0, 0, 0.54);
 
   img {
     width: 40%;
@@ -258,20 +311,25 @@ const AccountBalance = styled.section`
   }
   big {
     font-size: 14px;
+  }
+  @media (max-width: 768px) {
+    height: 20vh;
+    big {
+      font-size: 10px;
+    }
   }
 `
 
 const TotalEarned = styled.div`
-  /* background: gray; */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 35%;
   height: 40vh;
-  box-shadow: 4px 7px 13px 0px rgba(0, 0, 0, 0.72);
-  -webkit-box-shadow: 4px 7px 13px 0px rgba(0, 0, 0, 0.72);
-  -moz-box-shadow: 4px 7px 13px 0px rgba(0, 0, 0, 0.72);
+  box-shadow: 4px 3px 10px -4px rgba(0, 0, 0, 0.54);
+  -webkit-box-shadow: 4px 3px 10px -4px rgba(0, 0, 0, 0.54);
+  -moz-box-shadow: 4px 3px 10px -4px rgba(0, 0, 0, 0.54);
 
   img {
     width: 40%;
@@ -282,20 +340,25 @@ const TotalEarned = styled.div`
   }
   big {
     font-size: 14px;
+  }
+  @media (max-width: 768px) {
+    height: 20vh;
+    big {
+      font-size: 10px;
+    }
   }
 `
 
 const StartUp = styled.div`
-  /* background: gray; */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 35%;
   height: 40vh;
-  box-shadow: 4px 7px 13px 0px rgba(0, 0, 0, 0.72);
-  -webkit-box-shadow: 4px 7px 13px 0px rgba(0, 0, 0, 0.72);
-  -moz-box-shadow: 4px 7px 13px 0px rgba(0, 0, 0, 0.72);
+  box-shadow: 4px 3px 10px -4px rgba(0, 0, 0, 0.54);
+  -webkit-box-shadow: 4px 3px 10px -4px rgba(0, 0, 0, 0.54);
+  -moz-box-shadow: 4px 3px 10px -4px rgba(0, 0, 0, 0.54);
 
   img {
     width: 40%;
@@ -306,6 +369,12 @@ const StartUp = styled.div`
   }
   big {
     font-size: 14px;
+  }
+  @media (max-width: 768px) {
+    height: 20vh;
+    big {
+      font-size: 10px;
+    }
   }
 `
 
@@ -314,7 +383,12 @@ const UpgradeAccount = styled.section`
   margin-top: 4%;
   display: flex;
   gap: 2%;
-  margin-bottom: 10%;
+  margin-bottom: 7%;
+  @media (max-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 18%;
+  }
 `
 
 const UserPackage = styled.div`
@@ -325,7 +399,7 @@ const UserPackage = styled.div`
   align-items: center;
   :hover {
     border-top: 2px solid black;
-    }
+  }
   img {
     width: 30%;
   }
@@ -360,19 +434,35 @@ const UserPackage = styled.div`
 
     :hover {
       background: #000;
+    }
+  }
+  @media (max-width: 768px) {
+    width: 33%;
+
+    small {
+      font-size: 6.7px;
+    }
+    div {
+        p {
+            font-size: 10px;
+        }
+    }
+    button {
+        width: 86%;
+    font-size: 8px;
     }
   }
 `
 
 const LastDeposit = styled.div`
- background: #e7fbfb;
+  background: #e7fbfb;
   width: 25%;
   display: flex;
   flex-direction: column;
   align-items: center;
   :hover {
     border-top: 2px solid black;
-    }
+  }
   img {
     width: 30%;
   }
@@ -407,19 +497,35 @@ const LastDeposit = styled.div`
 
     :hover {
       background: #000;
+    }
+  }
+  @media (max-width: 768px) {
+    width: 32%;
+    small {
+    font-size: 6.7px;
+  }
+  div {
+    margin: 5% 0;
+        p {
+            font-size: 10px;
+        }
+    }
+    button {
+        width: 86%;
+    font-size: 8px;
     }
   }
 `
 
 const Withdraw = styled.div`
- background: #e7fbfb;
+  background: #e7fbfb;
   width: 25%;
   display: flex;
   flex-direction: column;
   align-items: center;
   :hover {
     border-top: 2px solid black;
-    }
+  }
   img {
     width: 30%;
   }
@@ -456,17 +562,34 @@ const Withdraw = styled.div`
       background: #000;
     }
   }
+  @media (max-width: 768px) {
+    width: 31%;
+
+    small {
+    font-size: 6.7px;
+  }
+  div {
+    margin: 5% 0;
+        p {
+            font-size: 10px;
+        }
+    }
+    button {
+        width: 86%;
+    font-size: 8px;
+    }
+  }
 `
 
 const NewDeposit = styled.div`
- background: #e7fbfb;
+  background: #e7fbfb;
   width: 25%;
   display: flex;
   flex-direction: column;
   align-items: center;
   :hover {
     border-top: 2px solid black;
-    }
+  }
   img {
     width: 30%;
   }
@@ -502,5 +625,28 @@ const NewDeposit = styled.div`
     :hover {
       background: #000;
     }
+  }
+  @media (max-width: 768px) {
+    width: 30%;
+    margin-top: 3%;
+    small {
+    font-size: 6.7px;
+  }
+  div {
+    margin: 5% 0;
+        p {
+            font-size: 10px;
+        }
+    }
+    button {
+        width: 86%;
+    font-size: 8px;
+    }
+  }
+`
+
+const ProtectImage = styled.section`
+  img {
+    width: 100%;
   }
 `
