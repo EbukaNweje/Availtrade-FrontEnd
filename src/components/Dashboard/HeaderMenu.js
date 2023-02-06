@@ -7,6 +7,9 @@ import bg from "../../asset/bg-wrp.png"
 const MainContainer = styled.div`
     width: 100%;
     height: 55vh;
+    display:flex;
+    flex-direction:column ;
+    justify-content:center ;
     background: url(${bg});
     background-repeat: no-repeat;
     background-size: cover;
@@ -14,19 +17,29 @@ const MainContainer = styled.div`
     @media (max-width: 768px) {
      background-size: cover;
        background-repeat: no-repeat;
-       height: 45vh;
+       height: 20vh;
+    }
+    @media (max-width: 320px) {
+     background-size: cover;
+       background-repeat: no-repeat;
+       height: 19vh;
     }
 `
 const Wrapper = styled.div`
     width: 100%;
     height: 45%;
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     justify-content: center;
+    /* background-color:red ; */
+    @media (max-width: 320px) {
+    /* padding:5px 0px */
+    }
+
 `
 const MyMenu = styled.div`
     margin: 0px 1%;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 700;
     color: white;
     font-family: sans-serif;
@@ -37,8 +50,11 @@ const MyMenu = styled.div`
         color: orange;
     }
 
-    @media (max-width: 768px) {
-      font-size: 8px;
+    @media (max-width: 425px) {
+      font-size: 5px;
+    }
+    @media (max-width: 320px) {
+      font-size: 4px;
     }
 `
 const MyMenuButton = styled.div`
@@ -69,13 +85,14 @@ const MyMenuButton = styled.div`
 `
 const DashBoardText = styled.h2`
     margin-left: 5%;
-    margin-top: 5%;
     font-size: 55px;
     color: white;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     
     @media (max-width: 768px) {
-      font-size: 30px;
+      font-size: 25px;
+    }
+    @media (max-width: 320px) {
     }
 `
 
@@ -93,7 +110,6 @@ const HeaderMenu = () => {
             <MyMenuButton>DEPOSIT</MyMenuButton>
             <MyMenuButton bg>WITHDRAW</MyMenuButton>
         </Wrapper>
-
         <DashBoardText>Dashboard</DashBoardText>
     </MainContainer>
   )
