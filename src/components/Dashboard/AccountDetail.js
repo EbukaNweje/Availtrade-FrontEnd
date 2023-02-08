@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { useLocation } from 'react-router-dom'
 import Owner from '../../asset/pipOwner.png'
 import phone from '../../asset/pipPhone.png'
 import Email from '../../asset/pipEmail.png'
@@ -10,6 +11,10 @@ import head from '../../asset/head.png'
 import protectImage from '../../asset/protect.png'
 
 function AccountDetail() {
+  const location = useLocation()
+  const { edit } = location.state || {}
+  console.log(edit)
+
   return (
     <AccountContainer>
       <p>Welcome: Name of person</p>
@@ -96,7 +101,7 @@ function AccountDetail() {
         </NewDeposit>
       </UpgradeAccount>
       <ProtectImage>
-        <img src={protectImage} alt='img'/>
+        <img src={protectImage} alt="img" />
       </ProtectImage>
     </AccountContainer>
   )
@@ -140,15 +145,17 @@ const AccountType = styled.div`
   align-items: center;
   gap: 4%;
   div {
+    display: flex;
+    flex-direction: column;
     h3 {
       margin: 0;
-      font-size: 28px;
+      font-size: 22px;
       color: #fff;
-      margin-bottom: 3%;
     }
     p {
       font-size: 17px;
       color: #fff;
+      margin: 2% 0 0 0;
     }
   }
   img {
@@ -178,15 +185,17 @@ const AccountEmail = styled.div`
   align-items: center;
   gap: 4%;
   div {
+    display: flex;
+    flex-direction: column;
     h3 {
       margin: 0;
-      font-size: 28px;
+      font-size: 22px;
       color: #fff;
-      margin-bottom: 3%;
     }
     p {
       font-size: 17px;
       color: #fff;
+      margin: 2% 0 0 0;
     }
   }
   img {
@@ -216,15 +225,17 @@ const AccountCountry = styled.div`
   align-items: center;
   gap: 4%;
   div {
+    display: flex;
+    flex-direction: column;
     h3 {
       margin: 0;
-      font-size: 28px;
+      font-size: 22px;
       color: #fff;
-      margin-bottom: 3%;
     }
     p {
       font-size: 17px;
       color: #fff;
+      margin: 2% 0 0 0;
     }
   }
   img {
@@ -254,15 +265,17 @@ const AccountPhone = styled.div`
   align-items: center;
   gap: 4%;
   div {
+    display: flex;
+    flex-direction: column;
     h3 {
       margin: 0;
-      font-size: 28px;
+      font-size: 22px;
       color: #fff;
-      margin-bottom: 3%;
     }
     p {
       font-size: 17px;
       color: #fff;
+      margin: 2% 0 0 0;
     }
   }
   img {
@@ -443,8 +456,8 @@ const UserPackage = styled.div`
 
   @media screen and (min-width: 769px) and (max-width: 1120px) {
     small {
-    font-size: 12px;
-  }
+      font-size: 12px;
+    }
   }
 
   @media (max-width: 768px) {
@@ -454,13 +467,13 @@ const UserPackage = styled.div`
       font-size: 6.7px;
     }
     div {
-        p {
-            font-size: 10px;
-        }
+      p {
+        font-size: 10px;
+      }
     }
     button {
-        width: 86%;
-    font-size: 8px;
+      width: 86%;
+      font-size: 8px;
     }
   }
 `
@@ -514,17 +527,17 @@ const LastDeposit = styled.div`
   @media (max-width: 768px) {
     width: 32%;
     small {
-    font-size: 6.7px;
-  }
-  div {
-    margin: 5% 0;
-        p {
-            font-size: 10px;
-        }
+      font-size: 6.7px;
+    }
+    div {
+      margin: 5% 0;
+      p {
+        font-size: 10px;
+      }
     }
     button {
-        width: 86%;
-    font-size: 8px;
+      width: 86%;
+      font-size: 8px;
     }
   }
 `
@@ -578,17 +591,17 @@ const Withdraw = styled.div`
     width: 31%;
 
     small {
-    font-size: 6.7px;
-  }
-  div {
-    margin: 5% 0;
-        p {
-            font-size: 10px;
-        }
+      font-size: 6.7px;
+    }
+    div {
+      margin: 5% 0;
+      p {
+        font-size: 10px;
+      }
     }
     button {
-        width: 86%;
-    font-size: 8px;
+      width: 86%;
+      font-size: 8px;
     }
   }
 `
@@ -642,17 +655,17 @@ const NewDeposit = styled.div`
     width: 30%;
     margin-top: 3%;
     small {
-    font-size: 6.7px;
-  }
-  div {
-    margin: 5% 0;
-        p {
-            font-size: 10px;
-        }
+      font-size: 6.7px;
+    }
+    div {
+      margin: 5% 0;
+      p {
+        font-size: 10px;
+      }
     }
     button {
-        width: 86%;
-    font-size: 8px;
+      width: 86%;
+      font-size: 8px;
     }
   }
 `

@@ -1,4 +1,5 @@
 import React from 'react'
+import { useLocation, NavLink } from 'react-router-dom'
 import "../../index.css"
 import styled from 'styled-components'
 import bg from "../../asset/bg-wrp.png"
@@ -45,6 +46,15 @@ const MyMenu = styled.div`
     font-family: sans-serif;
     cursor: pointer;
     transition: all 350ms;
+    a {
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    transition: all 350ms;
+    :hover{
+        color: orange;
+    }
+    }
 
     :hover{
         color: orange;
@@ -97,20 +107,33 @@ const DashBoardText = styled.h2`
 `
 
 const HeaderMenu = () => {
+
+
+  const location = useLocation();
+  const { edit } = location.state || {};
+  
   return (
     <MainContainer>
         <Wrapper>
-            <MyMenu>OVERVIEW</MyMenu>
+            <MyMenu>
+            <NavLink to="/dashboard">
+                  OVERVIEW
+              </NavLink>
+            </MyMenu>
             <MyMenu>ABOUT US</MyMenu>
             <MyMenu>FAQS</MyMenu>
             <MyMenu>PRIVACY POLICY</MyMenu>
-            <MyMenu>EDIT PROFILE</MyMenu>
+            <MyMenu >
+              <NavLink to="/edit" state={{ edit: 'edit' }}>
+                  EDIT
+              </NavLink>
+            </MyMenu>
             <MyMenu>CONTACT US</MyMenu>
             <MyMenu>LOGOUT</MyMenu>
             <MyMenuButton>DEPOSIT</MyMenuButton>
             <MyMenuButton bg>WITHDRAW</MyMenuButton>
         </Wrapper>
-        <DashBoardText>Dashboard</DashBoardText>
+        <DashBoardText>{edit ? 'Edit' : 'Dashboard'}</DashBoardText>
     </MainContainer>
   )
 }
