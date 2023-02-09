@@ -1,7 +1,5 @@
 .footer {
   width: 100%;
-  /* height: 100vh; */
-  /* background-color: blue; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -13,9 +11,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #f8f8f8;
+  /* background-color: #f8f8f8; */
+  margin-bottom: 2%;
 }
-
 
 
 .footer_cont {
@@ -42,7 +40,6 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* background-color: red; */
 }
 
 .footer_nav {
@@ -61,6 +58,7 @@
 .button p{
 margin-top: 5px 0;
 }
+
 .button1 {
   width: 35%;
   height: 40px;
@@ -137,7 +135,6 @@ margin-top: 5px 0;
   .button {
     width: 40%;
     margin-bottom: 5px;
-    /* background-color: grey; */
   }
 
   .button1 {
@@ -191,7 +188,6 @@ margin-top: 5px 0;
   .button {
     width: 45%;
     margin-bottom: 5px;
-    /* background-color: grey; */
   }
 
   .button1 {
@@ -215,7 +211,6 @@ margin-top: 5px 0;
     font-weight: 600;
   }
   .footer_nav {
-  /* background-color: grey; */
   width: 70%;
   }
   .footerNav_contain {
@@ -251,7 +246,6 @@ margin-top: 5px 0;
   .button {
     width: 40%;
     margin-bottom: 5px;
-    /* background-color: grey; */
   }
 
   .button1 {
@@ -278,7 +272,6 @@ margin-top: 5px 0;
     font-weight: 700;
   }
   .footer_nav {
-  /* background-color: grey; */
   width: 63%;
   }
   .footerNav_contain {
@@ -292,6 +285,7 @@ margin-top: 5px 0;
     font-size:10px;
   }
 }
+
 @media screen and (max-width:1024px) {
   .button {
     width: 38%;
