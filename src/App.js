@@ -1,6 +1,6 @@
 import './App.css';
 // import Faq from './components/Faq';
-import Question from './components/Question';
+import Question from './components/Faq/Question';
 // import Contact from './components/Contact';
 // import GetStarted from './components/GetStarted';
 

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { TiArrowSortedDown, TiArrowSortedUp } from "react-icons/ti";
-import "./Contact.css";
-import "./GetStarted.css";
+import "../Contacts/Contact.css";
+import "../Steps/GetStarted.css";
 import "./Question.css";
 
 const Faq = (faqs) => {
