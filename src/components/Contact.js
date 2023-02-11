@@ -10,7 +10,7 @@ const Contact = () => {
     <div>
       <section className="contact">
         <h5>24/7 support one touch away</h5>
-        <h1 className="contact_h1">Contact Us</h1>
+        <h1 className="contact_h1 faq_h1">Contact Us</h1>
         <hr className="open_acct_hr" />
       </section>
 
