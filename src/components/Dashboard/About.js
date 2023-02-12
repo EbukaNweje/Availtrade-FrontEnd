@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import certificate from "../../asset/certificate.png"
 
 function About() {
   return (
@@ -29,7 +30,9 @@ function About() {
           administration are prepared to give proficient administrations.
         </p>
       </Detail>
-      <Certificate> ABout</Certificate>
+      <Certificate> 
+        <img src={certificate} alt="certificate"/>
+      </Certificate>
     </AboutContainer>
   )
 }
@@ -65,7 +68,8 @@ const Detail = styled.div`
 `
 
 const Certificate = styled.div`
-  background: #000;
+  display: flex;
+  justify-content: center;
   /* height: 55vh; */
   margin-top: 1%;
   width: 40%;

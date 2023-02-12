@@ -9,6 +9,8 @@ import pipMoney from '../../asset/pipMoney.png'
 import EarnedMoney from '../../asset/Earned-money.png'
 import head from '../../asset/head.png'
 import protectImage from '../../asset/protect.png'
+import ForexCrossRates from './ForexCrossRates'
+import Advanced from './Advanced'
 
 function AccountDetail() {
   const location = useLocation()
@@ -100,9 +102,11 @@ function AccountDetail() {
           <button>MAKE NEW DEPOSIT</button>
         </NewDeposit>
       </UpgradeAccount>
+        <ForexCrossRates/>
       <ProtectImage>
         <img src={protectImage} alt="img" />
       </ProtectImage>
+        <Advanced/>
     </AccountContainer>
   )
 }
@@ -276,6 +280,7 @@ const AccountPhone = styled.div`
       font-size: 17px;
       color: #fff;
       margin: 2% 0 0 0;
+  
     }
   }
   img {
@@ -311,10 +316,9 @@ const AccountBalance = styled.section`
   justify-content: center;
   width: 35%;
   height: 40vh;
-  box-shadow: 4px 3px 10px -4px rgba(0, 0, 0, 0.54);
-  -webkit-box-shadow: 4px 3px 10px -4px rgba(0, 0, 0, 0.54);
-  -moz-box-shadow: 4px 3px 10px -4px rgba(0, 0, 0, 0.54);
-
+  box-shadow: -6px 8px 5px -7px rgba(0,0,0,0.23);
+-webkit-box-shadow: -6px 8px 5px -7px rgba(0,0,0,0.23);
+-moz-box-shadow: -6px 8px 5px -7px rgba(0,0,0,0.23);
   img {
     width: 40%;
   }
@@ -340,9 +344,9 @@ const TotalEarned = styled.div`
   justify-content: center;
   width: 35%;
   height: 40vh;
-  box-shadow: 4px 3px 10px -4px rgba(0, 0, 0, 0.54);
-  -webkit-box-shadow: 4px 3px 10px -4px rgba(0, 0, 0, 0.54);
-  -moz-box-shadow: 4px 3px 10px -4px rgba(0, 0, 0, 0.54);
+  box-shadow: -6px 8px 5px -7px rgba(0,0,0,0.23);
+-webkit-box-shadow: -6px 8px 5px -7px rgba(0,0,0,0.23);
+-moz-box-shadow: -6px 8px 5px -7px rgba(0,0,0,0.23);
 
   img {
     width: 40%;
@@ -369,9 +373,9 @@ const StartUp = styled.div`
   justify-content: center;
   width: 35%;
   height: 40vh;
-  box-shadow: 4px 3px 10px -4px rgba(0, 0, 0, 0.54);
-  -webkit-box-shadow: 4px 3px 10px -4px rgba(0, 0, 0, 0.54);
-  -moz-box-shadow: 4px 3px 10px -4px rgba(0, 0, 0, 0.54);
+  box-shadow: -6px 8px 5px -7px rgba(0,0,0,0.23);
+-webkit-box-shadow: -6px 8px 5px -7px rgba(0,0,0,0.23);
+-moz-box-shadow: -6px 8px 5px -7px rgba(0,0,0,0.23);
 
   img {
     width: 40%;
