@@ -24,6 +24,11 @@ const MainContainer = styled.div`
     background-repeat: no-repeat;
     height: 19vh;
   }
+  @media (max-width: 1024px) {
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 24vh;
+  }
 `
 const Wrapper = styled.div`
   width: 100%;
@@ -31,9 +36,10 @@ const Wrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  /* background-color:red ; */
-  @media (max-width: 320px) {
-    /* padding:5px 0px */
+
+  @media (max-width: 1024px) {
+    margin-top: 5%;
+    padding-top: 10px;
   }
 `
 const MyMenu = styled.div`
