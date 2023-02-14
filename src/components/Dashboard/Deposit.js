@@ -1,24 +1,25 @@
 import React from "react"
 // import { useLocation } from 'react-router-dom'
 import TopHeader from './TopHeader'
-// import BitconScr from './BitconScr'
 import HeaderMenu from "./HeaderMenu"
-// import EditForm from "./EditForm"
-import About from "./About"
+import BitconScr from "./BitconScr"
 import Eze from './Eze'
+import DepositDetail from "./DepositDetail"
+import DepositMethod from "./DepositMethod"
 
-function AboutCompany() {
+function Deposit() {
 
   return (
     <div>
         <TopHeader/>
-        {/* <BitconScr/> */}
+        <BitconScr/>
         <HeaderMenu/>
-        {/* <BitconScr/> */}
-        <About />
+        <BitconScr/>
+        <DepositDetail />
+        <DepositMethod />
         <Eze />
     </div>
   )
 }
 
-export default AboutCompany
+export default Deposit
