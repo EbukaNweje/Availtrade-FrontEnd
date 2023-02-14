@@ -325,21 +325,6 @@ const PhoneNumber = styled.input`
   }
 `
 
-// const SelectCountry = styled.select`
-//   width: 60%;
-//   height: 7vh;
-//   border: 0;
-//   border-radius: 5px;
-//   background: #f9f9fb;
-//   outline: none;
-//   padding-left: 3%;
-//   margin-bottom: 2%;
-//   color: gray;
-//   @media (max-width: 768px) {
-//     width: 93%;
-//   }
-// `
-
 const ButtonContainer = styled.div`
   width: 100%;
   display: flex;
