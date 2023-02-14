@@ -105,7 +105,6 @@ const DepositTable = styled.table`
   background-color: #ffffff;
   border-collapse: collapse;
   border-width: 1px;
-  /* border-color: #13C4EA; */
   border-style: solid;
   color: #000000;
   margin-inline: 8%;
@@ -122,7 +121,6 @@ const DepositTable = styled.table`
     padding-left: 1%;
     height: 5vh;
     color: gray;
-    /* width: 50%; */
   }
 `
 
