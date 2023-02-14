@@ -86,6 +86,9 @@ const MyMenuButton = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  a {
+    text-decoration: none;
+  }
 
   :hover {
     color: ${({ bg }) => (bg ? 'darkblue' : 'darkblue')};
@@ -115,6 +118,7 @@ const HeaderMenu = () => {
   const location = useLocation()
   const { edit } = location.state || {}
   const { about } = location.state || {}
+  const { deposit } = location.state || {}
 
   return (
     <MainContainer>
@@ -136,10 +140,16 @@ const HeaderMenu = () => {
         </MyMenu>
         <MyMenu>CONTACT US</MyMenu>
         <MyMenu>LOGOUT</MyMenu>
-        <MyMenuButton>DEPOSIT</MyMenuButton>
+        <MyMenuButton>
+          <NavLink to="/deposit" state={{ deposit: 'deposit' }}>
+            DEPOSIT
+          </NavLink>
+        </MyMenuButton>
         <MyMenuButton bg>WITHDRAW</MyMenuButton>
       </Wrapper>
-      <DashBoardText>{edit ? 'Edit' : about ? 'About Us' : 'Dashboard'}</DashBoardText>
+      <DashBoardText>
+        {edit ? 'Edit' : about ? 'About Us' : deposit ? 'Deposit' : 'Dashboard'}
+      </DashBoardText>
     </MainContainer>
   )
 }
