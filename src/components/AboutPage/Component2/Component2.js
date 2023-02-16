@@ -1,6 +1,6 @@
 import React from "react";
 import {
-    Container, Wrapper, CircleHold, TextsHold,
+    Container, Wrapper, TextsHold,
     Img,
     H4,
     H1, 
