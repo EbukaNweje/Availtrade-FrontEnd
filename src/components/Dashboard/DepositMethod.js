@@ -139,5 +139,6 @@ const AmountToBeWithdrawn = styled.div`
     border-left: 2px solid #fff;
     height: 6vh;
     margin: 0;
+    padding: 10px;
   }
 `

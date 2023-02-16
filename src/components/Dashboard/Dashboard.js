@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 
 import TopHeader from './TopHeader'
 import BitconScr from './BitconScr'
@@ -6,8 +6,12 @@ import HeaderMenu from "./HeaderMenu"
 import AccountDetail from './AccountDetail'
 import Eze from './Eze'
 
-const Dashboard = () => {
+const Dashboard = ({Display}) => {
+  useEffect(()=>{
 
+    /* eslint-disable-next-line no-unused-expressions */
+    return Display
+  },[])
   return (
     <div>
         <TopHeader/>

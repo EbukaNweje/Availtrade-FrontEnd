@@ -102,11 +102,11 @@ function AccountDetail() {
           <button>MAKE NEW DEPOSIT</button>
         </NewDeposit>
       </UpgradeAccount>
-        <ForexCrossRates/>
+        {/* {<ForexCrossRates/>} */}
       <ProtectImage>
         <img src={protectImage} alt="img" />
       </ProtectImage>
-        <Advanced/>
+        {/* <Advanced/> */}
     </AccountContainer>
   )
 }
