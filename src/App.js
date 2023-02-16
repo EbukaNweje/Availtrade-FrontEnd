@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import SignUp from "./components/SignUp";
 import Login from './components/Login';
@@ -6,12 +7,15 @@ import Private from './components/Private';
 import EditProfile from './components/Dashboard/EditProfile';
 import AboutCompany from './components/Dashboard/AboutCompany';
 import Deposit from './components/Dashboard/Deposit';
+
+import BitcoinDeposit from './components/Dashboard/BitcoinDeposit';
+import RequestForm from './components/Dashboard/RequestForm';
 import AboutPage from './components/AboutPage/AboutPage';
 import AffiliatePage from './components/AffiliatePage/AffiliatePage';
 import TradingPage from './components/TradingPage/TradingPage';
 import Header from './components/Header/Header';
 import LandingPage from './components/LandingPage/LandingPage';
-import { useState } from 'react';
+
 
 function App() {
 const [display, setDisplay] = useState(true)
@@ -35,6 +39,8 @@ const [display, setDisplay] = useState(true)
             <Route path="/edit" element={<EditProfile />} />
             <Route path="/about" element={<AboutCompany />} />
             <Route path="/deposit" element={<Deposit />} />
+            <Route path="/bitcoin-deposit" element={<BitcoinDeposit />} />
+            <Route path="/request-form" element={<RequestForm />} />
           </Route>
         </Routes>
       </Router>
