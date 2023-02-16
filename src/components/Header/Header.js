@@ -1,4 +1,6 @@
 import React, {useState, useEffect} from 'react';
+import { NavLink } from 'react-router-dom'
+
 import pic from '../../asset/preeminentcryptotrade.png'
 import logo from '../../asset/preeminentcryptotrade.png'
 // import pic from '../'
@@ -33,7 +35,6 @@ const Header = () => {
   const [header, setHeader] = useState(false);
 
   const changeHeaderBackground = () =>{
-    // console.log((window).scrollY);
     if(window.scrollY >= 66){
       setHeader(true);
     }else{
@@ -64,7 +65,11 @@ const Header = () => {
             <Line></Line>
             <NavRight>
             <CreateAccount2 to='/siginup'>Create Account</CreateAccount2>
-            <Button2 style={{color: "black"}} to="/login">Sign In</Button2> 
+            <Button2 style={{color: "black"}}>
+              <NavLink to="/login">
+              Log In
+              </NavLink>
+              </Button2> 
             </NavRight>
           </NavWrap>
           <MenuHold  onClick={() =>{
@@ -90,7 +95,11 @@ const Header = () => {
        <Line></Line>
        <NavRight>
        <CreateAccount to='/siginup'>Create Account</CreateAccount>
-       <Button to='/login'>Sign In</Button>
+       <Button>
+       <NavLink to="/login">
+              Log In
+              </NavLink>
+       </Button>
        </NavRight>
      </NavWrap>
      <MenuHold  onClick={() =>{

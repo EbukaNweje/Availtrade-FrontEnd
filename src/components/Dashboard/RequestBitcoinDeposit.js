@@ -1,16 +1,11 @@
-import { useEffect } from 'react'
 import TopHeader from './TopHeader'
 import HeaderMenu from "./HeaderMenu"
 import BitconScr from "./BitconScr"
 import Eze from './Eze'
 import DepositDetail from "./DepositDetail"
-import RequestWithDrawalBank from './RequestWithDrawalBank'
+import RequestWithDrawalBitcoin from './RequestWithdrawalBitcoin'
 
-function RequestWithDrawal( { Display }) {
-    useEffect(() => {
-        /* eslint-disable-next-line no-unused-expressions */
-        return Display
-      }, [])
+function RequestBitcoinWithdraw( { Display }) {
   return (
     <div>
       <TopHeader />
@@ -18,10 +13,10 @@ function RequestWithDrawal( { Display }) {
       <HeaderMenu />
       <BitconScr />
       <DepositDetail />
-      <RequestWithDrawalBank />
+      <RequestWithDrawalBitcoin Display = {Display} />
       <Eze />
     </div>
   )
 }
 
-export default RequestWithDrawal
+export default RequestBitcoinWithdraw

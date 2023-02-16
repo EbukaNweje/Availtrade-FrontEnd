@@ -128,7 +128,7 @@ const HeaderMenu = () => {
           <NavLink to="/dashboard">OVERVIEW</NavLink>
         </MyMenu>
         <MyMenu>
-          <NavLink to="/about" state={{ about: 'about' }}>
+          <NavLink to="/about-company" state={{ about: 'about' }}>
             ABOUT
           </NavLink>
         </MyMenu>

@@ -326,6 +326,11 @@ align-items: center;
 border-radius: 50px;
 cursor: pointer;
 
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
 @media Screen and (max-width: 768px){
     /* width: 150px; */
     height: 35px;
@@ -343,6 +348,11 @@ justify-content: center;
 align-items: center;
 border-radius: 50px;
 cursor: pointer;
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
 
 @media Screen and (max-width: 768px){
     /* width: 150px; */
