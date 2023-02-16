@@ -6,6 +6,7 @@ import Private from './components/Private';
 import EditProfile from './components/Dashboard/EditProfile';
 import AboutCompany from './components/Dashboard/AboutCompany';
 import Deposit from './components/Dashboard/Deposit';
+import BitcoinDeposit from './components/Dashboard/BitcoinDeposit';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
             <Route path="/edit" element={<EditProfile />} />
             <Route path="/about" element={<AboutCompany />} />
             <Route path="/deposit" element={<Deposit />} />
+            <Route path="/bitcoin-deposit" element={<BitcoinDeposit />} />
           </Route>
         </Routes>
       </Router>

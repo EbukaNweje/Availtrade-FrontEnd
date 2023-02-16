@@ -12,7 +12,7 @@ function DepositMethod() {
     <DepositMethodContainer>
       <DepositMethodHeading>Select A Deposit Method</DepositMethodHeading>
       <PaymentMethods>
-        <NavLink to="">
+        <NavLink to="/bitcoin-deposit">
           <img src={bitcoin} alt="bitcoinImage" />
         </NavLink>
         <NavLink to="">
