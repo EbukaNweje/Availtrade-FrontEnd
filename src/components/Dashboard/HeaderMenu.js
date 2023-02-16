@@ -10,7 +10,7 @@ const MainContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: url(${bg});
+  background: url(${bg}), #03318F;
   background-repeat: no-repeat;
   background-size: cover;
 
@@ -19,10 +19,10 @@ const MainContainer = styled.div`
     background-repeat: no-repeat;
     height: 20vh;
   }
-  @media (max-width: 320px) {
+  @media (max-width: 375px) {
     background-size: cover;
     background-repeat: no-repeat;
-    height: 19vh;
+    height: 5vh;
   }
   @media (max-width: 1024px) {
     background-size: cover;

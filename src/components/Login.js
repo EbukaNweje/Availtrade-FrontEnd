@@ -9,7 +9,9 @@ const Login = () => {
     <MainContainer>
          <FirstContainer>
           <LogoDiv>
-            <LogoImg src={logo} alt="Logo"/>
+            <Link to={"/"}>
+             <LogoImg src={logo} alt="Logo"/>
+            </Link>
           </LogoDiv>
           <Welcome>
               <WelText>Welcome to <span>Preeminentcryptotrade</span> </WelText>
@@ -28,7 +30,7 @@ const Login = () => {
         <FirstParagraph>
           Don't have an account?
           <span>
-            <Link to="/">SignUp</Link>
+            <Link to="/siginup">SignUp</Link>
           </span>
         </FirstParagraph>
         <Header2>Login Account</Header2>

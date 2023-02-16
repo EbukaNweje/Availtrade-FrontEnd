@@ -1,15 +1,24 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 import bg from '../asset/bitcoinwallpaper.jpg'
 import logo from '../asset/preeminentcryptotrade.png'
 
-function SignUp() {
+function SignUp({Display}) {
+
+   useEffect(()=>{
+
+    /* eslint-disable-next-line no-unused-expressions */
+    return Display
+  },[])
+
   return (
     <MainContainer>
       <FirstContainer>
           <LogoDiv>
-            <LogoImg src={logo} alt="Logo"/>
+            <Link to="/">
+              <LogoImg src={logo} alt="Logo"/>
+            </Link>
           </LogoDiv>
           <Welcome>
               <WelText>Welcome to <span>Preeminentcryptotrade</span> </WelText>
