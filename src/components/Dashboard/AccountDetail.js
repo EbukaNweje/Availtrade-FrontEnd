@@ -9,8 +9,6 @@ import pipMoney from '../../asset/pipMoney.png'
 import EarnedMoney from '../../asset/Earned-money.png'
 import head from '../../asset/head.png'
 import protectImage from '../../asset/protect.png'
-import ForexCrossRates from './ForexCrossRates'
-import Advanced from './Advanced'
 
 function AccountDetail() {
   const location = useLocation()
@@ -102,11 +100,11 @@ function AccountDetail() {
           <button>MAKE NEW DEPOSIT</button>
         </NewDeposit>
       </UpgradeAccount>
-        <ForexCrossRates/>
+        {/* {<ForexCrossRates/>} */}
       <ProtectImage>
         <img src={protectImage} alt="img" />
       </ProtectImage>
-        <Advanced/>
+        {/* <Advanced/> */}
     </AccountContainer>
   )
 }

@@ -48,11 +48,12 @@ const Container2 = styled.div`
     font-weight: 500;
     font-size: 13px;
     align-items: center;
-    
+    margin-left: 20px;
     @media (max-width: 768px) {
         font-size: 5px;
         width: 30%;
         justify-content: center;
+        margin-left: 0;
     }
 
     
@@ -70,8 +71,6 @@ const Container3 = styled.div`
         width: 37%;
     }
 `
-// const Container = styled.div``
-
 
 const TopHeader = () => {
   return (

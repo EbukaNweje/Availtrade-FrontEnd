@@ -10,7 +10,7 @@ const MainContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: url(${bg});
+  background: url(${bg}), #03318f;
   background-repeat: no-repeat;
   background-size: cover;
 
@@ -19,10 +19,10 @@ const MainContainer = styled.div`
     background-repeat: no-repeat;
     height: 20vh;
   }
-  @media (max-width: 320px) {
+  @media (max-width: 375px) {
     background-size: cover;
     background-repeat: no-repeat;
-    height: 19vh;
+    height: 5vh;
   }
   @media (max-width: 1024px) {
     background-size: cover;
@@ -119,6 +119,7 @@ const HeaderMenu = () => {
   const { edit } = location.state || {}
   const { about } = location.state || {}
   const { deposit } = location.state || {}
+  const { withdraw } = location.state || {}
 
   return (
     <MainContainer>
@@ -127,7 +128,7 @@ const HeaderMenu = () => {
           <NavLink to="/dashboard">OVERVIEW</NavLink>
         </MyMenu>
         <MyMenu>
-          <NavLink to="/about" state={{ about: 'about' }}>
+          <NavLink to="/about-company" state={{ about: 'about' }}>
             ABOUT
           </NavLink>
         </MyMenu>
@@ -145,10 +146,14 @@ const HeaderMenu = () => {
             DEPOSIT
           </NavLink>
         </MyMenuButton>
-        <MyMenuButton bg>WITHDRAW</MyMenuButton>
+        <MyMenuButton bg>
+          <NavLink to="/withdraw" state={{ withdraw: 'withdraw' }}>
+            WITHDRAW
+          </NavLink>
+        </MyMenuButton>
       </Wrapper>
       <DashBoardText>
-        {edit ? 'Edit' : about ? 'About Us' : deposit ? 'Deposit' : 'Dashboard'}
+        {edit ? 'Edit' : about ? 'About Us' : deposit ? 'Deposit' : withdraw ? 'Withdraw' : 'Dashboard'}
       </DashBoardText>
     </MainContainer>
   )

@@ -1,3 +1,4 @@
+
 import React, {useEffect, useState} from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
@@ -47,11 +48,23 @@ function SignUp({Display}) {
     })
     }
 
+function SignUp({Display}) {
+
+   useEffect(()=>{
+
+    /* eslint-disable-next-line no-unused-expressions */
+    return Display
+    /* eslint-disable-next-line react-hooks/exhaustive-deps */
+  },[])
+
+
   return (
     <MainContainer>
       <FirstContainer>
           <LogoDiv>
-            <LogoImg src={logo} alt="Logo"/>
+            <Link to="/">
+              <LogoImg src={logo} alt="Logo"/>
+            </Link>
           </LogoDiv>
           <Welcome>
               <WelText>Welcome to <span>Preeminentcryptotrade</span> </WelText>
