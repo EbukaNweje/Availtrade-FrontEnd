@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import styled from 'styled-components'
 
-function RequestWithDrawalBank({ Display }) {
+function RequestWithDrawalBitcoin({ Display }) {
   useEffect(() => {
     /* eslint-disable-next-line no-unused-expressions */
     return Display
@@ -10,19 +10,15 @@ function RequestWithDrawalBank({ Display }) {
   return (
     <MainContainer>
       <SecondContainer>
-        <p>WITHDRAWAL METHOD : BANK DEPOSIT</p>
+        <p>WITHDRAWAL METHOD : BITCOIN WITHDRAWAL</p>
         <small>Use the form below to initiate Your Withdrawal</small>
         <FormInput>
           <label>Your First Name</label>
           <FirstNameInput type="text" placeholder="first name" />
           <label>Your Last Name</label>
           <LastNameInput type="text" placeholder="Last name" />
-          <label>Your Email Address</label>
-          <EmailInput type="email" placeholder="Email address" />
-          <label>Your Bank Name</label>
-          <PhoneNumber type="text" placeholder="Bank Name" />
-          <label>Your Account Number</label>
-          <PhoneNumber type="text" placeholder="Your Account Number" />
+          <label>Bitcoin wallet Address</label>
+          <EmailInput placeholder="Bitcoin wallet" />
           <label>Amount To Withdraw</label>
           <PhoneNumber type="number" placeholder="Amount To Withdraw" />
           <ButtonContainer>
@@ -34,7 +30,7 @@ function RequestWithDrawalBank({ Display }) {
   )
 }
 
-export default RequestWithDrawalBank
+export default RequestWithDrawalBitcoin
 
 const MainContainer = styled.div`
   width: 100%;

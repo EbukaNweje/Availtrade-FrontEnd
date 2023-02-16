@@ -17,6 +17,7 @@ import Header from './components/Header/Header';
 import LandingPage from './components/LandingPage/LandingPage';
 import Withdraw from './components/Dashboard/Withdraw';
 import RequestWithDrawal from './components/Dashboard/RequestWithDrawal';
+import RequestBitcoinWithdraw from './components/Dashboard/RequestBitcoinDeposit';
 
 function App() {
 const [display, setDisplay] = useState(true)
@@ -32,17 +33,18 @@ const [display, setDisplay] = useState(true)
         <Route path="/about" element={<AboutPage/>}/>
         <Route path="/affiliate" element={<AffiliatePage/>}/>
         <Route path="/trading" element={<TradingPage/>}/>
-          <Route path='/login' element={<Login />} />
+          <Route path='/login' element={<Login  Display = {toggle}/>} />
           <Route path="/siginup" element={<SignUp Display = {toggle}/>} />
           <Route element={<Private />}>
             <Route exact path="/dashboard" element={<Dashboard Display = {toggle}/>} />
             <Route path="/edit" element={<EditProfile />} />
-            <Route path="/about" element={<AboutCompany />} />
+            <Route path="/about-company" element={<AboutCompany />} />
             <Route path="/deposit" element={<Deposit />} />
             <Route path="/bitcoin-deposit" element={<BitcoinDeposit />} />
             <Route path="/request-form" element={<RequestForm />} />
             <Route path="/withdraw" element={<Withdraw Display = {toggle}/>} />
             <Route path="/request-bank-withdrawal" element={<RequestWithDrawal Display = {toggle}/>} />
+            <Route path="/request-bitcoin-withdrawal" element={<RequestBitcoinWithdraw Display = {toggle}/>} />
           </Route>
         </Routes>
       </Router>

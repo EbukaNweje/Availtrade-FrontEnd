@@ -8,10 +8,10 @@ function WithdrawalMethod() {
     <DepositMethodContainer>
       <DepositMethodHeading>Select A Withdrawal Method</DepositMethodHeading>
       <PaymentMethods>
-        <NavLink to="/bitcoin-deposit">
+        <NavLink to="/request-bitcoin-withdrawal" state={{ withdraw: 'withdraw' }}>
           <img src={bitcoin} alt="bitcoinImage" />
         </NavLink>
-        <NavLink to="/request-bank-withdrawal">
+        <NavLink to="/request-bank-withdrawal" state={{ withdraw: 'withdraw' }}>
           <p className="moneyG" src={moneyGram} alt="moneyGramImage">
             Bank Deposit
           </p>
