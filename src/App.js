@@ -15,7 +15,8 @@ import AffiliatePage from './components/AffiliatePage/AffiliatePage';
 import TradingPage from './components/TradingPage/TradingPage';
 import Header from './components/Header/Header';
 import LandingPage from './components/LandingPage/LandingPage';
-
+import Withdraw from './components/Dashboard/Withdraw';
+import RequestWithDrawal from './components/Dashboard/RequestWithDrawal';
 
 function App() {
 const [display, setDisplay] = useState(true)
@@ -23,7 +24,6 @@ const [display, setDisplay] = useState(true)
   const toggle = () => setDisplay(false)
   const changeToggle = () => setDisplay(true)
 
-  console.log(display)
   return (
       <Router>
         {display? <Header/> : null}
@@ -41,6 +41,8 @@ const [display, setDisplay] = useState(true)
             <Route path="/deposit" element={<Deposit />} />
             <Route path="/bitcoin-deposit" element={<BitcoinDeposit />} />
             <Route path="/request-form" element={<RequestForm />} />
+            <Route path="/withdraw" element={<Withdraw Display = {toggle}/>} />
+            <Route path="/request-bank-withdrawal" element={<RequestWithDrawal Display = {toggle}/>} />
           </Route>
         </Routes>
       </Router>

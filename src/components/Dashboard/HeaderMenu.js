@@ -10,7 +10,7 @@ const MainContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: url(${bg}), #03318F;
+  background: url(${bg}), #03318f;
   background-repeat: no-repeat;
   background-size: cover;
 
@@ -119,6 +119,7 @@ const HeaderMenu = () => {
   const { edit } = location.state || {}
   const { about } = location.state || {}
   const { deposit } = location.state || {}
+  const { withdraw } = location.state || {}
 
   return (
     <MainContainer>
@@ -145,10 +146,14 @@ const HeaderMenu = () => {
             DEPOSIT
           </NavLink>
         </MyMenuButton>
-        <MyMenuButton bg>WITHDRAW</MyMenuButton>
+        <MyMenuButton bg>
+          <NavLink to="/withdraw" state={{ withdraw: 'withdraw' }}>
+            WITHDRAW
+          </NavLink>
+        </MyMenuButton>
       </Wrapper>
       <DashBoardText>
-        {edit ? 'Edit' : about ? 'About Us' : deposit ? 'Deposit' : 'Dashboard'}
+        {edit ? 'Edit' : about ? 'About Us' : deposit ? 'Deposit' : withdraw ? 'Withdraw' : 'Dashboard'}
       </DashBoardText>
     </MainContainer>
   )
