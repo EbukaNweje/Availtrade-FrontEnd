@@ -15,19 +15,19 @@ function DepositMethod() {
         <NavLink to="/bitcoin-deposit">
           <img src={bitcoin} alt="bitcoinImage" />
         </NavLink>
-        <NavLink to="">
+        <NavLink to="/request-form">
           <img className="moneyG" src={moneyGram} alt="moneyGramImage" />
         </NavLink>
-        <NavLink to="">
+        <NavLink to="/request-form">
           <img src={payPal} alt="payPalImage" />
         </NavLink>
-        <NavLink to="">
+        <NavLink to="/request-form">
           <img className="ria" src={ria} alt="riaImage" />
         </NavLink>
-        <NavLink to="">
+        <NavLink to="/request-form">
           <img src={visa} alt="visaImage" />
         </NavLink>
-        <NavLink to="">
+        <NavLink to="/request-form">
           <img src={western} alt="westernImage" />
         </NavLink>
       </PaymentMethods>
@@ -91,7 +91,7 @@ const PaymentMethods = styled.div`
   }
 
   img {
-    width: 25%;
+    width: 20%;
   }
 `
 const AccountBal = styled.h2`

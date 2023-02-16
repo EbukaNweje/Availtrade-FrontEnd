@@ -7,6 +7,7 @@ import EditProfile from './components/Dashboard/EditProfile';
 import AboutCompany from './components/Dashboard/AboutCompany';
 import Deposit from './components/Dashboard/Deposit';
 import BitcoinDeposit from './components/Dashboard/BitcoinDeposit';
+import RequestForm from './components/Dashboard/RequestForm';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
             <Route path="/about" element={<AboutCompany />} />
             <Route path="/deposit" element={<Deposit />} />
             <Route path="/bitcoin-deposit" element={<BitcoinDeposit />} />
+            <Route path="/request-form" element={<RequestForm />} />
           </Route>
         </Routes>
       </Router>
