@@ -5,6 +5,7 @@ function RequestWithDrawalBitcoin({ Display }) {
   useEffect(() => {
     /* eslint-disable-next-line no-unused-expressions */
     return Display
+    /* eslint-disable-next-line react-hooks/exhaustive-deps */
   }, [])
 
   return (
@@ -145,21 +146,6 @@ const PhoneNumber = styled.input`
   margin-bottom: 2%;
   @media (max-width: 768px) {
     width: 90%;
-  }
-`
-
-const SelectGender = styled.select`
-  width: 98%;
-  height: 7vh;
-  border: 0;
-  border-radius: 5px;
-  background: #f9f9fb;
-  outline: none;
-  padding-left: 3%;
-  margin-bottom: 2%;
-  color: gray;
-  @media (max-width: 768px) {
-    width: 93%;
   }
 `
 

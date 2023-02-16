@@ -13,6 +13,7 @@ const LandingPage = ({changeDisplay}) => {
 
     /* eslint-disable-next-line no-unused-expressions */
     return changeDisplay
+    /* eslint-disable-next-line react-hooks/exhaustive-deps */
   },[])
   return (
     <Container>
