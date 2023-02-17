@@ -36,7 +36,7 @@ const [display, setDisplay] = useState(true)
           <Route path='/login' element={<Login  Display = {toggle}/>} />
           <Route path="/siginup" element={<SignUp Display = {toggle}/>} />
           <Route element={<Private />}>
-            <Route exact path="/dashboard" element={<Dashboard Display = {toggle}/>} />
+            <Route exact path="/dashboard/:userid" element={<Dashboard Display = {toggle}/>} />
             <Route path="/edit" element={<EditProfile />} />
             <Route path="/about-company" element={<AboutCompany />} />
             <Route path="/deposit" element={<Deposit />} />

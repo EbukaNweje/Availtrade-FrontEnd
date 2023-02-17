@@ -8,8 +8,8 @@ import sitelock from '../../../asset/sitelock.png'
 import trustwave from '../../../asset/trustwave.png'
 import macAfee from '../../../asset/mcafee.png'
 import geotrust from '../../../asset/geotrust.png'
-import norton from '../../../asset/Norton.png'
 import trustguard from '../../../asset/trustguard.png'
+import norton from '../../../asset/Norton.png'
 import trends from '../../../asset/trends.png'
 
 

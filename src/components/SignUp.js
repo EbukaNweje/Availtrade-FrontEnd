@@ -1,7 +1,7 @@
 
 import React, {useEffect, useState} from 'react'
 import styled from 'styled-components'
-import { Link } from 'react-router-dom'
+import { json, Link } from 'react-router-dom'
 import bg from '../asset/bitcoinwallpaper.jpg'
 import logo from '../asset/preeminentcryptotrade.png'
 import { useNavigate } from "react-router-dom"
@@ -28,17 +28,20 @@ function SignUp({Display}) {
 
     const Data = {firstName,lastName,referenceid,password,confirmPassword,gender,phoneNumber,email}
     const url = "https://preeminentcryptotrade.onrender.com/api/register"
-    const Siginup = () => {
+    
+    const Siginup = (e) => {
+      e.preventDefault()
       Axios.post(url,Data)
       .then((res) => {
         localStorage.setItem("User", JSON.stringify(res.data));
-      console.log(res)
+        console.log(res)
       }
       )
       .then(()=>{
         setMessage({ error: true, msg: "successfully!" });
+        const id =JSON.parse(localStorage.getItem("User") )
         setTimeout(() => {
-          navigate("/")
+          navigate(`/dashboard/${id.data._id}`) 
         }, [2000]);
       })
       .catch((error)=>{
@@ -48,7 +51,6 @@ function SignUp({Display}) {
     })
     }
 
-function SignUp({Display}) {
 
    useEffect(()=>{
 
@@ -87,8 +89,8 @@ function SignUp({Display}) {
           </span>
         </FirstParagraph>
         <Header2>Create Account</Header2>
-        <FormInput onSubmit={()=> Siginup()}>
-          <FirstNameInput type="text" required placeholder="Reference ID(Optional)(*)" value={referenceid} onChange ={(e)=>{setReferenceId(e.target.value)}}/>
+        <FormInput onSubmit={(e)=> Siginup(e)}>
+          <FirstNameInput type="text"  placeholder="Reference ID(Optional)(*)" value={referenceid} onChange ={(e)=>{setReferenceId(e.target.value)}}/>
           <FirstNameInput type="text" required placeholder="First Name(*)" value={firstName} onChange ={(e)=>{setFirstName(e.target.value)}}/>
           <LastNameInput type="text" required placeholder="Last Name(*)" value={lastName} onChange ={(e)=>{setLastName(e.target.value)}}/>
           <EmailInput type="email" required placeholder="Email Address(*)" value={email} onChange ={(e)=>{setEmail(e.target.value)}}/>

@@ -1,10 +1,42 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 import bg from '../asset/bitcoinwallpaper.jpg'
 import logo from '../asset/preeminentcryptotrade.png'
+import { useNavigate } from "react-router-dom"
+import Axios from "axios"
 
 const Login = ({ Display }) => {
+  const navigate = useNavigate()
+  const [email, setEmail] = useState("")
+  const [password, setPassword] = useState("")
+  const [message, setMessage] = useState({ error: false, msg: "" });
+
+  const url = "https://preeminentcryptotrade.onrender.com/api/login"
+  const Data = {email, password}
+  const Login = (e) => {
+    e.preventDefault()
+    Axios.post(url,Data)
+    .then((res) => {
+      localStorage.setItem("User", JSON.stringify(res.data));
+      console.log(res)
+    }
+    )
+    .then(()=>{
+      setMessage({ error: true, msg: "successfully!" });
+      const id =JSON.parse(localStorage.getItem("User") )
+      console.log(id._id)
+      setTimeout(() => {
+        navigate(`/dashboard/${id._id}`) 
+      }, [2000]);
+    })
+    .catch((error)=>{
+      setMessage({error: false, msg: "user not found" });
+    console.log(error)
+    //  reset(),
+  })
+  }
+  
   useEffect(() => {
     /* eslint-disable-next-line no-unused-expressions */
     return Display
@@ -45,9 +77,9 @@ const Login = ({ Display }) => {
           </span>
         </FirstParagraph>
         <Header2>Login Account</Header2>
-        <FormInput>
-          <EmailInput type="email" placeholder="Email Address" />
-          <Password type="password" placeholder="Input Password" />
+        <FormInput  onSubmit={(e)=> Login(e)}>
+          <EmailInput type="email" placeholder="Email Address"  value={email} onChange ={(e)=>{setEmail(e.target.value)}}/>
+          <Password type="password" placeholder="Input Password"  value={password} onChange ={(e)=>{setPassword(e.target.value)}}/>
           <CheckBoxContainer>
             <CheckBox type="checkbox" />
             <p>Keep me Logged in</p>
