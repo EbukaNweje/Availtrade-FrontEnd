@@ -28,7 +28,7 @@ const Login = ({ Display }) => {
       setMessage({ error: true, msg: "successfully!" });
       const id =JSON.parse(localStorage.getItem("User"))
       setTimeout(() => {
-        navigate(`/dashboard/${id._id}/${id.token}`) 
+        navigate(`/dashboard/${id._id}`) 
       console.log(id._id)
       }, [2000]);
     })
