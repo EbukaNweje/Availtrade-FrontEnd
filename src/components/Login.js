@@ -14,6 +14,7 @@ const Login = ({ Display }) => {
 
   const url = "https://preeminentcryptotrade.onrender.com/api/login"
   const Data = {email, password}
+
   const Login = (e) => {
     e.preventDefault()
     Axios.post(url,Data)
@@ -24,10 +25,10 @@ const Login = ({ Display }) => {
     )
     .then(()=>{
       setMessage({ error: true, msg: "successfully!" });
-      const id =JSON.parse(localStorage.getItem("User") )
-      console.log(id._id)
+      const id =JSON.parse(localStorage.getItem("User"))
       setTimeout(() => {
-        navigate(`/dashboard/${id._id}`) 
+        navigate(`/dashboard/${id._id}/${id.token}`) 
+      console.log(id._id)
       }, [2000]);
     })
     .catch((error)=>{

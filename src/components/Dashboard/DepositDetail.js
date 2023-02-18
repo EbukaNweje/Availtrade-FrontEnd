@@ -6,34 +6,37 @@ import Country from '../../asset/pipCountry.png'
 
 
 function DepositDetail() {
+  const UserData =JSON.parse(localStorage.getItem("User"))
+/*   console.log("This is user data",UserData.data) */
+
   return (
     <AccountInfo>
       <AccountType>
         <img src={Owner} alt="img" />
         <div>
           <h3>ACCOUNT</h3>
-          <p>BITCOIN INVESTMENT</p>
+       {/*    <p>BITCOIN INVESTMENT</p> */}
         </div>
       </AccountType>
       <AccountEmail>
         <img src={Email} alt="img" />
         <div>
           <h3>EMAIL</h3>
-          <p>someonesemail@email.com</p>
+          <p>{UserData.data.email}</p>
         </div>
       </AccountEmail>
       <AccountCountry>
         <img src={Country} alt="img" />
         <div>
           <h3>COUNTRY</h3>
-          <p>mozambique</p>
+          {/* <p>mozambique</p> */}
         </div>
       </AccountCountry>
       <AccountPhone>
         <img src={phone} alt="img" />
         <div>
           <h3>PHONE:</h3>
-          <p>+123456789</p>
+          <p>{UserData.data.phoneNumber}</p>
         </div>
       </AccountPhone>
     </AccountInfo>
