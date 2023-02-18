@@ -1,7 +1,7 @@
 import React from 'react';
 import {
     Container, Wrapper,Hold, H1, Line, Content, Div, Wrap, Circle2,
-    Icon, H5
+     H5
 } from './Component1Style';
 
 

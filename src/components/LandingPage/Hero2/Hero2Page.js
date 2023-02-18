@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 import {
     Container, LeftDiv, H4, H1, Content, Line,ButtonHold,
     KnowMore, Arrow, RightDiv, Wrapper, Img, Content1
