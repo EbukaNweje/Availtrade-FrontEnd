@@ -120,34 +120,36 @@ const HeaderMenu = () => {
   const { about } = location.state || {}
   const { deposit } = location.state || {}
   const { withdraw } = location.state || {}
+  const id =JSON.parse(localStorage.getItem("User") )
+/*   console.log("this is",id.data._id) */
 
   return (
     <MainContainer>
       <Wrapper>
         <MyMenu>
-          <NavLink to="/dashboard">OVERVIEW</NavLink>
+          <NavLink to={`/dashboard/${id.data._id}/${id.data.token}`}>OVERVIEW</NavLink>
         </MyMenu>
         <MyMenu>
-          <NavLink to="/about-company" state={{ about: 'about' }}>
+          <NavLink to={`/about-company/${id.data._id}/${id.data.token}`}state={{ about: 'about' }}>
             ABOUT
           </NavLink>
         </MyMenu>
         <MyMenu>FAQS</MyMenu>
         <MyMenu>PRIVACY POLICY</MyMenu>
         <MyMenu>
-          <NavLink to="/edit" state={{ edit: 'edit' }}>
+          <NavLink to={`/edit/${id.data._id}/${id.data.token}`} state={{ edit: 'edit' }}>
             EDIT
           </NavLink>
         </MyMenu>
         <MyMenu>CONTACT US</MyMenu>
         <MyMenu>LOGOUT</MyMenu>
         <MyMenuButton>
-          <NavLink to="/deposit" state={{ deposit: 'deposit' }}>
+          <NavLink to={`/deposit/${id.data._id}/${id.data.token}`}   state={{ deposit: 'deposit' }}>
             DEPOSIT
           </NavLink>
         </MyMenuButton>
         <MyMenuButton bg>
-          <NavLink to="/withdraw" state={{ withdraw: 'withdraw' }}>
+          <NavLink to={`/withdraw/${id.data._id}/${id.data.token}`} state={{ withdraw: 'withdraw' }}>
             WITHDRAW
           </NavLink>
         </MyMenuButton>

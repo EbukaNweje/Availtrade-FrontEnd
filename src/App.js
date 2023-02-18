@@ -36,13 +36,13 @@ const [display, setDisplay] = useState(true)
           <Route path='/login' element={<Login  Display = {toggle}/>} />
           <Route path="/siginup" element={<SignUp Display = {toggle}/>} />
           <Route element={<Private />}>
-            <Route exact path="/dashboard/:userid" element={<Dashboard Display = {toggle}/>} />
-            <Route path="/edit" element={<EditProfile />} />
-            <Route path="/about-company" element={<AboutCompany />} />
-            <Route path="/deposit" element={<Deposit />} />
+            <Route exact path="/dashboard/:userid/:token" element={<Dashboard Display = {toggle}/>} />
+            <Route path="/edit/:userid/:token" element={<EditProfile />} />
+            <Route path="/about-company/:userid/:token" element={<AboutCompany />} />
+            <Route path="/deposit/:userid/:token" element={<Deposit />} />
             <Route path="/bitcoin-deposit" element={<BitcoinDeposit />} />
             <Route path="/request-form" element={<RequestForm />} />
-            <Route path="/withdraw" element={<Withdraw Display = {toggle}/>} />
+            <Route path="/withdraw/:userid/:token" element={<Withdraw Display = {toggle}/>} />
             <Route path="/request-bank-withdrawal" element={<RequestWithDrawal Display = {toggle}/>} />
             <Route path="/request-bitcoin-withdrawal" element={<RequestBitcoinWithdraw Display = {toggle}/>} />
           </Route>

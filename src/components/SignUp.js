@@ -41,7 +41,7 @@ function SignUp({Display}) {
         setMessage({ error: true, msg: "successfully!" });
         const id =JSON.parse(localStorage.getItem("User") )
         setTimeout(() => {
-          navigate(`/dashboard/${id.data._id}`) 
+          navigate(`/dashboard/${id.data._id}/${id.data.token}`) 
         }, [2000]);
       })
       .catch((error)=>{
