@@ -1,10 +1,56 @@
-import React, {useEffect} from 'react'
+
+import React, {useEffect, useState} from 'react'
 import styled from 'styled-components'
-import { Link } from 'react-router-dom'
+import { json, Link } from 'react-router-dom'
 import bg from '../asset/bitcoinwallpaper.jpg'
 import logo from '../asset/preeminentcryptotrade.png'
+import { useNavigate } from "react-router-dom"
+import Axios from "axios"
 
 function SignUp({Display}) {
+  const navigate = useNavigate()
+  const [firstName, setFirstName] = useState("")
+  const [lastName, setLastName] = useState("")
+  const [referenceid, setReferenceId] = useState("")
+  const [password, setPassword] = useState("")
+  const [confirmPassword, setconfirmPassword] = useState("")
+  const [gender, setGender] = useState("")
+  const [phoneNumber, setPhoneNumber] = useState("")
+  const [email, setEmail] = useState("")
+  const [message, setMessage] = useState({ error: false, msg: "" });
+ /*  const [old, setOld] = useState(false)
+  const [conditions, setconditions] = useState(false) */
+
+   useEffect(()=>{
+    /* eslint-disable-next-line no-unused-expressions */
+    return Display
+  },[])
+
+    const Data = {firstName,lastName,referenceid,password,confirmPassword,gender,phoneNumber,email}
+    const url = "https://preeminentcryptotrade.onrender.com/api/register"
+    
+    const Siginup = (e) => {
+      e.preventDefault()
+      Axios.post(url,Data)
+      .then((res) => {
+        localStorage.setItem("User", JSON.stringify(res.data));
+        console.log(res)
+      }
+      )
+      .then(()=>{
+        setMessage({ error: true, msg: "successfully!" });
+        const id =JSON.parse(localStorage.getItem("User") )
+        setTimeout(() => {
+          navigate(`/dashboard/${id.data._id}/${id.data.token}`) 
+        }, [2000]);
+      })
+      .catch((error)=>{
+        setMessage({error: false, msg: "user not found" });
+      console.log(error)
+      //  reset(),
+    })
+    }
+
 
    useEffect(()=>{
 
@@ -12,6 +58,7 @@ function SignUp({Display}) {
     return Display
     /* eslint-disable-next-line react-hooks/exhaustive-deps */
   },[])
+
 
   return (
     <MainContainer>
@@ -42,11 +89,11 @@ function SignUp({Display}) {
           </span>
         </FirstParagraph>
         <Header2>Create Account</Header2>
-        <FormInput>
-          <FirstNameInput type="text" placeholder="Reference ID(Optional)(*)" />
-          <FirstNameInput type="text" placeholder="First Name(*)" />
-          <LastNameInput type="text" placeholder="Last Name(*)" />
-          <EmailInput type="email" placeholder="Email Address(*)" />
+        <FormInput onSubmit={(e)=> Siginup(e)}>
+          <FirstNameInput type="text"  placeholder="Reference ID(Optional)(*)" value={referenceid} onChange ={(e)=>{setReferenceId(e.target.value)}}/>
+          <FirstNameInput type="text" required placeholder="First Name(*)" value={firstName} onChange ={(e)=>{setFirstName(e.target.value)}}/>
+          <LastNameInput type="text" required placeholder="Last Name(*)" value={lastName} onChange ={(e)=>{setLastName(e.target.value)}}/>
+          <EmailInput type="email" required placeholder="Email Address(*)" value={email} onChange ={(e)=>{setEmail(e.target.value)}}/>
           {/* <ConfirmEmailInput
             type="email"
             placeholder=" Confirm Email Address(*)"
@@ -55,8 +102,8 @@ function SignUp({Display}) {
             type="text"
             placeholder="DD/MM/YYYY - Date Of Birth(*)"
           /> */}
-          <PhoneNumber type="text" placeholder="Phone Number(*)" />
-          <SelectCountry>
+          <PhoneNumber type="text" required placeholder="Phone Number(*)" value={phoneNumber} onChange ={(e)=>{setPhoneNumber(e.target.value)}}  />
+          <SelectCountry value={gender} required onChange ={(e)=>{setGender(e.target.value)}} >
             <option>-Gender-</option>
             <option value="Male">Male</option>
             <option value="Female">Female</option>
@@ -74,15 +121,15 @@ function SignUp({Display}) {
             <option>GOLD PLAN($51000-$100,000)</option>
             <option>DIAMOND PLAN($101,000-$1,000,000)</option>
           </SelectPackage> */}
-          <Password type="password" placeholder="Input Password(*)" />
-          <ConfirmPassword type="password" placeholder="Confirm Password(*)" />
+          <Password type="password" required placeholder="Input Password(*)" value={password} onChange ={(e)=>{setPassword(e.target.value)}}/>
+          <ConfirmPassword type="password"required placeholder="Confirm Password(*)"  value={confirmPassword} onChange ={(e)=>{setconfirmPassword(e.target.value)}}/>
 
           <CheckBoxContainer>
-            <CheckBox type="checkbox" />
+            <CheckBox type="checkbox" required />
             <p>I am 18 years of age or older(*)</p>
           </CheckBoxContainer>
           <CheckBoxContainer>
-            <CheckBox type="checkbox" />
+            <CheckBox type="checkbox" required />
             <p>I Agree to the terms and conditions(*)</p>
           </CheckBoxContainer>
           <Instruction>

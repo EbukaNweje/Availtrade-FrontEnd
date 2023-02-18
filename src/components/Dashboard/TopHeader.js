@@ -71,8 +71,6 @@ const Container3 = styled.div`
         width: 37%;
     }
 `
-// const Container = styled.div``
-
 
 const TopHeader = () => {
   return (
