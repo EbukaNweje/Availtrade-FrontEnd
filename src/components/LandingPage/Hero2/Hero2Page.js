@@ -3,7 +3,6 @@ import {
     Container, LeftDiv, H4, H1, Content, Line,ButtonHold,
     KnowMore, Arrow, RightDiv, Wrapper, Img, Content1
 } from "./Hero2style";
-// import arrow from '../../../Assets/arrow.svg'
 import bg2 from '../../../asset/bg44.svg'
 
 

@@ -2,33 +2,19 @@ import styled from 'styled-components'
 import { NavLink } from 'react-router-dom'
 import bitcoin from '../../asset/bitcoin(1).png'
 import moneyGram from '../../asset/moneygramads-300x103.png'
-import payPal from '../../asset/paypal.png'
-import ria from '../../asset/ria-logo(1).jpg'
-import visa from '../../asset/visa_mc.png'
-import western from '../../asset/western.png'
 
-function DepositMethod() {
+function WithdrawalMethod() {
   return (
     <DepositMethodContainer>
-      <DepositMethodHeading>Select A Deposit Method</DepositMethodHeading>
+      <DepositMethodHeading>Select A Withdrawal Method</DepositMethodHeading>
       <PaymentMethods>
-        <NavLink to="/bitcoin-deposit">
+        <NavLink to="/request-bitcoin-withdrawal" state={{ withdraw: 'withdraw' }}>
           <img src={bitcoin} alt="bitcoinImage" />
         </NavLink>
-        <NavLink to="/request-form">
-          <img className="moneyG" src={moneyGram} alt="moneyGramImage" />
-        </NavLink>
-        <NavLink to="/request-form">
-          <img src={payPal} alt="payPalImage" />
-        </NavLink>
-        <NavLink to="/request-form">
-          <img className="ria" src={ria} alt="riaImage" />
-        </NavLink>
-        <NavLink to="/request-form">
-          <img src={visa} alt="visaImage" />
-        </NavLink>
-        <NavLink to="/request-form">
-          <img src={western} alt="westernImage" />
+        <NavLink to="/request-bank-withdrawal" state={{ withdraw: 'withdraw' }}>
+          <p className="moneyG" src={moneyGram} alt="moneyGramImage">
+            Bank Deposit
+          </p>
         </NavLink>
       </PaymentMethods>
       <AccountBal>Your Account Balance: $0.00</AccountBal>
@@ -55,7 +41,7 @@ function DepositMethod() {
   )
 }
 
-export default DepositMethod
+export default WithdrawalMethod
 
 const DepositMethodContainer = styled.section``
 
@@ -63,10 +49,14 @@ const DepositMethodHeading = styled.h2`
   text-align: center;
   color: #2b4d6f;
   font-size: 30px;
+
+  @media (max-width: 768px) {
+    font-size: 20px;
+  }
 `
 
 const PaymentMethods = styled.div`
-  height: 100vh;
+  height: 40vh;
   background: #f9f7f7;
   margin-inline: 7%;
   border: 2px solid #00add4;
@@ -80,24 +70,46 @@ const PaymentMethods = styled.div`
   a {
     display: flex;
     justify-content: center;
+    width: 70%;
+    height: 8vh;
+    text-decoration: none;
 
     .moneyG {
-      width: 100%;
-    }
-
-    .ria {
-      width: 70%;
+      width: 35%;
+      height: 7vh;
+      background: #000;
+      color: #fff;
+      font-size: 30px;
+      text-align: center;
+      border-radius: 15px;
     }
   }
 
   img {
-    width: 20%;
+    width: 30%;
+    height: 15vh;
+  }
+  @media (max-width: 768px) {
+    a {
+      width: 100%;
+
+      .moneyG {
+        width: 55%;
+        font-size: 25px;
+        height: 6vh;
+        margin: 0;
+      }
+    }
   }
 `
 const AccountBal = styled.h2`
   text-align: center;
   color: #2b4d6f;
   font-size: 30px;
+
+  @media (max-width: 768px) {
+    font-size: 20px;
+  }
 `
 
 const DepositTable = styled.table`

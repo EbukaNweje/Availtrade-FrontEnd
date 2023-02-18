@@ -18,20 +18,6 @@ const Component2 = () =>{
     return(
         <Container>
             <Wrapper>
-                {/* <White></White> */}
-                {/* <CircleHold>
-                    <Circle6>
-                    <Circle5>
-                        <Circle4>
-                            <Circle3>
-                                <Circle2>
-                                    <Circle>circle</Circle>
-                                </Circle2>
-                            </Circle3>
-                        </Circle4>
-                    </Circle5>
-                    </Circle6>
-                </CircleHold> */}
                 <TextsHold>
                     <Img src={trendup} alt='/icon'/>
                     <H4>OUR VISION</H4>

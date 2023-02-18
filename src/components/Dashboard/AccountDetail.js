@@ -9,74 +9,74 @@ import pipMoney from '../../asset/pipMoney.png'
 import EarnedMoney from '../../asset/Earned-money.png'
 import head from '../../asset/head.png'
 import protectImage from '../../asset/protect.png'
-/* import ForexCrossRates from './ForexCrossRates'
-import Advanced from './Advanced' */
 
 function AccountDetail() {
   const location = useLocation()
   const { edit } = location.state || {}
   console.log(edit)
+  const UserData =JSON.parse(localStorage.getItem("User"))
+  console.log(UserData)
 
   return (
     <AccountContainer>
-      <p>Welcome: Name of person</p>
+      <p>Welcome: {UserData.data.firstName} {UserData.data.lastName}</p>
       <AccountInfo>
         <AccountType>
           <img src={Owner} alt="img" />
           <div>
             <h3>ACCOUNT</h3>
-            <p>BITCOIN INVESTMENT</p>
+            {/* <p>BITCOIN INVESTMENT</p> */}
           </div>
         </AccountType>
         <AccountEmail>
           <img src={Email} alt="img" />
           <div>
             <h3>EMAIL</h3>
-            <p>someonesemail@email.com</p>
+            <p>{UserData.data.email}</p>
           </div>
         </AccountEmail>
         <AccountCountry>
           <img src={Country} alt="img" />
           <div>
             <h3>COUNTRY</h3>
-            <p>mozambique</p>
+           {/*  <p>mozambique</p> */}
           </div>
         </AccountCountry>
         <AccountPhone>
           <img src={phone} alt="img" />
           <div>
             <h3>PHONE:</h3>
-            <p>+123456789</p>
+            <p>{UserData.data.phoneNumber}</p>
           </div>
         </AccountPhone>
       </AccountInfo>
       <MoneyInfo>
         <AccountBalance>
           <img src={Bag} alt="bag" />
-          <p>$100.00</p>
+          <p>${UserData.data.accountBalance}</p>
           <big>ACCOUNT BALANCE</big>
         </AccountBalance>
         <TotalEarned>
           <img src={pipMoney} alt="bag" />
-          <p>$100.00</p>
+          <p>${UserData.data.totalDeposit}</p>
           <big>TOTAL EARNED</big>
         </TotalEarned>
         <StartUp>
           <img src={EarnedMoney} alt="bag" />
-          <p>$100.00</p>
+          <p>${UserData.data.startUpDeposit}</p>
           <big>START-UP DEPOSIT</big>
         </StartUp>
       </MoneyInfo>
 
       <UpgradeAccount>
-        <UserPackage>
+        {/* <UserPackage>
           <img src={head} alt="imag" />
           <small>EMERALD($1,000,000-$1,900,000)</small>
           <div>
             <p>USER PACKAGE PLAN</p>
           </div>
           <button>UPGRADE ACCOUNT</button>
-        </UserPackage>
+        </UserPackage> */}
         <LastDeposit>
           <img src={head} alt="imag" />
           <small>0.00</small>
@@ -401,6 +401,7 @@ const UpgradeAccount = styled.section`
   display: flex;
   gap: 2%;
   margin-bottom: 7%;
+  justify-content: center;
   @media (max-width: 768px) {
     display: flex;
     flex-wrap: wrap;
