@@ -11,6 +11,7 @@ const Login = ({ Display }) => {
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
   const [message, setMessage] = useState({ error: false, msg: "" });
+  console.log(message)
 
   const url = "https://preeminentcryptotrade.onrender.com/api/login"
   const Data = {email, password}

@@ -153,7 +153,7 @@ const PhoneNumber = styled.input`
   }
 `
 
-const SelectGender = styled.select`
+/* const SelectGender = styled.select`
   width: 98%;
   height: 7vh;
   border: 0;
@@ -166,7 +166,7 @@ const SelectGender = styled.select`
   @media (max-width: 768px) {
     width: 93%;
   }
-`
+` */
 
 const ButtonContainer = styled.div`
   width: 100%;

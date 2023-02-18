@@ -1,7 +1,7 @@
 
 import React, {useEffect, useState} from 'react'
 import styled from 'styled-components'
-import { json, Link } from 'react-router-dom'
+import {Link } from 'react-router-dom'
 import bg from '../asset/bitcoinwallpaper.jpg'
 import logo from '../asset/preeminentcryptotrade.png'
 import { useNavigate } from "react-router-dom"
@@ -18,12 +18,14 @@ function SignUp({Display}) {
   const [phoneNumber, setPhoneNumber] = useState("")
   const [email, setEmail] = useState("")
   const [message, setMessage] = useState({ error: false, msg: "" });
+  console.log(message)
  /*  const [old, setOld] = useState(false)
   const [conditions, setconditions] = useState(false) */
 
    useEffect(()=>{
     /* eslint-disable-next-line no-unused-expressions */
     return Display
+    /* eslint-disable-next-line react-hooks/exhaustive-deps */
   },[])
 
     const Data = {firstName,lastName,referenceid,password,confirmPassword,gender,phoneNumber,email}
