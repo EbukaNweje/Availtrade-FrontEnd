@@ -3,10 +3,24 @@ import Owner from '../../asset/pipOwner.png'
 import phone from '../../asset/pipPhone.png'
 import Email from '../../asset/pipEmail.png'
 import Country from '../../asset/pipCountry.png'
+import { useEffect, useState } from 'react'
+import Axios from "axios"
+import { useParams } from "react-router-dom";
 
 
 function DepositDetail() {
-  const UserData =JSON.parse(localStorage.getItem("User"))
+  const { userid } = useParams();
+  const [data, setData] = useState()
+  /* const UserData =JSON.parse(localStorage.getItem("User")) */
+  console.log("this is the data",data)
+
+  const url = `https://preeminentcryptotrade.onrender.com/api/userdata/${userid}`
+
+  useEffect(()=>{
+    Axios.get(url)
+    .then(res => setData(res.data.data))
+    /* eslint-disable-next-line react-hooks/exhaustive-deps */
+},[])
 /*   console.log("This is user data",UserData.data) */
 
   return (
@@ -22,7 +36,7 @@ function DepositDetail() {
         <img src={Email} alt="img" />
         <div>
           <h3>EMAIL</h3>
-          <p>{UserData.data.email}</p>
+          <p></p>
         </div>
       </AccountEmail>
       <AccountCountry>
@@ -36,7 +50,7 @@ function DepositDetail() {
         <img src={phone} alt="img" />
         <div>
           <h3>PHONE:</h3>
-          <p>{UserData.data.phoneNumber}</p>
+          <p></p>
         </div>
       </AccountPhone>
     </AccountInfo>

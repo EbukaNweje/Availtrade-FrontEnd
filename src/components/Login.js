@@ -26,7 +26,7 @@ const Login = ({ Display }) => {
     )
     .then(()=>{
       setMessage({ error: true, msg: "successfully!" });
-      const id =JSON.parse(localStorage.getItem("User"))
+      const id = JSON.parse(localStorage.getItem("User"))
       setTimeout(() => {
         navigate(`/dashboard/${id._id}`) 
       console.log(id._id)

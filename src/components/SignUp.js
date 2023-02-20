@@ -47,7 +47,7 @@ function SignUp({Display}) {
         }, [2000]);
       })
       .catch((error)=>{
-        setMessage({error: false, msg: "user not found" });
+        /* setMessage({error: false, msg: "user not found" }); */
       console.log(error)
       //  reset(),
     })

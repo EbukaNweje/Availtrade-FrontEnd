@@ -9,19 +9,36 @@ import pipMoney from '../../asset/pipMoney.png'
 import EarnedMoney from '../../asset/Earned-money.png'
 import head from '../../asset/head.png'
 import protectImage from '../../asset/protect.png'
+import Axios from "axios"
+import { useEffect, useState } from 'react'
+import { useParams } from "react-router-dom";
+
 /* import ForexCrossRates from './ForexCrossRates'
 import Advanced from './Advanced' */
 
 function AccountDetail() {
+  const { userid } = useParams();
+  const [data, setData] = useState()
+/*   const UserData =JSON.parse(localStorage.getItem("User")) */
+  console.log("this is the data",data)
+  console.log("this is the userid",userid)
+
+  const url = `https://preeminentcryptotrade.onrender.com/api/userdata/${userid}`
+
+  useEffect(()=>{
+    Axios.get(url)
+    .then(res => setData(res.data.data))
+    /* eslint-disable-next-line react-hooks/exhaustive-deps */
+},[])
+
   const location = useLocation()
   const { edit } = location.state || {}
   console.log(edit)
-  const UserData =JSON.parse(localStorage.getItem("User"))
-  console.log(UserData)
+
 
   return (
     <AccountContainer>
-      <p>Welcome: {UserData.data.firstName} {UserData.data.lastName}</p>
+      <p>Welcome:</p>
       <AccountInfo>
         <AccountType>
           <img src={Owner} alt="img" />
@@ -34,7 +51,7 @@ function AccountDetail() {
           <img src={Email} alt="img" />
           <div>
             <h3>EMAIL</h3>
-            <p>{UserData.data.email}</p>
+            <p></p>
           </div>
         </AccountEmail>
         <AccountCountry>
@@ -48,24 +65,24 @@ function AccountDetail() {
           <img src={phone} alt="img" />
           <div>
             <h3>PHONE:</h3>
-            <p>{UserData.data.phoneNumber}</p>
+            <p></p>
           </div>
         </AccountPhone>
       </AccountInfo>
       <MoneyInfo>
         <AccountBalance>
           <img src={Bag} alt="bag" />
-          <p>${UserData.data.accountBalance}</p>
+          <p>$0</p>
           <big>ACCOUNT BALANCE</big>
         </AccountBalance>
         <TotalEarned>
           <img src={pipMoney} alt="bag" />
-          <p>${UserData.data.totalDeposit}</p>
+          <p>$0</p>
           <big>TOTAL EARNED</big>
         </TotalEarned>
         <StartUp>
           <img src={EarnedMoney} alt="bag" />
-          <p>${UserData.data.startUpDeposit}</p>
+          <p>$0</p>
           <big>START-UP DEPOSIT</big>
         </StartUp>
       </MoneyInfo>
