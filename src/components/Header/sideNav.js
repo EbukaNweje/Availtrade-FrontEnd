@@ -28,8 +28,8 @@ const SideNav = ({setNav}) => {
                     <Span to='/news'><MdOutlineRssFeed style={{color:"#bdbcd1"}}/>  News</Span>
                     <Span to='/terms'> <BsFileEarmarkRuled style={{color:"#bdbcd1"}}/> Terms & Conditions</Span>
                     <Span to='/contactus'> <IoPersonCircleSharp style={{color:"#bdbcd1"}}/>Contact Us</Span>
-                    <Span2 to='/createaccount'> <BsFillPersonFill style={{color:"#bdbcd1"}}/>Create Account</Span2>
-                    <Span3 to='/signin'> <BsPerson style={{color:"#bdbcd1"}}/>Sign In</Span3>
+                    <Span2 to='/siginup'> <BsFillPersonFill style={{color:"#bdbcd1"}}/>Create Account</Span2>
+                    <Span3 to='/login'> <BsPerson style={{color:"#bdbcd1"}}/>Sign In</Span3>
                 </MidNav>
         </Wrapper>
     </Container>
