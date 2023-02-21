@@ -20,7 +20,9 @@ const HeroPage = () => {
                     <Getstarted>
                     <NavLink to={"/about"} style={{color:"#fff", textDecoration:"none"}}>Get Started</NavLink>
                     </Getstarted>
-                    <Openaccount to={"/siginup"} style={{color:"#fff", textDecoration:"none"}}>Open An Account</Openaccount>
+                    <Openaccount>
+                    <NavLink to={"/siginup"} style={{color:"#fff", textDecoration:"none"}}>Open An Account</NavLink>
+                    </Openaccount>
                 </ButtonHold>
             </LeftDiv>
             <RightDiv>
