@@ -11,7 +11,7 @@ const Footer = () => {
     <Container>
         <Wrapper>
             <LeftDiv>
-                <Logo>PIPSCOUNTFX</Logo>
+                <Logo>Preeminentcryptotrade</Logo>
                 <Dot></Dot>
                 <Span to='/news'>News</Span>
                 <Dot></Dot>

@@ -4,6 +4,8 @@ import {
     Getstarted,Openaccount,Wrapper,TopDiv,BottomDiv,H11,Daily,
     Box,Top,Bottom,Arrow,Texts
 } from './HeroStyle'
+import { NavLink } from 'react-router-dom'
+
 
 const HeroPage = () => {
   return (
@@ -15,8 +17,10 @@ const HeroPage = () => {
                 <Line></Line>
                 <Content>Private equity firm Preeminentcryptotrade.com came up with a Balanced Asset Basket that allowed it to invest in cryptocurrency and other similar blockchain based industries. The company’s primary activity is focused on cryptocurrency domain such as field of exchange and stock markets.</Content>
                 <ButtonHold>
-                    <Getstarted>Get Started</Getstarted>
-                    <Openaccount>Open An Account</Openaccount>
+                    <Getstarted>
+                    <NavLink to={"/about"} style={{color:"#fff", textDecoration:"none"}}>Get Started</NavLink>
+                    </Getstarted>
+                    <Openaccount to={"/siginup"} style={{color:"#fff", textDecoration:"none"}}>Open An Account</Openaccount>
                 </ButtonHold>
             </LeftDiv>
             <RightDiv>

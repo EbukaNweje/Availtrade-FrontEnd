@@ -29,7 +29,7 @@ const Hero3 = () => {
                 </MidText>
                 <BottomText>
                     <Icon>i</Icon>
-                    <BLink to='/afilliate'>How to become a representative?</BLink>
+                    <BLink to='/affiliate'>How to become a representative?</BLink>
                 </BottomText>
                </Div2>
             </LeftDiv>

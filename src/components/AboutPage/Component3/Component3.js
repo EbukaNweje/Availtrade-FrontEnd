@@ -7,6 +7,7 @@ import flaticon from './flaticon.svg';
 import pdficon from './pdficon.svg'; 
 import {AiFillCalendar} from 'react-icons/ai'
 import {BsSearch} from 'react-icons/bs'
+import { NavLink } from 'react-router-dom'
 
 const Component3 = () => {
   return (
@@ -37,7 +38,8 @@ const Component3 = () => {
                     <Content2>Please read rules carefully before you start to use the site and register an account. By using website, you confirm that you accept terms of service.</Content2>
                     <ButtonHold>
                         <BsSearch/>
-                        <Text>VALIDATE COMPANY DETAILS</Text>
+                        <NavLink to={"/about"} style={{color:"#fff", textDecoration:"none"}}><Text>VALIDATE COMPANY DETAILS</Text></NavLink>
+                        
                     </ButtonHold>
                 </Right>
             </Div2>
