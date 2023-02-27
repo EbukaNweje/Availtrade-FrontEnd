@@ -1,10 +1,8 @@
-<<<<<<< HEAD
 import './App.css';
-// import Faq from './components/Faq';
+import Faq from './components/Faq';
 import Question from './components/Faq/Question';
-// import Contact from './components/Contact';
-// import GetStarted from './components/GetStarted';
-=======
+import Contact from './components/Contact';
+import GetStarted from './components/GetStarted';
 import { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import SignUp from "./components/SignUp";
@@ -25,7 +23,6 @@ import LandingPage from './components/LandingPage/LandingPage';
 import Withdraw from './components/Dashboard/Withdraw';
 import RequestWithDrawal from './components/Dashboard/RequestWithDrawal';
 import RequestBitcoinWithdraw from './components/Dashboard/RequestBitcoinDeposit';
->>>>>>> main
 
 function App() {
 const [display, setDisplay] = useState(true)
@@ -34,14 +31,6 @@ const [display, setDisplay] = useState(true)
   const changeToggle = () => setDisplay(true)
 
   return (
-<<<<<<< HEAD
-    <div>
-      <Question />
-      {/* <Faq /> */}
-      {/* <GetStarted /> */}
-      {/* <Contact /> */}
-    </div>
-=======
       <Router>
         {display? <Header/> : null}
         <Routes>
@@ -61,10 +50,13 @@ const [display, setDisplay] = useState(true)
             <Route path="/withdraw/:userid" element={<Withdraw Display = {toggle}/>} />
             <Route path="/request-bank-withdrawal" element={<RequestWithDrawal Display = {toggle}/>} />
             <Route path="/request-bitcoin-withdrawal" element={<RequestBitcoinWithdraw Display = {toggle}/>} />
+            <Route path="/questions" element={<Question />} />
+            <Route path="/faq" element={<Faq />} />
+            <Route path="/get_started" element={<GetStarted />} />
+            <Route path="/contact" element={<Contact />} />
           </Route>
         </Routes>
       </Router>
->>>>>>> main
   );
 }
 
