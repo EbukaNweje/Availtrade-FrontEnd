@@ -145,7 +145,11 @@ const HeaderMenu = () => {
           </NavLink>
         </MyMenu>
         <MyMenu>CONTACT US</MyMenu>
-        <MyMenu>LOGOUT</MyMenu>
+        <MyMenu>
+          <NavLink to={`/`}>
+            LOGOUT
+          </NavLink>
+          </MyMenu>
         <MyMenuButton>
           <NavLink to={`/deposit/${userid}`}   state={{ deposit: 'deposit' }}>
             DEPOSIT

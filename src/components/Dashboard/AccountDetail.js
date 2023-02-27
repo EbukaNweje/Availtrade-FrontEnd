@@ -20,8 +20,9 @@ function AccountDetail() {
   const { userid } = useParams();
   const [data, setData] = useState()
 /*   const UserData =JSON.parse(localStorage.getItem("User")) */
-  console.log("this is the data",data)
   console.log("this is the userid",userid)
+  
+
 
   const url = `https://preeminentcryptotrade.onrender.com/api/userdata/${userid}`
 
@@ -31,6 +32,9 @@ function AccountDetail() {
     /* eslint-disable-next-line react-hooks/exhaustive-deps */
 },[])
 
+const mydata = {...data}
+console.log("this is the datas",mydata)
+
   const location = useLocation()
   const { edit } = location.state || {}
   console.log(edit)
@@ -38,7 +42,7 @@ function AccountDetail() {
 
   return (
     <AccountContainer>
-      <p>Welcome:</p>
+      <p>Welcome: {mydata.firstName} {mydata.lastName}</p>
       <AccountInfo>
         <AccountType>
           <img src={Owner} alt="img" />
@@ -51,7 +55,7 @@ function AccountDetail() {
           <img src={Email} alt="img" />
           <div>
             <h3>EMAIL</h3>
-            <p></p>
+            <p>{mydata.email}</p>
           </div>
         </AccountEmail>
         <AccountCountry>
@@ -65,24 +69,24 @@ function AccountDetail() {
           <img src={phone} alt="img" />
           <div>
             <h3>PHONE:</h3>
-            <p></p>
+            <p>{mydata.phoneNumber}</p>
           </div>
         </AccountPhone>
       </AccountInfo>
       <MoneyInfo>
         <AccountBalance>
           <img src={Bag} alt="bag" />
-          <p>$0</p>
+          <p>${mydata.accountBalance}</p>
           <big>ACCOUNT BALANCE</big>
         </AccountBalance>
         <TotalEarned>
           <img src={pipMoney} alt="bag" />
-          <p>$0</p>
+          <p>${mydata.lastDeposit}</p>
           <big>TOTAL EARNED</big>
         </TotalEarned>
         <StartUp>
           <img src={EarnedMoney} alt="bag" />
-          <p>$0</p>
+          <p>${mydata.startUpDeposit}</p>
           <big>START-UP DEPOSIT</big>
         </StartUp>
       </MoneyInfo>
@@ -114,7 +118,7 @@ function AccountDetail() {
         </Withdraw>
         <NewDeposit>
           <img src={head} alt="imag" />
-          <small>0.00</small>
+          <small>0.0{mydata.totalDeposit}</small>
           <div>
             <p>TOTAL DEPOSIT</p>
           </div>
