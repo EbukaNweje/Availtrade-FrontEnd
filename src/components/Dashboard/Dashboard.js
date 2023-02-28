@@ -37,7 +37,7 @@ const Dashboard = ({Display}) => {
         <Eze />
        </div>: <div style={{width:"100%", height:"100vh", position:"fixed", display:"flex", background: "black", color: "white", justifyContent: "center", alignItems: "center", flexDirection: "column"}}>
        <SpinnerDotted size={50} thickness={100} speed={100} color="rgba(255, 255, 255, 1)" />
-            <span style={{marginTop: "30px"}}>
+            <span style={{marginTop: "30px", textAlign: "center"}}>
             Please Wait While We connect to Your Account.
           </span>
         </div>}

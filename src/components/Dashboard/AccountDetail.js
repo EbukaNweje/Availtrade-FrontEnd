@@ -122,7 +122,7 @@ console.log("this is the datas",mydata)
         </Withdraw>
         <NewDeposit>
           <img src={head} alt="imag" />
-          <small>0.0{mydata.totalDeposit}</small>
+          <small>{mydata.totalDeposit}</small>
           <div>
             <p>TOTAL DEPOSIT</p>
           </div>
