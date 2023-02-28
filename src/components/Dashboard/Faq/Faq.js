@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { TiArrowSortedDown, TiArrowSortedUp } from "react-icons/ti";
-import "../Contacts/Contact.css";
-import "../Steps/GetStarted.css";
-import "./Question.css";
+import "../../Contacts/Contact.css";
+import "../../Steps/GetStarted.css";
+import "../Faq//Question.css";
 
 const Faq = (faqs) => {
   console.log(faqs)

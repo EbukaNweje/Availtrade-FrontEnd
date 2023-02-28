@@ -1,7 +1,7 @@
 import React from "react";
 import "./GetStarted.css";
 import { BsArrowRight } from "react-icons/bs";
-import picture from "../assets/cb-258-512.svg";
+import picture from "../../assets/cb-258-512.svg";
 import Share from "./Share";
 import StepTwo from "./StepTwo";
 
@@ -35,7 +35,7 @@ const GetStarted = () => {
             <br />
 
             <div className="button-link">
-              <a href="./" className="button1">
+              <a href="/siginup" className="button1">
                 <BsArrowRight className="arrow" />
                 CREATE ACCOUNT
               </a>

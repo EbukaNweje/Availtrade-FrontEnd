@@ -1,12 +1,16 @@
 import React from 'react';
-import { Outlet } from 'react-router-dom';
+import { Outlet, Navigate } from 'react-router-dom';
 
 
 const Private = () => {
-//   const user =  JSON.parse(localStorage.getItem('user'))
+  
+  const user =  JSON.parse(localStorage.getItem('User'))
 
+  console.log(user)
   return (
-    <Outlet />
+  <>
+    {!user ? <Navigate to="/login" /> : <Outlet />}
+  </>
   );
 };
 

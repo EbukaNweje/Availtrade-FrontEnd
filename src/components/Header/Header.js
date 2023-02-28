@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom'
 
 import pic from '../../asset/preeminentcryptotrade.png'
 import logo from '../../asset/preeminentcryptotrade.png'
-// import pic from '../'
+
 import {
     Container,
     Container2,
@@ -59,8 +59,8 @@ const Header = () => {
             <Nav2 to='/about'>About Us</Nav2>
             <Nav2 to='/trading'>Trading</Nav2>
             <Nav2 to='/affiliate'>Affiliate</Nav2>
-            <Nav2 to='/getstarted'>Get Started</Nav2>
-            <Nav2 to='/FAQ'>FAQ</Nav2>
+            <Nav2 to='/get_started'>Get Started</Nav2>
+            <Nav2 to='/questions'>FAQ</Nav2>
             <Nav2 to='/contact'>Contact</Nav2>
             <Line></Line>
             <NavRight>
@@ -89,8 +89,8 @@ const Header = () => {
        <Nav to='/about'>About Us</Nav>
        <Nav to='/trading'>Trading</Nav>
        <Nav to='/affiliate'>Affiliate</Nav>
-       <Nav to='/getstarted'>Get Started</Nav>
-       <Nav to='/FAQ'>FAQ</Nav>
+       <Nav to='/get_started'>Get Started</Nav>
+       <Nav to='/questions'>FAQ</Nav>
        <Nav to='/contact'>Contact</Nav>
        <Line></Line>
        <NavRight>

@@ -1,6 +1,6 @@
 import React from "react";
-import "./Contact.css";
-import "../Steps/GetStarted.css";
+import "../Contacts/Contact.css";
+import "../../Steps/GetStarted.css";
 import { IoLocationOutline } from "react-icons/io5";
 import { BsEnvelope } from "react-icons/bs";
 import { BsHeadset } from "react-icons/bs";
@@ -15,7 +15,7 @@ const Contact = () => {
       </section>
 
       <div className="flex-cont">
-       {/*  <section className="map">Map</section> */}
+        <section className="map">Map</section>
 
         <section className="support_form">
           <h4>Support Form</h4>

@@ -121,6 +121,9 @@ const HeaderMenu = () => {
   const { about } = location.state || {}
   const { deposit } = location.state || {}
   const { withdraw } = location.state || {}
+  const { faq } = location.state || {}
+  const { contact } = location.state || {}
+  const { privacy } = location.state || {}
 
   const { userid } = useParams();
 /*   const id = JSON.parse(localStorage.getItem("User") )
@@ -137,21 +140,33 @@ const HeaderMenu = () => {
             ABOUT
           </NavLink>
         </MyMenu>
-        <MyMenu>FAQS</MyMenu>
-        <MyMenu>PRIVACY POLICY</MyMenu>
+        <MyMenu>
+        <NavLink to={`/faq/${userid}`} state={{ faq: 'faq' }}>
+        FAQ
+          </NavLink>
+          </MyMenu>
+        <MyMenu>
+        <NavLink to={`/privacypolicy/${userid}`} state={{ privacy: 'privacy' }}>
+        PRIVACY POLICY
+          </NavLink>
+          </MyMenu>
         <MyMenu>
           <NavLink to={`/edit/${userid}`} state={{ edit: 'edit' }}>
             EDIT
           </NavLink>
         </MyMenu>
-        <MyMenu>CONTACT US</MyMenu>
         <MyMenu>
-          <NavLink to={`/`}>
+        <NavLink to={`/contactus/${userid}`} state={{ contact: 'contact' }}>
+        CONTACT US
+          </NavLink>
+          </MyMenu>
+        <MyMenu>
+          <NavLink to={`/`} onClick={() => localStorage.removeItem("User")}>
             LOGOUT
           </NavLink>
           </MyMenu>
         <MyMenuButton>
-          <NavLink to={`/deposit/${userid}`}   state={{ deposit: 'deposit' }}>
+          <NavLink to={`/deposit/${userid}`} state={{ deposit: 'deposit' }}>
             DEPOSIT
           </NavLink>
         </MyMenuButton>
@@ -162,7 +177,7 @@ const HeaderMenu = () => {
         </MyMenuButton>
       </Wrapper>
       <DashBoardText>
-        {edit ? 'Edit' : about ? 'About Us' : deposit ? 'Deposit' : withdraw ? 'Withdraw' : 'Dashboard'}
+        {edit ? 'Edit' : about ? 'About Us' : deposit ? 'Deposit' : withdraw ? 'Withdraw' : faq ? "FAQ" : contact ? "CONTACT US" : privacy ? "PRIVACY" : 'Dashboard'}
       </DashBoardText>
     </MainContainer>
   )

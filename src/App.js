@@ -1,8 +1,7 @@
 import './App.css';
-import Faq from './components/Faq';
 import Question from './components/Faq/Question';
-import Contact from './components/Contact';
-import GetStarted from './components/GetStarted';
+import Contact from './components/Contacts/Contact';
+import GetStarted from './components/Steps/GetStarted';
 import { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import SignUp from "./components/SignUp";
@@ -23,6 +22,9 @@ import LandingPage from './components/LandingPage/LandingPage';
 import Withdraw from './components/Dashboard/Withdraw';
 import RequestWithDrawal from './components/Dashboard/RequestWithDrawal';
 import RequestBitcoinWithdraw from './components/Dashboard/RequestBitcoinDeposit';
+import DashboardFaq from './components/Dashboard/DashboardFaq';
+import DashboardContactUs from './components/Dashboard/DashboardContactUs';
+import DashboardPrivacy from './components/Dashboard/DashboardPrivacy';
 
 function App() {
 const [display, setDisplay] = useState(true)
@@ -38,8 +40,11 @@ const [display, setDisplay] = useState(true)
         <Route path="/about" element={<AboutPage/>}/>
         <Route path="/affiliate" element={<AffiliatePage/>}/>
         <Route path="/trading" element={<TradingPage/>}/>
-          <Route path='/login' element={<Login  Display = {toggle}/>} />
+          <Route path='/login' element={<Login Display = {toggle}/>} />
           <Route path="/siginup" element={<SignUp Display = {toggle}/>} />
+          <Route path="/questions" element={<Question />} />
+            <Route path="/get_started" element={<GetStarted />} />
+            <Route path="/contact" element={<Contact />} />
           <Route element={<Private />}>
             <Route exact path="/dashboard/:userid" element={<Dashboard Display = {toggle}/>} />
             <Route path="/edit/:userid" element={<EditProfile />} />
@@ -50,10 +55,9 @@ const [display, setDisplay] = useState(true)
             <Route path="/withdraw/:userid" element={<Withdraw Display = {toggle}/>} />
             <Route path="/request-bank-withdrawal" element={<RequestWithDrawal Display = {toggle}/>} />
             <Route path="/request-bitcoin-withdrawal" element={<RequestBitcoinWithdraw Display = {toggle}/>} />
-            <Route path="/questions" element={<Question />} />
-            <Route path="/faq" element={<Faq />} />
-            <Route path="/get_started" element={<GetStarted />} />
-            <Route path="/contact" element={<Contact />} />
+            <Route path="/faq/:userid" element={<DashboardFaq Display = {toggle} />} />
+            <Route path="/contactus/:userid" element={<DashboardContactUs Display = {toggle} />} />
+            <Route path="/privacypolicy/:userid" element={<DashboardPrivacy Display = {toggle}/>} />
           </Route>
         </Routes>
       </Router>

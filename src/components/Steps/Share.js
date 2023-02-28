@@ -1,7 +1,7 @@
 import React from "react";
 import "./Share.css";
 import { BsArrowRight } from "react-icons/bs";
-import picture from "../assets/cb-263-512.svg";
+import picture from "../../assets/cb-263-512.svg";
 
 const Share = () => {
   return (
@@ -31,7 +31,7 @@ const Share = () => {
             <br />
 
             <div className="button-link">
-              <a href="./" className="button1">
+              <a href="/siginup" className="button1">
                 <BsArrowRight className="arrow" />
                 REGISTER NOW
               </a>
