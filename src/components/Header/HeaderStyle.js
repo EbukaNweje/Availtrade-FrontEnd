@@ -18,7 +18,7 @@ position: fixed;
 left: 0;
 top: 0;
 z-index: 9999990;
-overflow-x: hidden;
+/* overflow-x: hidden; */
 padding: 10px 0;
 display: flex;
 justify-content:  center;
@@ -273,14 +273,14 @@ border: 1px solid rgb(99 82 171 / 32%);
 
 `;
 export const CreateAccount = styled(Link)`
-width: 110px;
+width: 130px;
 height: 33px;
 display: flex;
 justify-content: center;
 align-items: center;
 border-radius: 50px;
 cursor: pointer;
-margin-right: 5px;
+margin-right: 6px;
 text-decoration: none;
 color: white;
 

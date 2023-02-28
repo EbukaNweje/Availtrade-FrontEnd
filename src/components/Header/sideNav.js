@@ -2,9 +2,9 @@ import React from 'react'
 import { FiHome } from 'react-icons/fi';
 import { IoPersonCircleSharp } from 'react-icons/io5';
 import { VscMegaphone } from 'react-icons/vsc';
-// import { FaTheaterMasks } from 'react-icons/fa';
-import { BsQuestionLg, BsX, BsBarChartLine, BsFileEarmarkRuled, BsFillPersonFill, BsPerson} from 'react-icons/bs';
-import { MdOutlineCloudUpload, MdOutlineLibraryBooks, MdOutlineRssFeed} from 'react-icons/md';
+
+import { BsQuestionLg, BsX, BsBarChartLine, BsFillPersonFill, BsPerson} from 'react-icons/bs';
+import { MdOutlineCloudUpload, MdOutlineLibraryBooks} from 'react-icons/md';
 import { Link } from 'react-router-dom';
 import styled from "styled-components";
 
@@ -23,11 +23,9 @@ const SideNav = ({setNav}) => {
                     <Span to='/about'> <MdOutlineLibraryBooks style={{color:"#bdbcd1"}}/> About Us</Span>
                     <Span to='/trading'> <BsBarChartLine style={{color:"#bdbcd1"}}/> Trading </Span>
                     <Span to='/affiliate'> <VscMegaphone style={{color:"#bdbcd1"}}/> Affiliate Program </Span>
-                    <Span to='/getstarted'> <MdOutlineCloudUpload style={{color:"#bdbcd1"}}/>Get Started</Span>
-                    <Span to='/FAQ'> <BsQuestionLg style={{color:"#bdbcd1"}}/>FAQ</Span>
-                    <Span to='/news'><MdOutlineRssFeed style={{color:"#bdbcd1"}}/>  News</Span>
-                    <Span to='/terms'> <BsFileEarmarkRuled style={{color:"#bdbcd1"}}/> Terms & Conditions</Span>
-                    <Span to='/contactus'> <IoPersonCircleSharp style={{color:"#bdbcd1"}}/>Contact Us</Span>
+                    <Span to='/get_started'> <MdOutlineCloudUpload style={{color:"#bdbcd1"}}/>Get Started</Span>
+                    <Span to='/questions'> <BsQuestionLg style={{color:"#bdbcd1"}}/>FAQ</Span>
+                    <Span to='/contact'> <IoPersonCircleSharp style={{color:"#bdbcd1"}}/>Contact Us</Span>
                     <Span2 to='/siginup'> <BsFillPersonFill style={{color:"#bdbcd1"}}/>Create Account</Span2>
                     <Span3 to='/login'> <BsPerson style={{color:"#bdbcd1"}}/>Sign In</Span3>
                 </MidNav>
@@ -44,7 +42,6 @@ const Button = styled.button`
   height: 30px;
   border: none;
   background: linear-gradient(#FFFFF9, #C6DDF2);
-  /* background-color: #C6DDF2; */
   padding: 5px o;
   border-radius: 5px;
   display: flex;

@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { useLocation } from 'react-router-dom'
+import { useLocation, NavLink } from 'react-router-dom'
 import Owner from '../../asset/pipOwner.png'
 import phone from '../../asset/pipPhone.png'
 import Email from '../../asset/pipEmail.png'
@@ -114,7 +114,11 @@ console.log("this is the datas",mydata)
           <div>
             <p>TOTAL WIDRAWN</p>
           </div>
-          <button>MAKE WITHDRAWAL</button>
+          <button>
+          <NavLink to={`/withdraw/${userid}`} state={{ withdraw: 'withdraw' }} style={{textDecoration:"none", color:"white"}}>
+            WITHDRAW
+          </NavLink>
+          </button>
         </Withdraw>
         <NewDeposit>
           <img src={head} alt="imag" />
@@ -122,7 +126,11 @@ console.log("this is the datas",mydata)
           <div>
             <p>TOTAL DEPOSIT</p>
           </div>
-          <button>MAKE NEW DEPOSIT</button>
+          <button>
+          <NavLink to={`/deposit/${userid}`}   state={{ deposit: 'deposit' }} style={{textDecoration:"none", color:"white"}}>
+          MAKE NEW DEPOSIT
+          </NavLink>
+            </button>
         </NewDeposit>
       </UpgradeAccount>
         {/* {<ForexCrossRates/>} */}
