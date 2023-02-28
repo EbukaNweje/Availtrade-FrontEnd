@@ -6,7 +6,7 @@ import logo from '../asset/preeminentcryptotrade.png'
 import { useNavigate } from "react-router-dom"
 import Axios from "axios"
 import { SpinnerCircular } from 'spinners-react';
-import Swal from 'sweetalert2'
+/* import Swal from 'sweetalert2' */
 
 const Login = ({ Display }) => {
   const navigate = useNavigate()
@@ -108,7 +108,7 @@ const Login = ({ Display }) => {
           </CheckBoxContainer>
 
           <ButtonContainer>
-            <button type="submit" onClick={()=> alert()}>
+            <button type="submit">
               {loading ? <SpinnerCircular size={25} thickness={100} speed={100} color="rgba(255, 255, 255, 1)" secondaryColor="rgba(0, 0, 0, 0.44)" /> : "Log In "} </button>
             <Link to="">Forgot password?</Link>
           </ButtonContainer>
