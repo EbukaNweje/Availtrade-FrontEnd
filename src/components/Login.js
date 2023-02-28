@@ -14,8 +14,6 @@ const Login = ({ Display }) => {
   const [password, setPassword] = useState("")
   const [loading, setLoading] = useState(false)
   const [message, setMessage] = useState({ error: false, msg:""});
-  const [err, setErr] = useState();
-  console.log(err)
 
   /* const alert = () => {
         if(message.error === false) {
@@ -53,7 +51,7 @@ const Login = ({ Display }) => {
     })
     .catch((error)=>{
       setMessage({error: false, msg: error.response.data.message});
-      setErr("user not")
+    setLoading(false)
     console.log(error)
     //  reset(),
   })
@@ -102,6 +100,7 @@ const Login = ({ Display }) => {
         <FormInput  onSubmit={(e)=> Login(e)}>
           <EmailInput type="email" placeholder="Email Address"  value={email} onChange ={(e)=>{setEmail(e.target.value)}}/>
           <Password type="password" placeholder="Input Password"  value={password} onChange ={(e)=>{setPassword(e.target.value)}}/>
+          <Messg>{message.msg}</Messg>
           <CheckBoxContainer>
             <CheckBox type="checkbox" />
             <p>Keep me Logged in</p>
@@ -119,6 +118,16 @@ const Login = ({ Display }) => {
 }
 
 export default Login
+const Messg = styled.div`
+  width: 56%;
+  margin-bottom: 10px;
+  font-size: 13px;
+  color: red;
+
+  @media (max-width: 768px) {
+      width: 87%
+    }
+`
 const FirstFooterText2 = styled.div`
   display: flex;
   margin-right: auto;
