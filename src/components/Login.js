@@ -119,10 +119,14 @@ const Login = ({ Display }) => {
 
 export default Login
 const Messg = styled.div`
-  width: 87%;
+  width: 56%;
   margin-bottom: 10px;
   font-size: 13px;
   color: red;
+
+  @media (max-width: 768px) {
+      width: 87%
+    }
 `
 const FirstFooterText2 = styled.div`
   display: flex;
