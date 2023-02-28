@@ -14,19 +14,21 @@ const Login = ({ Display }) => {
   const [password, setPassword] = useState("")
   const [loading, setLoading] = useState(false)
   const [message, setMessage] = useState({ error: false, msg:""});
+  const [err, setErr] = useState();
+  console.log(err)
 
-  const alert = () => {
+  /* const alert = () => {
         if(message.error === false) {
           Swal.fire({
             icon: 'error',
             title: 'Oops...',
-            text: message.msg,
+            text: err,
          }) 
         }else{
           alert("good")
         }
   }
-
+ */
   console.log(message)
 
   const url = "https://preeminentcryptotrade.onrender.com/api/login"
@@ -51,6 +53,7 @@ const Login = ({ Display }) => {
     })
     .catch((error)=>{
       setMessage({error: false, msg: error.response.data.message});
+      setErr("user not")
     console.log(error)
     //  reset(),
   })
