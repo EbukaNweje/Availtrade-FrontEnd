@@ -6,6 +6,8 @@ import { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import SignUp from "./components/SignUp";
 import Login from './components/Login';
+import ForgotPassword from './components/ForgotPassword';
+import RestPassword from './components/RestPassword';
 import Dashboard from './components/Dashboard/Dashboard';
 import Private from './components/Private';
 import EditProfile from './components/Dashboard/EditProfile';
@@ -45,6 +47,8 @@ const [display, setDisplay] = useState(true)
           <Route path="/questions" element={<Question />} />
             <Route path="/get_started" element={<GetStarted />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/forgotpassword" element={<ForgotPassword  Display = {toggle} />} />
+            <Route path="/restLink/:userid/:tokenid" element={<RestPassword Display = {toggle} />} />
           <Route element={<Private />}>
             <Route exact path="/dashboard/:userid" element={<Dashboard Display = {toggle}/>} />
             <Route path="/edit/:userid" element={<EditProfile />} />

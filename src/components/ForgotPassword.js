@@ -8,65 +8,70 @@ import Axios from "axios"
 import { SpinnerCircular } from 'spinners-react';
 import Swal from 'sweetalert2'
 
-const Login = ({ Display }) => {
-  const navigate = useNavigate()
-  const [email, setEmail] = useState("")
-  const [password, setPassword] = useState("")
-  const [loading, setLoading] = useState(false)
-  const [message, setMessage] = useState({ error: false, msg:""});
+const ForgotPassword = ({ Display }) => {
+    const navigate = useNavigate()
+    const [email, setEmail] = useState("")
+   /*  const [password, setPassword] = useState("") */
+    const [loading, setLoading] = useState(false)
+    const [message, setMessage] = useState({ error: false, msg:""});
+    console.log(message)
 
-  /* const alert = () => {
-        if(message.error === false) {
-          Swal.fire({
-            icon: 'error',
-            title: 'Oops...',
-            text: err,
-         }) 
-        }else{
-          alert("good")
-        }
-  }
- */
-  console.log(message)
 
-  const url = "https://preeminentcryptotrade.onrender.com/api/login"
-  const Data = {email, password}
+  const url = "https://preeminentcryptotrade.onrender.com/api/forgotpassword"
+  const Data = {email}
 
   const Login = (e) => {
+
     e.preventDefault()
     setLoading(true)
     Axios.post(url,Data)
-    .then((res) => {
-      localStorage.setItem("User", JSON.stringify(res.data));
+    .then((res)=>{
       console.log(res)
-    }
-    )
-    .then(()=>{
       setMessage({ error: true, msg: "successfully!" });
-      const id = JSON.parse(localStorage.getItem("User"))
-      setTimeout(() => {
-        navigate(`/dashboard/${id._id}`) 
-      console.log(id._id)
+      Swal.fire({
+        icon: 'success',
+        title: 'successfully',
+        text: res.data.message,
+     }) 
+     setLoading(false)
+     setTimeout(() => {
+        navigate(`/login`) 
       }, [2000]);
     })
     .catch((error)=>{
+        console.log(error.response)
       setMessage({error: false, msg: error.response.data.message});
     setLoading(false)
     Swal.fire({
-      icon: 'error',
-      title: 'Oops...',
-      text: error.response.data.message,
-   }) 
+        icon: 'error',
+        title: 'Oops...',
+        text: error.response.data.message,
+     }) 
+    /* setTimeout(() => {
+        setMessage({error: false, msg:""});
+      }, [5000]); */
     console.log(error)
     //  reset(),
   })
   }
+/*   const alert = () => {
+    if(message.error === false) {
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: message.msg,
+     }) 
+    }else{
+      alert("good")
+    }
+} */
   
   useEffect(() => {
     /* eslint-disable-next-line no-unused-expressions */
     return Display
     /* eslint-disable-next-line react-hooks/exhaustive-deps */
   }, [])
+  
   return (
     <MainContainer>
       <FirstContainer>
@@ -101,20 +106,20 @@ const Login = ({ Display }) => {
             <Link to="/siginup">SignUp</Link>
           </span>
         </FirstParagraph>
-        <Header2>Login Account</Header2>
+        <Header2>Forgot Password</Header2>
         <FormInput  onSubmit={(e)=> Login(e)}>
-          <EmailInput type="email" placeholder="Email Address"  value={email} onChange ={(e)=>{setEmail(e.target.value)}}/>
-          <Password type="password" placeholder="Input Password"  value={password} onChange ={(e)=>{setPassword(e.target.value)}}/>
+          <EmailInput type="email" required placeholder="Email Address"  value={email} onChange ={(e)=>{setEmail(e.target.value)}}/>
+          {/* <Password type="password" placeholder="Input Password"  value={password} onChange ={(e)=>{setPassword(e.target.value)}}/> */}
           {/* <Messg>{message.msg}</Messg> */}
-          <CheckBoxContainer>
+          {/* <CheckBoxContainer>
             <CheckBox type="checkbox" />
             <p>Keep me Logged in</p>
-          </CheckBoxContainer>
+          </CheckBoxContainer> */}
 
           <ButtonContainer>
             <button type="submit">
-              {loading ? <SpinnerCircular size={25} thickness={100} speed={100} color="rgba(255, 255, 255, 1)" secondaryColor="rgba(0, 0, 0, 0.44)" /> : "Log In "} </button>
-            <Link to="/forgotpassword">Forgot password?</Link>
+              {loading ? <SpinnerCircular size={25} thickness={100} speed={100} color="rgba(255, 255, 255, 1)" secondaryColor="rgba(0, 0, 0, 0.44)" /> : "Submit"} </button>
+            {/* <Link to="">Forgot password?</Link> */}
           </ButtonContainer>
         </FormInput>
       </SecondContainer>
@@ -122,7 +127,8 @@ const Login = ({ Display }) => {
   )
 }
 
-export default Login
+export default ForgotPassword
+
 /* const Messg = styled.div`
   width: 56%;
   margin-bottom: 10px;
@@ -303,7 +309,7 @@ const EmailInput = styled.input`
   }
 `
 
-const Password = styled.input`
+/* const Password = styled.input`
   width: 57%;
   height: 7vh;
   border: 0;
@@ -315,15 +321,15 @@ const Password = styled.input`
   @media (max-width: 768px) {
     width: 90%;
   }
-`
+` */
 
-const CheckBox = styled.input`
+/* const CheckBox = styled.input`
   display: flex;
   align-items: flex-start;
   margin: 0;
-`
+` */
 
-const CheckBoxContainer = styled.div`
+/* const CheckBoxContainer = styled.div`
   width: 60%;
   display: flex;
   gap: 5%;
@@ -333,7 +339,7 @@ const CheckBoxContainer = styled.div`
   @media (max-width: 768px) {
     width: 90%;
   }
-`
+` */
 
 const ButtonContainer = styled.div`
   width: 60%;
@@ -369,3 +375,4 @@ const ButtonContainer = styled.div`
     }
   }
 `
+
