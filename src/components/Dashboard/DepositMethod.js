@@ -6,8 +6,28 @@ import payPal from '../../asset/paypal.png'
 import ria from '../../asset/ria-logo(1).jpg'
 import visa from '../../asset/visa_mc.png'
 import western from '../../asset/western.png'
+import { useParams } from "react-router-dom";
+import { useEffect, useState } from 'react'
+import Axios from "axios"
 
 function DepositMethod() {
+  const { userid } = useParams();
+  const [data, setData] = useState()
+  /* const UserData =JSON.parse(localStorage.getItem("User")) */
+  console.log("this is the data",data)
+
+  const url = `https://preeminentcryptotrade.onrender.com/api/userdata/${userid}`
+
+  useEffect(()=>{
+    Axios.get(url)
+    .then(res => setData(res.data.data))
+    /* eslint-disable-next-line react-hooks/exhaustive-deps */
+},[])
+
+const mydata = {...data}
+console.log("this is the datas",mydata)
+
+/*   console.log("This is user data",UserData.data) */
   return (
     <DepositMethodContainer>
       <DepositMethodHeading>Select A Deposit Method</DepositMethodHeading>
@@ -31,13 +51,13 @@ function DepositMethod() {
           <img src={western} alt="westernImage" />
         </NavLink>
       </PaymentMethods>
-      <AccountBal>Your Account Balance: $0.00</AccountBal>
+      <AccountBal>Your Account Balance: ${mydata.accountBalance}</AccountBal>
 
       <DepositTable>
         <tbody>
           <tr>
             <td>Account Balance:</td>
-            <td>$0.00</td>
+            <td>${mydata.accountBalance}</td>
           </tr>
           <tr>
             <td>Pending Withdrawals:</td>

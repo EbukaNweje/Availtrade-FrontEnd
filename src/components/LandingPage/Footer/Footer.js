@@ -13,11 +13,11 @@ const Footer = () => {
             <LeftDiv>
                 <Logo>Preeminentcryptotrade</Logo>
                 <Dot></Dot>
-                <Span to='/news'>News</Span>
-                <Dot></Dot>
-                <Span to='/terms'>Terms & Condition</Span>
-                <Dot></Dot>
-                <Span to='/FAQ'>FAQ</Span>
+                {/* <Span to='/news'>News</Span> */}
+               {/*  <Dot></Dot> */}
+                {/* <Span to='/terms'>Terms & Condition</Span> */}
+                {/* <Dot></Dot> */}
+                <Span to='/questions'>FAQ</Span>
                 <Dot></Dot>
                 <Span to='/contact'>Contact</Span>
             </LeftDiv>
