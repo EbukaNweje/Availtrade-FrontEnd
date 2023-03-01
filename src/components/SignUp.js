@@ -6,6 +6,7 @@ import bg from '../asset/bitcoinwallpaper.jpg'
 import logo from '../asset/preeminentcryptotrade.png'
 import { useNavigate } from "react-router-dom"
 import Axios from "axios"
+import { SpinnerCircular } from 'spinners-react';
 
 function SignUp({Display}) {
   const navigate = useNavigate()
@@ -18,6 +19,8 @@ function SignUp({Display}) {
   const [phoneNumber, setPhoneNumber] = useState("")
   const [email, setEmail] = useState("")
   const [message, setMessage] = useState({ error: false, msg: "" });
+  const [loading, setLoading] = useState(false)
+
   console.log(message)
  /*  const [old, setOld] = useState(false)
   const [conditions, setconditions] = useState(false) */
@@ -32,6 +35,7 @@ function SignUp({Display}) {
     const url = "https://preeminentcryptotrade.onrender.com/api/register"
     
     const Siginup = (e) => {
+    setLoading(true)
       e.preventDefault()
       Axios.post(url,Data)
       .then((res) => {
@@ -39,16 +43,17 @@ function SignUp({Display}) {
         console.log(res)
       }
       )
-      .then(()=>{
-        setMessage({ error: true, msg: "successfully!" });
+      .then((res)=>{
+        setMessage({ error: true, msg: res.response.data.message });
         const id =JSON.parse(localStorage.getItem("User") )
         setTimeout(() => {
           navigate(`/dashboard/${id.data._id}`) 
         }, [2000]);
       })
       .catch((error)=>{
-        /* setMessage({error: false, msg: "user not found" }); */
+        setMessage({error: false, msg:error.response.data.message });
       console.log(error)
+      setLoading(false)
       //  reset(),
     })
     }
@@ -78,8 +83,8 @@ function SignUp({Display}) {
             <FirstFooter>
               <FirstFooterText1>© 2020 preeminentcryptotrade.com ! </FirstFooterText1>
               <FirstFooterText2>
-                <span>Terms & Conditions</span>
-                <span>Contact</span>
+                {/* <span>Terms & Conditions</span> */}
+                <span><Link to="/contact" style={{color: "gray"}}>Contact</Link></span>
               </FirstFooterText2>
             </FirstFooter>
       </FirstContainer>
@@ -125,7 +130,7 @@ function SignUp({Display}) {
           </SelectPackage> */}
           <Password type="password" required placeholder="Input Password(*)" value={password} onChange ={(e)=>{setPassword(e.target.value)}}/>
           <ConfirmPassword type="password"required placeholder="Confirm Password(*)"  value={confirmPassword} onChange ={(e)=>{setconfirmPassword(e.target.value)}}/>
-
+          <Messg>{message.msg}</Messg>
           <CheckBoxContainer>
             <CheckBox type="checkbox" required />
             <p>I am 18 years of age or older(*)</p>
@@ -139,7 +144,7 @@ function SignUp({Display}) {
             filled properly before Submitting your form.)
           </Instruction>
           <ButtonContainer>
-            <button type="submit"> Sign Up</button>
+            <button type="submit">  {loading ? <SpinnerCircular size={25} thickness={100} speed={100} color="rgba(255, 255, 255, 1)" secondaryColor="rgba(0, 0, 0, 0.44)" /> : "Sign Up "} </button>
           </ButtonContainer>
         </FormInput>
       </SecondContainer>
@@ -148,6 +153,16 @@ function SignUp({Display}) {
 }
 
 export default SignUp
+const Messg = styled.div`
+  width: 56%;
+  margin-bottom: 10px;
+  font-size: 13px;
+  color: red;
+
+  @media (max-width: 768px) {
+      width: 87%
+    }
+`
 
 const FirstFooterText2 = styled.div`
   display: flex;

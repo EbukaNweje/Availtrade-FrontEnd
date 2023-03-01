@@ -84,8 +84,8 @@ const Login = ({ Display }) => {
             © 2020 preeminentcryptotrade.com !{' '}
           </FirstFooterText1>
           <FirstFooterText2>
-            <span>Terms & Conditions</span>
-            <span>Contact</span>
+            {/* <span>Terms & Conditions</span> */}
+            <span><Link to="/contact" style={{color: "gray"}}>Contact</Link></span>
           </FirstFooterText2>
         </FirstFooter>
       </FirstContainer>
