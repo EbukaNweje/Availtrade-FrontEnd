@@ -6,60 +6,58 @@ import logo from '../asset/preeminentcryptotrade.png'
 import { useNavigate } from "react-router-dom"
 import Axios from "axios"
 import { SpinnerCircular } from 'spinners-react';
+import { useParams } from "react-router-dom";
 import Swal from 'sweetalert2'
 
-const Login = ({ Display }) => {
-  const navigate = useNavigate()
-  const [email, setEmail] = useState("")
-  const [password, setPassword] = useState("")
-  const [loading, setLoading] = useState(false)
-  const [message, setMessage] = useState({ error: false, msg:""});
+const RestPassword = ({Display}) => {
+  const { userid, tokenid } = useParams();
+    const navigate = useNavigate()
+    /* const [email, setEmail] = useState("") */
+    const [password, setPassword] = useState("")
+    const [confirmPassword, setconfirmPassword] = useState("")
+    const [loading, setLoading] = useState(false)
+    const [message, setMessage] = useState({ error: false, msg:""});
+    console.log(message)
 
-  /* const alert = () => {
-        if(message.error === false) {
-          Swal.fire({
-            icon: 'error',
-            title: 'Oops...',
-            text: err,
-         }) 
-        }else{
-          alert("good")
-        }
-  }
- */
-  console.log(message)
-
-  const url = "https://preeminentcryptotrade.onrender.com/api/login"
-  const Data = {email, password}
+  const url = `https://preeminentcryptotrade.onrender.com/api/restLink/${userid}/${tokenid}`
+  const Data = {password}
 
   const Login = (e) => {
     e.preventDefault()
     setLoading(true)
-    Axios.post(url,Data)
-    .then((res) => {
-      localStorage.setItem("User", JSON.stringify(res.data));
-      console.log(res)
+    if(password !== confirmPassword){
+        setLoading(false)
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: "Password does not match",
+         }) 
+    }else{
+        Axios.post(url,Data)
+        .then((res)=>{
+          setMessage({ error: true, msg: "successfully!" }); 
+          console.log("this is rest",res)
+          Swal.fire({
+            icon: 'success',
+            title: 'successfully',
+            text: "you have successfuly change your passwo",
+         }) 
+          setTimeout(() => {
+            navigate(`/login`) 
+          }, [2000]);
+        })
+        .catch((error)=>{
+          setMessage({error: false, msg: error.response.data.message});
+          Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: error.response.data.message,
+         })
+        setLoading(false)
+        console.log(error)
+        //  reset(),
+      })
     }
-    )
-    .then(()=>{
-      setMessage({ error: true, msg: "successfully!" });
-      const id = JSON.parse(localStorage.getItem("User"))
-      setTimeout(() => {
-        navigate(`/dashboard/${id._id}`) 
-      console.log(id._id)
-      }, [2000]);
-    })
-    .catch((error)=>{
-      setMessage({error: false, msg: error.response.data.message});
-    setLoading(false)
-    Swal.fire({
-      icon: 'error',
-      title: 'Oops...',
-      text: error.response.data.message,
-   }) 
-    console.log(error)
-    //  reset(),
-  })
   }
   
   useEffect(() => {
@@ -101,20 +99,21 @@ const Login = ({ Display }) => {
             <Link to="/siginup">SignUp</Link>
           </span>
         </FirstParagraph>
-        <Header2>Login Account</Header2>
+        <Header2>Reset Password</Header2>
         <FormInput  onSubmit={(e)=> Login(e)}>
-          <EmailInput type="email" placeholder="Email Address"  value={email} onChange ={(e)=>{setEmail(e.target.value)}}/>
-          <Password type="password" placeholder="Input Password"  value={password} onChange ={(e)=>{setPassword(e.target.value)}}/>
-          {/* <Messg>{message.msg}</Messg> */}
-          <CheckBoxContainer>
+{/*           <EmailInput type="email" placeholder="Email Address"  value={email} onChange ={(e)=>{setEmail(e.target.value)}}/> */}
+          <Password type="password" placeholder="Enter your new password"  value={password} onChange ={(e)=>{setPassword(e.target.value)}}/>
+          <Password type="password" placeholder="Confirm Password"  value={confirmPassword} onChange ={(e)=>{setconfirmPassword(e.target.value)}}/>
+         {/*  <Messg>{message.msg}</Messg> */}
+          {/* <CheckBoxContainer>
             <CheckBox type="checkbox" />
             <p>Keep me Logged in</p>
-          </CheckBoxContainer>
+          </CheckBoxContainer> */}
 
           <ButtonContainer>
             <button type="submit">
-              {loading ? <SpinnerCircular size={25} thickness={100} speed={100} color="rgba(255, 255, 255, 1)" secondaryColor="rgba(0, 0, 0, 0.44)" /> : "Log In "} </button>
-            <Link to="/forgotpassword">Forgot password?</Link>
+              {loading ? <SpinnerCircular size={25} thickness={100} speed={100} color="rgba(255, 255, 255, 1)" secondaryColor="rgba(0, 0, 0, 0.44)" /> : "Submit"} </button>
+            {/* <Link to="">Forgot password?</Link> */}
           </ButtonContainer>
         </FormInput>
       </SecondContainer>
@@ -122,7 +121,8 @@ const Login = ({ Display }) => {
   )
 }
 
-export default Login
+export default RestPassword
+
 /* const Messg = styled.div`
   width: 56%;
   margin-bottom: 10px;
@@ -289,7 +289,7 @@ const FormInput = styled.form`
   align-items: center;
 `
 
-const EmailInput = styled.input`
+/* const EmailInput = styled.input`
   width: 57%;
   height: 7vh;
   border: 0;
@@ -301,7 +301,7 @@ const EmailInput = styled.input`
   @media (max-width: 768px) {
     width: 90%;
   }
-`
+` */
 
 const Password = styled.input`
   width: 57%;
@@ -317,13 +317,13 @@ const Password = styled.input`
   }
 `
 
-const CheckBox = styled.input`
+/* const CheckBox = styled.input`
   display: flex;
   align-items: flex-start;
   margin: 0;
-`
+` */
 
-const CheckBoxContainer = styled.div`
+/* const CheckBoxContainer = styled.div`
   width: 60%;
   display: flex;
   gap: 5%;
@@ -333,7 +333,7 @@ const CheckBoxContainer = styled.div`
   @media (max-width: 768px) {
     width: 90%;
   }
-`
+` */
 
 const ButtonContainer = styled.div`
   width: 60%;

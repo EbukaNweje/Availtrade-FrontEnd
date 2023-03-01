@@ -7,6 +7,7 @@ import logo from '../asset/preeminentcryptotrade.png'
 import { useNavigate } from "react-router-dom"
 import Axios from "axios"
 import { SpinnerCircular } from 'spinners-react';
+import Swal from 'sweetalert2'
 
 function SignUp({Display}) {
   const navigate = useNavigate()
@@ -54,6 +55,11 @@ function SignUp({Display}) {
         setMessage({error: false, msg:error.response.data.message });
       console.log(error)
       setLoading(false)
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: error.response.data.message,
+     }) 
       //  reset(),
     })
     }
@@ -130,7 +136,7 @@ function SignUp({Display}) {
           </SelectPackage> */}
           <Password type="password" required placeholder="Input Password(*)" value={password} onChange ={(e)=>{setPassword(e.target.value)}}/>
           <ConfirmPassword type="password"required placeholder="Confirm Password(*)"  value={confirmPassword} onChange ={(e)=>{setconfirmPassword(e.target.value)}}/>
-          <Messg>{message.msg}</Messg>
+      {/*     <Messg>{message.msg}</Messg> */}
           <CheckBoxContainer>
             <CheckBox type="checkbox" required />
             <p>I am 18 years of age or older(*)</p>
@@ -153,7 +159,7 @@ function SignUp({Display}) {
 }
 
 export default SignUp
-const Messg = styled.div`
+/* const Messg = styled.div`
   width: 56%;
   margin-bottom: 10px;
   font-size: 13px;
@@ -162,7 +168,7 @@ const Messg = styled.div`
   @media (max-width: 768px) {
       width: 87%
     }
-`
+` */
 
 const FirstFooterText2 = styled.div`
   display: flex;
