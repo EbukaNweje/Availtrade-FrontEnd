@@ -86,7 +86,7 @@ const DashboardPrivacy0 = ({Display}) => {
              this "Privacy Policy". In case you think that preeminentcryptotrade.com - Force of
               Experience does not follow the rules and violate this Statement, contact Acmerealm - 
               Force of Experience at abuse@preeminentcryptotrade.com We guarantee that we will take 
-              commercially reasonable efforts to discover and solve the problem.
+              commercially reasonable efforts to discover and solve the problem
             </p>
            </div>
         </div>
