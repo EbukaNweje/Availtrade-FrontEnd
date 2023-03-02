@@ -36,7 +36,7 @@ function Question() {
 
   return (
     <div>
-      <section className="contact">
+      <section className="contacts">
         <h1 className="contact_h1 faq_h1">Frequently Asked Questions</h1>
         <h3 className="faq_h3">
           You ask, we answer. 99% of of most commonly asked questions are listed

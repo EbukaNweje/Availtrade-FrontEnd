@@ -209,7 +209,7 @@ color: #3c357e;
 `;
 export const Label = styled.div`
     position: absolute;
-    top: 55px;
+    top: 30px;
     right: 70px;
     line-height: 34px;
     font-size: 16px;
@@ -280,7 +280,7 @@ color: #54d8a3;
 `;
 export const BottomDiv = styled.div`
 width: 100%;
-height: 100px;
+height: 150px;
 display: flex;
 justify-content: space-between;
 align-items: center;
@@ -294,7 +294,7 @@ export const BottomLeft = styled.div`
 display: inline-block;
     background-image: linear-gradient(72deg, #DADAFA, #E9E8FF);
     width: 66.666666%;
-    height: 52%;
+    height: 60%;
     padding: 24px 32px;
     display: flex;
     flex-direction: column;
@@ -354,7 +354,7 @@ export const BottomRight = styled(Link)`
     color: #fff;
     font-weight: 500;
     text-transform: uppercase;
-    height: 100%;
+    /* height: 100%; */
     text-decoration: none;
     cursor: pointer;
 

@@ -11,7 +11,7 @@ background-repeat: no-repeat;
 background-size: cover;
 background-position: center;
 width: 100%;
-height:99vh;
+height: max-content;
 top: 0;
 left: 0;
 /* opacity: 95%; */
@@ -125,6 +125,7 @@ export const Box = styled.div`
     padding: 14px 0px 40px 0;
     border-radius: 5px;
     opacity: 95%;
+    margin-bottom: 4%;
 
     @media Screen and (max-width: 768px){
         width: 100%;

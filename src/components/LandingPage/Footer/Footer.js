@@ -15,7 +15,7 @@ const Footer = () => {
                 <Dot></Dot>
                 {/* <Span to='/news'>News</Span> */}
                {/*  <Dot></Dot> */}
-                {/* <Span to='/terms'>Terms & Condition</Span> */}
+                <Span to='/team'>Terms & Condition</Span>
                 {/* <Dot></Dot> */}
                 <Span to='/questions'>FAQ</Span>
                 <Dot></Dot>

@@ -4,6 +4,7 @@ import { BsArrowRight } from "react-icons/bs";
 import picture from "../../assets/cb-258-512.svg";
 import Share from "./Share";
 import StepTwo from "./StepTwo";
+import Footer from "../LandingPage/Footer/Footer"
 
 const GetStarted = () => {
   return (
@@ -50,6 +51,8 @@ const GetStarted = () => {
 
       <StepTwo />
       <Share />
+
+      <Footer/>
     </div>
   );
 };

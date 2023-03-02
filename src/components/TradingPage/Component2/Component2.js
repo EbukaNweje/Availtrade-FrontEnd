@@ -58,7 +58,7 @@ const Component2 = () =>{
                                     <Texts>Minimum withdrawal amount is 0.00005 BTC</Texts>
                                 </Bottom>
                             </BottomLeft>
-                            <BottomRight to='/'>Sign Up Now</BottomRight>
+                            <BottomRight to='/siginup'>Sign Up Now</BottomRight>
                         </BottomDiv>
                     </CalculatorDiv>
                 </Div>

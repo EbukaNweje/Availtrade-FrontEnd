@@ -1,5 +1,5 @@
-.contacts {
-  background-image: linear-gradient(28deg, rgb(18, 72, 189), #1e3cb1);
+.contact {
+  background-image: linear-gradient(28deg, #639, #5f72bd);
   padding: 10% 0 6% 5%;
 }
 
@@ -18,21 +18,16 @@
   font-weight: 300;
 }
 
-.map {
-  background: #eee;
-  height: 30vh;
-  width: 100%;
-}
-
 .support_form {
   text-align: center;
+  width: 100%;
 }
 
 .support_form > h4 {
   font-weight: 400;
   font-size: 18px;
   line-height: 28px;
-  color: rgb(51, 78, 153);
+  color: #639;
   padding-bottom: 6%;
   padding-top: 10%;
 }
@@ -41,7 +36,7 @@
   font-weight: 200;
   font-size: 14px;
   line-height: 24px;
-  color: rgb(51, 78, 153);
+  color: #639;
 }
 
 .support_form > hr {
@@ -69,11 +64,11 @@
   font-weight: 300;
 }
 
-.sbmts {
+.sbmt {
   background: linear-gradient(
     135deg,
-    rgb(36, 39, 214) 0,
-    rgb(47, 12, 161) 100%
+    rgba(141, 143, 254, 1) 0,
+    rgba(156, 126, 255, 1) 100%
   );
   color: #fff !important;
   height: 40px;
@@ -97,13 +92,49 @@
   padding-bottom: 18px;
 }
 
+.Read {
+  width: 90%;
+  min-height: 50px;
+  background-color: rgb(245, 245, 245);
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+}
+.ReadContainer {
+  width: 100%;
+  height: max-content;
+  display: flex;
+  align-items: center;
+  margin-top: 3%;
+  flex-direction: column;
+}
+
+.Standard {
+  width: 90%;
+  margin-top: 5%;
+}
+
+.Standard > h5 {
+  color: rgb(102, 51, 153);
+}
+
+.Standard > p {
+  color: rgb(119, 114, 126);
+  margin-top: 2%;
+  font-size: 15px;
+}
+
+.maincontainer {
+  height: max-content;
+}
+
 @media (min-width: 768px) {
 .flex-cont {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: row-reverse;
+/*   display: flex;
+  justify-content: space-between; */
+/*   flex-direction: row-reverse;
   align-items: center;
-  flex-wrap: wrap;
+  flex-wrap: wrap; */
   margin-top: 10%;
   padding-left: 5%;
 }

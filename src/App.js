@@ -26,6 +26,7 @@ import RequestBitcoinWithdraw from './components/Dashboard/RequestBitcoinDeposit
 import DashboardFaq from './components/Dashboard/DashboardFaq';
 import DashboardContactUs from './components/Dashboard/DashboardContactUs';
 import DashboardPrivacy from './components/Dashboard/DashboardPrivacy';
+import Teams from './components/TeamCondition/Contact';
 
 function App() {
 const [display, setDisplay] = useState(true)
@@ -46,6 +47,7 @@ const [display, setDisplay] = useState(true)
           <Route path="/questions" element={<Question />} />
             <Route path="/get_started" element={<GetStarted />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/team" element={<Teams />} />
             <Route path="/forgotpassword" element={<ForgotPassword  Display = {toggle} />} />
             <Route path="/restLink/:userid/:tokenid" element={<RestPassword Display = {toggle} />} />
           <Route element={<Private />}>
