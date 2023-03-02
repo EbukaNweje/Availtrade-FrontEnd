@@ -6,6 +6,7 @@ import HeaderMenu from "./HeaderMenu"
 import EditForm from "./EditForm"
 import Eze from './Eze'
 
+
 function EditProfile() {
 
     const location = useLocation();

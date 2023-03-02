@@ -13,7 +13,6 @@ import Private from './components/Private';
 import EditProfile from './components/Dashboard/EditProfile';
 import AboutCompany from './components/Dashboard/AboutCompany';
 import Deposit from './components/Dashboard/Deposit';
-
 import BitcoinDeposit from './components/Dashboard/BitcoinDeposit';
 import RequestForm from './components/Dashboard/RequestForm';
 import AboutPage from './components/AboutPage/AboutPage';
