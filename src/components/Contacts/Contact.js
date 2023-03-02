@@ -21,12 +21,12 @@ const Contact = () => {
           <h4>Support Form</h4>
           <p className="support_form_parag">
             <IoLocationOutline />
-            &nbsp;&nbsp; Address: 1234 Street Name, City Name, CountryName
+            &nbsp;&nbsp; Address: 813 Meadowbrook Drive Coppell,TX 75019
             <br />
             <BsEnvelope />
             <br />
             <BsHeadset />
-            &nbsp;&nbsp; Phone: +1 234 567 890
+            &nbsp;&nbsp; Phone: +1 774 473 9572
           </p>
           <hr />
 

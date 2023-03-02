@@ -6,8 +6,29 @@ import phone from '../../asset/pipPhone.png'
 import Email from '../../asset/pipEmail.png'
 import Country from '../../asset/pipCountry.png'
 import protectImage from '../../asset/protect.png'
+import Axios from "axios"
+import { useEffect, useState } from 'react'
+import { useParams } from "react-router-dom";
 
 function EditForm() {
+  const { userid } = useParams();
+  const [data, setData] = useState()
+/*   const UserData =JSON.parse(localStorage.getItem("User")) */
+  console.log("this is the userid",userid)
+  
+
+
+  const url = `https://preeminentcryptotrade.onrender.com/api/userdata/${userid}`
+
+  useEffect(()=>{
+    Axios.get(url)
+    .then(res => setData(res.data.data))
+    /* eslint-disable-next-line react-hooks/exhaustive-deps */
+},[])
+
+const mydata = {...data}
+console.log("this is the datas",mydata)
+
   return (
     <MainContainer>
       <AccountInfo>
@@ -15,41 +36,41 @@ function EditForm() {
           <img src={Owner} alt="img" />
           <div>
             <h3>ACCOUNT</h3>
-            <p>BITCOIN INVESTMENT</p>
+         {/*    <p>BITCOIN INVESTMENT</p> */}
           </div>
         </AccountType>
         <AccountEmail>
           <img src={Email} alt="img" />
           <div>
             <h3>EMAIL</h3>
-            <p>someonesemail@email.com</p>
+            <p>{mydata.email}</p>
           </div>
         </AccountEmail>
         <AccountCountry>
           <img src={Country} alt="img" />
           <div>
             <h3>COUNTRY</h3>
-            <p>mozambique</p>
+            {/* <p>mozambique</p> */}
           </div>
         </AccountCountry>
         <AccountPhone>
           <img src={phone} alt="img" />
           <div>
             <h3>PHONE:</h3>
-            <p>+123456789</p>
+            <p>{mydata.phoneNumber}</p>
           </div>
         </AccountPhone>
       </AccountInfo>
       <SecondContainer>
         <FormInput>
           <label>First Name</label>
-          <FirstNameInput type="text"  defaultValue='first name'/>
+          <FirstNameInput type="text"  defaultValue={mydata.firstName}/>
           <label>Last Name</label>
-          <LastNameInput type="text" defaultValue='Last name' />
+          <LastNameInput type="text" defaultValue={mydata.lastName} />
           <label>Email</label>
-          <EmailInput type="email" defaultValue='Email address' />
+          <EmailInput type="email" defaultValue={mydata.email} />
           <label>Phone Number</label>
-          <PhoneNumber type="text" defaultValue='Phone number' />
+          <PhoneNumber type="text" defaultValue={mydata.phoneNumber} />
           <ButtonContainer>
             <button type="submit">Edit Profile</button>
           </ButtonContainer>
