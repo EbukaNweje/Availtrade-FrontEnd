@@ -7,6 +7,7 @@ display: flex;
 justify-content: center;
 align-items: center;
 border-bottom: 1px solid #E8E9EF;
+margin-bottom: 5%;
 
 @media Screen and (max-width: 768px){
     height: auto;

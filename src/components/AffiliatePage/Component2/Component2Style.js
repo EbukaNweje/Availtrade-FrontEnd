@@ -9,6 +9,7 @@ display: flex;
 justify-content: center;
 align-items: center;
 margin-top: 580px;
+margin-bottom:5%;
 
 @media Screen and (max-width: 768px){
     height: auto;

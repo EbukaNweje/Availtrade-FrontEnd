@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import {v4 as uuidv4} from 'uuid';
 import Faq from "./Faq";
+import Footer from "../LandingPage/Footer/Footer"
 
 function Question() {
   const [questions, setQuestions] = useState([]);
@@ -58,6 +59,8 @@ function Question() {
           <Faq faq={question} index={i} />
         ))}
       </section>
+
+        <Footer/>
     </div>
   );
 }

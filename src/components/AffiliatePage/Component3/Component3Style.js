@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
 width: 100%;
-height: 80vh;
+height: 95vh;
 display: flex;
 flex-direction: column;
 /* justify-content: center; */
@@ -110,8 +110,8 @@ background-color: #54D8A3;
 margin: 15px 0;
 `;
 export const ButtonHold = styled.div`
-width: 75px;
-/* height: 40px; */
+width: 150px;
+height: 40px;
 background: linear-gradient(135deg, rgb(141 143 254), rgb(156 126 255));
 color: #fff!important;
 margin: 25px 0;

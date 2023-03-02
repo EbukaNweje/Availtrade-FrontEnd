@@ -4,6 +4,8 @@ import "../Steps/GetStarted.css";
 import { IoLocationOutline } from "react-icons/io5";
 import { BsEnvelope } from "react-icons/bs";
 import { BsHeadset } from "react-icons/bs";
+import Footer from "../LandingPage/Footer/Footer"
+
 
 const Contact = () => {
   return (
@@ -58,6 +60,7 @@ const Contact = () => {
           <div></div>
         </section>
       </div>
+      <Footer/>
     </div>
   );
 };
