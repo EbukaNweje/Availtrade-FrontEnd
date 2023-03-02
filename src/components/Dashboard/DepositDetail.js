@@ -22,6 +22,8 @@ function DepositDetail() {
     /* eslint-disable-next-line react-hooks/exhaustive-deps */
 },[])
 /*   console.log("This is user data",UserData.data) */
+const mydata = {...data}
+console.log("this is the datas",mydata)
 
   return (
     <AccountInfo>
@@ -36,7 +38,7 @@ function DepositDetail() {
         <img src={Email} alt="img" />
         <div>
           <h3>EMAIL</h3>
-          <p></p>
+          <p>{mydata.email}</p>
         </div>
       </AccountEmail>
       <AccountCountry>
@@ -50,7 +52,7 @@ function DepositDetail() {
         <img src={phone} alt="img" />
         <div>
           <h3>PHONE:</h3>
-          <p></p>
+          <p>{mydata.phoneNumber}</p>
         </div>
       </AccountPhone>
     </AccountInfo>

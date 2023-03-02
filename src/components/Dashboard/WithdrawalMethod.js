@@ -2,8 +2,26 @@ import styled from 'styled-components'
 import { NavLink } from 'react-router-dom'
 import bitcoin from '../../asset/bitcoin(1).png'
 import moneyGram from '../../asset/moneygramads-300x103.png'
+import { useParams } from "react-router-dom";
+import { useEffect, useState } from 'react'
+import Axios from "axios"
 
 function WithdrawalMethod() {
+  const { userid } = useParams();
+  const [data, setData] = useState()
+  /* const UserData =JSON.parse(localStorage.getItem("User")) */
+  console.log("this is the data",data)
+
+  const url = `https://preeminentcryptotrade.onrender.com/api/userdata/${userid}`
+
+  useEffect(()=>{
+    Axios.get(url)
+    .then(res => setData(res.data.data))
+    /* eslint-disable-next-line react-hooks/exhaustive-deps */
+},[])
+
+const mydata = {...data}
+console.log("this is the datas",mydata)
   return (
     <DepositMethodContainer>
       <DepositMethodHeading>Select A Withdrawal Method</DepositMethodHeading>
@@ -17,13 +35,13 @@ function WithdrawalMethod() {
           </p>
         </NavLink>
       </PaymentMethods>
-      <AccountBal>Your Account Balance: $0.00</AccountBal>
+      <AccountBal>Your Account Balance: ${mydata.accountBalance}</AccountBal>
 
       <DepositTable>
         <tbody>
           <tr>
             <td>Account Balance:</td>
-            <td>$0.00</td>
+            <td>${mydata.accountBalance}</td>
           </tr>
           <tr>
             <td>Pending Withdrawals:</td>
