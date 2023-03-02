@@ -40,7 +40,7 @@ const ForgotPassword = ({ Display }) => {
     })
     .catch((error)=>{
         console.log(error.response)
-      setMessage({error: false, msg: error.response.data.message});
+      /* setMessage({error: false, msg: error.response.data.message}); */
     setLoading(false)
     Swal.fire({
         icon: 'error',
