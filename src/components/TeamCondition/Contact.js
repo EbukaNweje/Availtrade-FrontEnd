@@ -30,7 +30,7 @@ const Contact = () => {
         <div className="Standard">
             <h5>2. Description of the platform</h5>
             <p>
-            2.1. preeminentcryptotrade.com® systems are scalable distributed computing systems for the purposes of cryptocurrency trading. The central data hub of the Company is where all the servers are located that power the platform.
+            2.1. preeminentcryptotrade.com systems are scalable distributed computing systems for the purposes of cryptocurrency trading. The central data hub of the Company is where all the servers are located that power the platform.
             </p>
             <p>
             2.2. The Company gives Buyers the opportunity of receiving measureable capital income through the preeminentcryptotrade.com® platform (http://preeminentcryptotrade.com). Based on the Seller’s use of the platform, all income and capital will be assessed and given.
