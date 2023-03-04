@@ -14,13 +14,14 @@ const Dashboard = ({Display}) => {
   const url = `https://preeminentcryptotrade.onrender.com/api/userdata/${userid}`
  /*  console.log(data) */
 
-  useEffect(()=>{
+useEffect(()=>{
+
     Axios.get(url)
     .then(res => setData(res.data.data))
     /* eslint-disable-next-line react-hooks/exhaustive-deps */
 },[])
-  useEffect(()=>{
 
+  useEffect(()=>{
     /* eslint-disable-next-line no-unused-expressions */
     return Display
     /* eslint-disable-next-line react-hooks/exhaustive-deps */
