@@ -3,7 +3,7 @@ import Question from './components/Faq/Question';
 import Contact from './components/Contacts/Contact';
 import GetStarted from './components/Steps/GetStarted';
 import { useState } from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import { HashRouter, Route, Routes } from 'react-router-dom'
 import SignUp from "./components/SignUp";
 import Login from './components/Login';
 import ForgotPassword from './components/ForgotPassword';
@@ -35,7 +35,7 @@ const [display, setDisplay] = useState(true)
   const changeToggle = () => setDisplay(true)
 
   return (
-      <Router>
+      <HashRouter>
         {display? <Header/> : null}
         <Routes>
         <Route path="/" element={<LandingPage changeDisplay = {changeToggle}/>}/>
@@ -65,7 +65,7 @@ const [display, setDisplay] = useState(true)
             <Route path="/privacypolicy/:userid" element={<DashboardPrivacy Display = {toggle}/>} />
           </Route>
         </Routes>
-      </Router>
+      </HashRouter>
   );
 }
 
