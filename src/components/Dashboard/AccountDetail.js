@@ -81,7 +81,7 @@ console.log("this is the datas",mydata)
         </AccountBalance>
         <TotalEarned>
           <img src={pipMoney} alt="bag" />
-          <p>${mydata.lastDeposit}</p>
+          <p>$0</p>
           <big>TOTAL EARNED</big>
         </TotalEarned>
         <StartUp>
@@ -102,7 +102,7 @@ console.log("this is the datas",mydata)
         </UserPackage> */}
         <LastDeposit>
           <img src={head} alt="imag" />
-          <small>0.00</small>
+          <small>{mydata.lastDeposit}</small>
           <div>
             <p>LAST DEPOSIT</p>
           </div>
