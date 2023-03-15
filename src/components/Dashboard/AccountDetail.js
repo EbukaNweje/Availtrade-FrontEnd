@@ -48,7 +48,6 @@ console.log("this is the datas",mydata)
           <img src={Owner} alt="img" />
           <div>
             <h3>ACCOUNT</h3>
-            {/* <p>BITCOIN INVESTMENT</p> */}
           </div>
         </AccountType>
         <AccountEmail>
@@ -62,7 +61,6 @@ console.log("this is the datas",mydata)
           <img src={Country} alt="img" />
           <div>
             <h3>COUNTRY</h3>
-           {/*  <p>mozambique</p> */}
           </div>
         </AccountCountry>
         <AccountPhone>
@@ -92,14 +90,6 @@ console.log("this is the datas",mydata)
       </MoneyInfo>
 
       <UpgradeAccount>
-        {/* <UserPackage>
-          <img src={head} alt="imag" />
-          <small>EMERALD($1,000,000-$1,900,000)</small>
-          <div>
-            <p>USER PACKAGE PLAN</p>
-          </div>
-          <button>UPGRADE ACCOUNT</button>
-        </UserPackage> */}
         <LastDeposit>
           <img src={head} alt="imag" />
           <small>{mydata.lastDeposit}</small>
