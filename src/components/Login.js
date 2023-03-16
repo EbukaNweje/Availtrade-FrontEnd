@@ -37,6 +37,7 @@ const Login = ({ Display }) => {
     setLoading(true)
     Axios.post(url,Data)
     .then((res) => {
+      console.log(res)
       localStorage.setItem("User", JSON.stringify(res.data));
       console.log(res)
     }
@@ -50,6 +51,7 @@ const Login = ({ Display }) => {
       }, [2000]);
     })
     .catch((error)=>{
+      console.log(error)
       setMessage({error: false, msg: error.response.data.message});
     setLoading(false)
     Swal.fire({
@@ -67,6 +69,7 @@ const Login = ({ Display }) => {
     return Display
     /* eslint-disable-next-line react-hooks/exhaustive-deps */
   }, [])
+
   return (
     <MainContainer>
       <FirstContainer>

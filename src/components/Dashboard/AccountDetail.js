@@ -79,7 +79,7 @@ console.log("this is the datas",mydata)
         </AccountBalance>
         <TotalEarned>
           <img src={pipMoney} alt="bag" />
-          <p>$0</p>
+          <p>${mydata.totalEarned}</p>
           <big>TOTAL EARNED</big>
         </TotalEarned>
         <StartUp>
