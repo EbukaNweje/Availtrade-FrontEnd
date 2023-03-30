@@ -92,7 +92,7 @@ console.log("this is the datas",mydata)
       <UpgradeAccount>
         <LastDeposit>
           <img src={head} alt="imag" />
-          <small>{mydata.lastDeposit}</small>
+          <small>${mydata.lastDeposit}</small>
           <div>
             <p>LAST DEPOSIT</p>
           </div>
@@ -100,7 +100,7 @@ console.log("this is the datas",mydata)
         </LastDeposit>
         <Withdraw>
           <img src={head} alt="imag" />
-          <small>0.000</small>
+          <small>$0.000</small>
           <div>
             <p>TOTAL WIDRAWN</p>
           </div>
@@ -112,7 +112,7 @@ console.log("this is the datas",mydata)
         </Withdraw>
         <NewDeposit>
           <img src={head} alt="imag" />
-          <small>{mydata.totalDeposit}</small>
+          <small>${mydata.totalDeposit}</small>
           <div>
             <p>TOTAL DEPOSIT</p>
           </div>

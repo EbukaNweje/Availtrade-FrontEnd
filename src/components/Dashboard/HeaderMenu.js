@@ -4,6 +4,8 @@ import '../../index.css'
 import styled from 'styled-components'
 import bg from '../../asset/bg-wrp.png'
 import { useParams } from "react-router-dom";
+import Axios from "axios"
+import { useEffect, useState } from 'react'
 
 const MainContainer = styled.div`
   width: 100%;
@@ -79,7 +81,7 @@ const MyMenuButton = styled.div`
   color: darkblue;
   font-family: sans-serif;
   cursor: pointer;
-  transition: all 350ms;
+  transition: all 350ms; 
   background: ${({ bg }) => (bg ? '#fff' : 'orange')};
   padding: 7px;
   width: 100px;
@@ -124,8 +126,25 @@ const HeaderMenu = () => {
   const { faq } = location.state || {}
   const { contact } = location.state || {}
   const { privacy } = location.state || {}
+  const { update } = location.state || {}
 
   const { userid } = useParams();
+  const [data, setData] = useState()
+  /*   const UserData =JSON.parse(localStorage.getItem("User")) */
+  /*   console.log("this is the userid",userid) */
+    
+  
+  
+    const url = `https://preeminentcryptotrade.onrender.com/api/userdata/${userid}`
+  
+    useEffect(()=>{
+      Axios.get(url)
+      .then(res => setData(res.data.data))
+      /* eslint-disable-next-line react-hooks/exhaustive-deps */
+  },[])
+  
+  const mydata = {...data}
+  /* console.log("this is the datas i what to use",mydata) */
 /*   const id = JSON.parse(localStorage.getItem("User") )
   console.log("this is",id.data._id)
  */
@@ -165,6 +184,13 @@ const HeaderMenu = () => {
             LOGOUT
           </NavLink>
           </MyMenu>
+            {mydata.isAdmin? 
+             <MyMenu>
+             <NavLink to={`/update/${userid}`} state={{ update: 'update' }}>
+               UPDATE
+             </NavLink>
+             </MyMenu>
+            : null}
         <MyMenuButton>
           <NavLink to={`/deposit/${userid}`} state={{ deposit: 'deposit' }}>
             DEPOSIT
@@ -177,7 +203,7 @@ const HeaderMenu = () => {
         </MyMenuButton>
       </Wrapper>
       <DashBoardText>
-        {edit ? 'Edit' : about ? 'About Us' : deposit ? 'Deposit' : withdraw ? 'Withdraw' : faq ? "FAQ" : contact ? "CONTACT US" : privacy ? "PRIVACY" : 'Dashboard'}
+        {edit ? 'Edit' : about ? 'About Us' : deposit ? 'Deposit' : withdraw ? 'Withdraw' : faq ? "FAQ" : contact ? "CONTACT US" : privacy ? "PRIVACY" : update ? "update" : 'Dashboard'}
       </DashBoardText>
     </MainContainer>
   )

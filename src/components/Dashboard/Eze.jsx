@@ -58,7 +58,7 @@ export default function Eze() {
             <div className='footer_icons'><ImBriefcase className='icon' /> <p> preeminentcryptotrade</p></div>
             <div className='footer_icons'><MdLocationOn className='icon' /> <p> Adress:813Meadowbrook Drive Coppell,TX 75019</p></div>
             <div className='footer_icons'><ImPhone className='icon' /> <p> Phone:VIP members only</p></div>
-            <div className='footer_icons'> <TfiEmail className='icon' /><p> Email: support@preeminentcryptotrade.com</p></div>
+            <div className='footer_icons'> <TfiEmail className='icon' /><p> Email: preeminentteam@gmail.com</p></div>
           </div>
         </div>
 

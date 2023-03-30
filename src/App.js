@@ -27,6 +27,7 @@ import DashboardFaq from './components/Dashboard/DashboardFaq';
 import DashboardContactUs from './components/Dashboard/DashboardContactUs';
 import DashboardPrivacy from './components/Dashboard/DashboardPrivacy';
 import Teams from './components/TeamCondition/Contact';
+import Update from "./components/Dashboard/UpdateUser"
 
 function App() {
 const [display, setDisplay] = useState(true)
@@ -63,6 +64,7 @@ const [display, setDisplay] = useState(true)
             <Route path="/faq/:userid" element={<DashboardFaq Display = {toggle} />} />
             <Route path="/contactus/:userid" element={<DashboardContactUs Display = {toggle} />} />
             <Route path="/privacypolicy/:userid" element={<DashboardPrivacy Display = {toggle}/>} />
+            <Route path="/update/:userid" element={<Update Display = {toggle}/>} />
           </Route>
         </Routes>
       </HashRouter>
