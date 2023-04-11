@@ -67,8 +67,9 @@ const MyMenu = styled.div`
     color: orange;
   }
 
-  @media (max-width: 425px) {
-    font-size: 5px;
+  @media (max-width: 428px) {
+    font-size: 8px;
+    margin: 0px 0.7%;
   }
   @media (max-width: 320px) {
     font-size: 4px;

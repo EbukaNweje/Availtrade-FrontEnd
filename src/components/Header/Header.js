@@ -76,7 +76,7 @@ const Header = () => {
                     setNav(true);
                 }}> 
                 <Menu />
-                </MenuHold>
+          </MenuHold>
         </Wrapper>
         </Container2>
       ) :  
@@ -98,15 +98,15 @@ const Header = () => {
        <Button>
        <NavLink to="/login">
               Log In
-              </NavLink>
+        </NavLink>
        </Button>
        </NavRight>
      </NavWrap>
-     <MenuHold  onClick={() =>{
+     <MenuHold onClick={() =>{
                     setNav(true);
                 }}> 
                 <Menu2 />
-                </MenuHold>
+      </MenuHold>
    </Wrapper2>
    </Container>
       }

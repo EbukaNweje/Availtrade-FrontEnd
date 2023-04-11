@@ -12,7 +12,7 @@ justify-content: center;
 
 
 export const Container = styled.div`
-width: 100vw;
+width: 100%;
 height: 60px;
 position: fixed;
 left: 0;
@@ -48,11 +48,11 @@ flex-wrap: wrap;
         /* transition: all */
     }
 }
-@media Screen and (max-width: 425px){
+@media Screen and (max-width: 428px){
     width: 100%;
     /* background-color: red; */
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     :hover{
         cursor: pointer;
@@ -60,7 +60,7 @@ flex-wrap: wrap;
 }
 `;
 export const Container2 = styled.div`
-width: 100vw;
+width: 100%;
 background-color: #1035ac;
 /* height: 150px; */
 /* min-height: 49px; */
@@ -100,7 +100,7 @@ box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
         /* transition: all */
     }
 };
-@media Screen and (max-width: 425px){
+@media Screen and (max-width: 428px){
     width: 100%;
     height: 80px;
     /* background-color: red; */
@@ -155,7 +155,7 @@ padding: 0 20px;
     }
 }
 
-@media Screen and (max-width: 425px){
+@media Screen and (max-width: 428px){
     width: 90%;
     /* background-color: red; */
     :hover{
@@ -379,7 +379,7 @@ color: white;
     }
     /* justify-content: center; */
 }
-@media Screen and (max-width: 425px){
+@media Screen and (max-width: 428px){
     display: none;
     /* justify-content: center; */
 }

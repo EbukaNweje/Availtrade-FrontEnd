@@ -1,8 +1,11 @@
 import React from 'react'
 import {
-    Holder,Container,LeftDiv, RightDiv,H1,Line,Content,ButtonHold,
-    Getstarted,Openaccount,Wrapper,TopDiv,BottomDiv,H11,Daily,
-    Box,Top,Bottom,Arrow,Texts
+    Holder,Container,LeftDiv, 
+   /*  RightDiv, */
+    H1,Line,Content,ButtonHold,
+    Getstarted,Openaccount,Wrapper,
+   /*  TopDiv,BottomDiv,H11,Daily,
+    Box,Top,Bottom,Arrow,Texts */
 } from './HeroStyle'
 import { NavLink } from 'react-router-dom'
 
@@ -25,7 +28,7 @@ const HeroPage = () => {
                     </Openaccount>
                 </ButtonHold>
             </LeftDiv>
-            <RightDiv>
+          {/*   <RightDiv>
                 <Box>
                 <TopDiv>
                     <H11>10%</H11>
@@ -42,7 +45,7 @@ const HeroPage = () => {
                     </Bottom>
                 </BottomDiv>
                 </Box>
-            </RightDiv>
+            </RightDiv> */}
         </Container>
     </Wrapper>
     </Holder>

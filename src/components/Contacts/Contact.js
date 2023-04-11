@@ -26,6 +26,7 @@ const Contact = () => {
             &nbsp;&nbsp; Address: 813 Meadowbrook Drive Coppell,TX 75019
             <br />
             <BsEnvelope />
+            &nbsp;&nbsp; preeminentteam@gmail.com
             <br />
             <BsHeadset />
             &nbsp;&nbsp; Phone: +1 774 473 9572
