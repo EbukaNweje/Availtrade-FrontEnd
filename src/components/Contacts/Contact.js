@@ -29,7 +29,7 @@ const Contact = () => {
             &nbsp;&nbsp; preeminentteam@gmail.com
             <br />
             <BsHeadset />
-            &nbsp;&nbsp; Phone: +1 774 473 9572
+            &nbsp;&nbsp; Phone: +1 (847) 616-147
           </p>
           <hr />
 
