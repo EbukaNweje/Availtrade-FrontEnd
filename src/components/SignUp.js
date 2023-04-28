@@ -33,7 +33,7 @@ function SignUp({Display}) {
   },[])
 
     const Data = {firstName,lastName,referenceid,password,confirmPassword,gender,phoneNumber,email}
-    const url = "https://preeminentcryptotrade.onrender.com/api/register"
+    const url = "https://preeminentcryptotrades.onrender.com/api/register"
     
     const Siginup = (e) => {
     setLoading(true)

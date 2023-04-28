@@ -29,7 +29,7 @@ const Login = ({ Display }) => {
  */
   console.log(message)
 
-  const url = "https://preeminentcryptotrade.onrender.com/api/login"
+  const url = "https://preeminentcryptotrades.onrender.com/api/login"
   const Data = {email, password}
 
   const Login = (e) => {
