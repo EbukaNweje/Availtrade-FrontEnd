@@ -17,8 +17,8 @@ const Component3 = () => {
         <Wrapper>
             <Div1>
                 <H4>INCORPURATION</H4>
-                <H1 href='https://preeminentcryptotrade.com/home/index4c4f.html?a=aboutus#'>preeminentcryptotrade.com; Nr.: 1122234445</H1>
-                <Content>preeminentcryptotrade.comis a cryptocurrency trading broker established in 2022. The wide array of services we offer were specifically designed to assist Bitcoin holders in making good cryptocurrency management decisions.</Content>
+                <H1 href='https://Experttreades.org/home/index4c4f.html?a=aboutus#'>Experttreades.org; Nr.: 1122234445</H1>
+                <Content>Experttreades.org is a cryptocurrency trading broker established in 2022. The wide array of services we offer were specifically designed to assist Bitcoin holders in making good cryptocurrency management decisions.</Content>
                 <Line></Line>
             </Div1>
             <br/>
@@ -27,7 +27,7 @@ const Component3 = () => {
                 <Left>
                     <Icon src={flaticon} alt='flaticon'/>
                     <H4>CERTIFICATE OF INCORPORATION</H4>
-                    <Content2>preeminentcryptotrade.com passed the registration procedure in Jan 2022 and is listed on the website of the royal registrar Companies House.</Content2>
+                    <Content2>Experttreades.org passed the registration procedure in Jan 2022 and is listed on the website of the royal registrar Companies House.</Content2>
                    {/*  <ButtonHold>
                         <AiFillCalendar/>
                         <Text>VIEW OUR CERTIFICATE</Text>

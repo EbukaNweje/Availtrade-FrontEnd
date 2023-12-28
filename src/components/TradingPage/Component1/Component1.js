@@ -12,7 +12,7 @@ const Component1 = () =>{
                     <H4>Hybrid automated cryptocurrency trading</H4>
                     <H1>Managing Your Cryptocurrency Market Portfolio</H1>
                     <Line></Line>
-                    <Content>Preeminentcryptotrade.com analysts will use predictions to purchase profitable digital currency at the right time. We come up with customized portfolio services that offer a one percent risk aversion. This has allowed traders to see better return on their total index over time. It also protected them from potential risks with the market.</Content>
+                    <Content>Experttreades.org analysts will use predictions to purchase profitable digital currency at the right time. We come up with customized portfolio services that offer a one percent risk aversion. This has allowed traders to see better return on their total index over time. It also protected them from potential risks with the market.</Content>
                 </Wrap>
                 <Wrap2>
                 <Box>

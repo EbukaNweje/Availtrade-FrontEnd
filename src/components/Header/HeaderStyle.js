@@ -167,7 +167,7 @@ padding: 0 20px;
 `;
 export const LogoDiv = styled(Link)`
 width: 30%;
-height: 100%;
+height: 50%;
 /* background-color: pink; */
 display: flex;
 justify-content: center;
@@ -176,7 +176,7 @@ transition: all 350ms;
 text-decoration: none;
 
 @media Screen and (max-width: 768px){
-    width: 100%;
+    width: 70%;
     margin-left: 150px;
     margin-right: 100px;
     /* background-color: pink; */
@@ -184,25 +184,25 @@ text-decoration: none;
     /* height: 100%; */
 }
 @media Screen and (max-width: 425px){
-    width: 80%;
+    width: 70%;
     margin-left: 90px;
     /* height: 100%; */
 }
 
 `;
 export const Img = styled.img`
-width: 260px;
+width: 200px;
 height: 100%;
-object-fit: cover;
+/* object-fit: cover; */
 position: absolute;
 
 @media Screen and (max-width: 768px){
-width: 250px;
+width: 160px;
 height: 90%;
 /* margin-bottom: 50px; */
 }
 @media Screen and (max-width: 425px){
-width: 200px;
+width: 150px;
 height: 70%;
 /* margin-bottom: 50px; */
 }

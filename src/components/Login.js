@@ -80,7 +80,7 @@ const Login = ({ Display }) => {
         </LogoDiv>
         <Welcome>
           <WelText>
-            Welcome to <span>Preeminentcryptotrade</span>{' '}
+            Welcome to <span>Experttreades</span>{' '}
           </WelText>
           <Parg>
             Our goal here is to provide investors with a platform that is
@@ -89,7 +89,7 @@ const Login = ({ Display }) => {
         </Welcome>
         <FirstFooter>
           <FirstFooterText1>
-            © 2020 preeminentcryptotrade.com !{' '}
+            © 2020 Experttreades.org !{' '}
           </FirstFooterText1>
           <FirstFooterText2>
             {/* <span>Terms & Conditions</span> */}

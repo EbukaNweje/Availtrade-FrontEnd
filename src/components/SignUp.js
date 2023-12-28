@@ -48,7 +48,7 @@ function SignUp({Display}) {
         setMessage({ error: true, msg: res.response.data.message });
         const id =JSON.parse(localStorage.getItem("User") )
         setTimeout(() => {
-          navigate(`/dashboard/${id.data._id}`) 
+          navigate(`/dashboard/${id.data._id}`)
         }, [2000]);
       })
       .catch((error)=>{
@@ -82,12 +82,12 @@ function SignUp({Display}) {
             </Link>
           </LogoDiv>
           <Welcome>
-              <WelText>Welcome to <span>Preeminentcryptotrade</span> </WelText>
+              <WelText>Welcome to <span>Experttreades</span> </WelText>
               <Parg>Our goal here is to provide investors with a platform that is trustworthy, 
                 reliable and efficient.</Parg>
             </Welcome>
             <FirstFooter>
-              <FirstFooterText1>© 2020 preeminentcryptotrade.com ! </FirstFooterText1>
+              <FirstFooterText1>© 2020 Experttreades.org ! </FirstFooterText1>
               <FirstFooterText2>
                 {/* <span>Terms & Conditions</span> */}
                 <span><Link to="/contact" style={{color: "gray"}}>Contact</Link></span>

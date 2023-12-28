@@ -18,7 +18,7 @@ const HeroPage = () => {
             <LeftDiv>
                 <H1>Hybrid automated cryptocurrency trading</H1>
                 <Line></Line>
-                <Content>Private equity firm Preeminentcryptotrade.com came up with a Balanced Asset Basket that allowed it to invest in cryptocurrency and other similar blockchain based industries. The company’s primary activity is focused on cryptocurrency domain such as field of exchange and stock markets.</Content>
+                <Content>Private equity firm Experttreades.org came up with a Balanced Asset Basket that allowed it to invest in cryptocurrency and other similar blockchain based industries. The company’s primary activity is focused on cryptocurrency domain such as field of exchange and stock markets.</Content>
                 <ButtonHold>
                     <Getstarted>
                     <NavLink to={"/about"} style={{color:"#fff", textDecoration:"none"}}>Get Started</NavLink>

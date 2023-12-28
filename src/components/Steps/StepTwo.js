@@ -11,7 +11,7 @@ const StepTwo = () => {
       <div className="step_two">
         <h5 className="step_two_h5">STEP BY STEP</h5>
         <h2 className="systematic_parag">
-          Systematic guide on how to start profiting with Preeminentcryptotrade.com
+          Systematic guide on how to start profiting with Experttreades.org
         </h2>
         <hr className="step_two_hr" />
       </div>
@@ -78,7 +78,7 @@ const StepTwo = () => {
           <hr className="step_two_hr" />
 
           <p className="explore_parag">
-            Making withdrawals is very fast and easy. Preeminentcryptotrade.com® offers
+            Making withdrawals is very fast and easy. Experttreades.org® offers
             instant withdrawals for all requested withdrawals. You don’t have to
             wait endless days for your withdrawal requests to be processed. All
             your withdrawals are made available to your Bitcoin address in real

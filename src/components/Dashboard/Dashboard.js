@@ -16,7 +16,7 @@ const Dashboard = ({Display}) => {
 
 useEffect(()=>{
 
-    Axios.get(url)
+    Axios.get(url)  
     .then(res => setData(res.data.data))
     /* eslint-disable-next-line react-hooks/exhaustive-deps */
 },[])
