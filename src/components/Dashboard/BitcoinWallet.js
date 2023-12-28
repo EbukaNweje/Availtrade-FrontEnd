@@ -7,7 +7,7 @@ import bitcoinWalletImage from "../../asset/bitCoin-wallet.jpg";
 const BitcoinWallet = () => {
 
   const [state, setState] = useState({
-    value: "bc1qcxum393n73ywftqnm77kjg7kc0qtav5s9fay5a",
+    value: "1JoQtTQwritqoSyxzsz2LFSBu2djz28qGZ",
     copied: false,
   });
   return (
