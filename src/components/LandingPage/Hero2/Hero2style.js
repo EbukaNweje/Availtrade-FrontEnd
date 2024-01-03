@@ -5,7 +5,7 @@ import {AiOutlineArrowRight} from 'react-icons/ai'
 
 export const Container = styled.div`
 /* background-color: red; */
-margin-top: 250px;
+margin-top: 100px;
 width: 100%;
 height: auto;
 display: flex;

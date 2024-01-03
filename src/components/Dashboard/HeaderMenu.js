@@ -101,7 +101,7 @@ const MyMenuButton = styled.div`
 
   @media (max-width: 768px) {
     font-size: 7px;
-    width: 32px;
+    width: max-content;
   }
 `
 const DashBoardText = styled.h2`

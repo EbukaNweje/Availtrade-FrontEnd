@@ -26,10 +26,10 @@ const Contact = () => {
             &nbsp;&nbsp; Address: 813 Meadowbrook Drive Coppell,TX 75019
             <br />
             <BsEnvelope />
-            &nbsp;&nbsp; preeminentteam@gmail.com
+            &nbsp;&nbsp; theExperttradesg@gmail.com
             <br />
             <BsHeadset />
-            &nbsp;&nbsp; Phone: +1 (847) 616-147
+            &nbsp;&nbsp; Phone: +15134165842
           </p>
           <hr />
 

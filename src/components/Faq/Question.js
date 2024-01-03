@@ -9,9 +9,9 @@ function Question() {
     {
       id: uuidv4(),
       question: 
-      "Q: What is the main idea behind the establishment of Experttreades.org? Is the company for ‘real’? And is there anything that really proves this?",
+      "Q: What is the main idea behind the establishment of Experttrades.org? Is the company for ‘real’? And is there anything that really proves this?",
       answer:
-      "A: Experttreades.org is a cryptocurrency trading company established in 2022. The wide array of services we offer were specifically designed to assist Bitcoin holders in making good trading decisions. We are a London-based company that possesses a group of trading professionals covering many industries, ranging from engineering to advanced computer technology. Our group of professionals are widely versed in cryptocurrency techniques as well and can expertly answer any question you might have concerning cryptocurrency trading.",
+      "A: Experttrades.org is a cryptocurrency trading company established in 2022. The wide array of services we offer were specifically designed to assist Bitcoin holders in making good trading decisions. We are a London-based company that possesses a group of trading professionals covering many industries, ranging from engineering to advanced computer technology. Our group of professionals are widely versed in cryptocurrency techniques as well and can expertly answer any question you might have concerning cryptocurrency trading.",
       open: true,
     },
     {
@@ -25,7 +25,7 @@ function Question() {
       id: uuidv4(),
       question: "Q: Are there risks involved?",
       answer:
-        "A: You already made a good decision by deciding to join our community. Experttreades.org is a completely risk-free trading company, all thanks to our overall ideology and company concept. In addition, our company is made up of certified professionals in various fields such as cryptocurrency trading, blockchain technology, cryptocurrency finance and security. Our goal is to provide a seamless trading experience based on expert project management. We aim to make cryptocurrency trading available to anybody that has no experience within the field.",
+        "A: You already made a good decision by deciding to join our community. Experttrades.org is a completely risk-free trading company, all thanks to our overall ideology and company concept. In addition, our company is made up of certified professionals in various fields such as cryptocurrency trading, blockchain technology, cryptocurrency finance and security. Our goal is to provide a seamless trading experience based on expert project management. We aim to make cryptocurrency trading available to anybody that has no experience within the field.",
       open: false,
     },
   ];

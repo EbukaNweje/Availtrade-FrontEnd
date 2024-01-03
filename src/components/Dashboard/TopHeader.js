@@ -78,7 +78,7 @@ const TopHeader = () => {
         <Wrapper>
             <Container> <MdLocationCity className='Icons'/> Address: 813 Meadowbrook Drive Coppell, TX 75019</Container>
             <Container2> <BsTelephonePlusFill className='Icons'/> Dphone: VIP members only</Container2>
-            <Container3> <MdEmail className='Icons'/>Email: preeminentteam@gmail.com</Container3>
+            <Container3> <MdEmail className='Icons'/>Email: theExperttradesg@gmail.com</Container3>
         </Wrapper>
     </MainContainer>
   )

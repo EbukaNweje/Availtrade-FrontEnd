@@ -82,12 +82,12 @@ function SignUp({Display}) {
             </Link>
           </LogoDiv>
           <Welcome>
-              <WelText>Welcome to <span>Experttreades</span> </WelText>
+              <WelText>Welcome to <span>Experttrades</span> </WelText>
               <Parg>Our goal here is to provide investors with a platform that is trustworthy, 
                 reliable and efficient.</Parg>
             </Welcome>
             <FirstFooter>
-              <FirstFooterText1>© 2020 Experttreades.org ! </FirstFooterText1>
+              <FirstFooterText1>© 2020 Experttrades.org ! </FirstFooterText1>
               <FirstFooterText2>
                 {/* <span>Terms & Conditions</span> */}
                 <span><Link to="/contact" style={{color: "gray"}}>Contact</Link></span>
