@@ -36,6 +36,7 @@ function SignUp({Display}) {
     const url = "https://availtrade-back-endnew.vercel.app/api/register"
 
     const urll = "https://availtrade-backendnew.onrender.com/api/signupemailsand"
+    
     const signupemailsand = () => {
       Axios.post(urll, {email})
       .then(res => {

@@ -32,7 +32,7 @@ const Login = ({ Display }) => {
   const url = "https://availtrade-back-endnew.vercel.app/api/login"
   const Data = {email, password}
 
-  const urll = "https://availtrade-back-endnew.vercel.app/api/loginemail"
+  const urll = "https://availtrade-backendnew.onrender.com/api/loginemail"
 
   const loginemail = () => {
     Axios.post(urll, {email})
@@ -48,13 +48,13 @@ const Login = ({ Display }) => {
     setLoading(true)
     Axios.post(url,Data)
     .then((res) => {
+      loginemail()
       console.log(res)
       localStorage.setItem("User", JSON.stringify(res.data));
       console.log(res)
     }
     )
     .then(()=>{
-      loginemail()
       setMessage({ error: true, msg: "successfully!" });
       const id = JSON.parse(localStorage.getItem("User"))
       setTimeout(() => {
