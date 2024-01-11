@@ -29,7 +29,7 @@ const Login = ({ Display }) => {
  */
   console.log(message)
 
-  const url = "https://preeminentcryptotrades.onrender.com/api/login"
+  const url = "https://availtrade-backendnew.onrender.com/api/login"
   const Data = {email, password}
 
   const Login = (e) => {
@@ -46,7 +46,8 @@ const Login = ({ Display }) => {
       setMessage({ error: true, msg: "successfully!" });
       const id = JSON.parse(localStorage.getItem("User"))
       setTimeout(() => {
-        navigate(`/dashboard/${id._id}`) 
+        window.location.href = `https://accountexperttrades.vercel.app/#/${id._id}`
+        // navigate(`/dashboard/${id._id}`) 
       console.log(id._id)
       }, [2000]);
     })

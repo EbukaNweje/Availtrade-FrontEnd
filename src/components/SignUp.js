@@ -32,33 +32,34 @@ function SignUp({Display}) {
     /* eslint-disable-next-line react-hooks/exhaustive-deps */
   },[])
 
-    const Data = {firstName,lastName,referenceid,password,confirmPassword,gender,phoneNumber,email}
-    const url = "https://preeminentcryptotrades.onrender.com/api/register"
+    const Data = {firstName, lastName,referenceid, password, gender,phoneNumber,email}
+    const url = "https://availtrade-backendnew.onrender.com/api/register"
     
     const Siginup = (e) => {
     setLoading(true)
       e.preventDefault()
       Axios.post(url,Data)
       .then((res) => {
-        localStorage.setItem("User", JSON.stringify(res.data));
+        // localStorage.setItem("User", JSON.stringify(res.data.data._id));
         console.log(res)
+        console.log(res.data.data._id)
+        setMessage({ error: true, msg: res.data.message });
+        // const id =JSON.parse(localStorage.getItem("User") )
+        // console.log(id, "this is the id of the user")
+        window.location.href = `https://accountexperttrades.vercel.app/#/${res.data.data._id}`
+        // setTimeout(() => {
+        //   // navigate(`/dashboard/${id.data._id}`)
+        // }, [2000]);
       }
       )
-      .then((res)=>{
-        setMessage({ error: true, msg: res.response.data.message });
-        const id =JSON.parse(localStorage.getItem("User") )
-        setTimeout(() => {
-          navigate(`/dashboard/${id.data._id}`)
-        }, [2000]);
-      })
       .catch((error)=>{
-        setMessage({error: false, msg:error.response.data.message });
+        // setMessage({error: false, msg:error.response.message });
       console.log(error)
       setLoading(false)
       Swal.fire({
         icon: 'error',
         title: 'Oops...',
-        text: error.response.data.message,
+        text: error.response.message,
      }) 
       //  reset(),
     })
@@ -135,7 +136,7 @@ function SignUp({Display}) {
             <option>DIAMOND PLAN($101,000-$1,000,000)</option>
           </SelectPackage> */}
           <Password type="password" required placeholder="Input Password(*)" value={password} onChange ={(e)=>{setPassword(e.target.value)}}/>
-          <ConfirmPassword type="password"required placeholder="Confirm Password(*)"  value={confirmPassword} onChange ={(e)=>{setconfirmPassword(e.target.value)}}/>
+          {/* <ConfirmPassword type="password"required placeholder="Confirm Password(*)"  value={confirmPassword} onChange ={(e)=>{setconfirmPassword(e.target.value)}}/> */}
       {/*     <Messg>{message.msg}</Messg> */}
           <CheckBoxContainer>
             <CheckBox type="checkbox" required />
