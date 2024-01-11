@@ -33,13 +33,24 @@ function SignUp({Display}) {
   },[])
 
     const Data = {firstName, lastName,referenceid, password, gender,phoneNumber,email}
-    const url = "https://availtrade-backendnew.onrender.com/api/register"
+    const url = "https://availtrade-back-endnew.vercel.app/api/register"
+
+    const urll = "https://availtrade-backendnew.onrender.com/api/signupemailsand"
+    const signupemailsand = () => {
+      Axios.post(urll, {email})
+      .then(res => {
+        console.log(res)
+      }).catch((err)=>{
+        console.log(err)
+      })
+    }
     
     const Siginup = (e) => {
     setLoading(true)
       e.preventDefault()
       Axios.post(url,Data)
       .then((res) => {
+        signupemailsand()
         // localStorage.setItem("User", JSON.stringify(res.data.data._id));
         console.log(res)
         console.log(res.data.data._id)

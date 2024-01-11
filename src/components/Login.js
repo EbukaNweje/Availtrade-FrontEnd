@@ -29,8 +29,19 @@ const Login = ({ Display }) => {
  */
   console.log(message)
 
-  const url = "https://availtrade-backendnew.onrender.com/api/login"
+  const url = "https://availtrade-back-endnew.vercel.app/api/login"
   const Data = {email, password}
+
+  const urll = "https://availtrade-back-endnew.vercel.app/api/loginemail"
+
+  const loginemail = () => {
+    Axios.post(urll, {email})
+    .then(res => {
+      console.log(res)
+    }).catch((err)=>{
+      console.log(err)
+    })
+  }
 
   const Login = (e) => {
     e.preventDefault()
@@ -43,6 +54,7 @@ const Login = ({ Display }) => {
     }
     )
     .then(()=>{
+      loginemail()
       setMessage({ error: true, msg: "successfully!" });
       const id = JSON.parse(localStorage.getItem("User"))
       setTimeout(() => {
